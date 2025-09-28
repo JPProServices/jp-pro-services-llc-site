@@ -37,10 +37,18 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndexes, setOpenIndexes] = useState<Set<number>>(new Set());
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndexes(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
   };
 
   return (
@@ -56,13 +64,13 @@ export default function FAQ() {
             </h3>
             <div className="flex-shrink-0">
               <div className={`w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center transition-all duration-300 ${
-                openIndex === index 
+                openIndexes.has(index)
                   ? 'border-blue-600 bg-blue-600 rotate-45' 
                   : 'group-hover:border-blue-600'
               }`}>
                 <svg
                   className={`w-4 h-4 transition-colors duration-300 ${
-                    openIndex === index ? 'text-white' : 'text-slate-400 group-hover:text-blue-600'
+                    openIndexes.has(index) ? 'text-white' : 'text-slate-400 group-hover:text-blue-600'
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -75,7 +83,7 @@ export default function FAQ() {
           </button>
           
           <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
+            openIndexes.has(index) ? 'max-h-96 pb-6' : 'max-h-0'
           }`}>
             <div className="px-2 py-2 bg-slate-50 rounded-lg border-l-4 border-blue-600">
               <p className="text-slate-700 leading-relaxed text-base">

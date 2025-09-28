@@ -392,7 +392,7 @@ export default function HomePage() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Answering your questions about roofing.
+              Answering your questions about our roofing services.
             </p>
           </div>
           
