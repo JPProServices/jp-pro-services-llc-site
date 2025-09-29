@@ -402,7 +402,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-slate-900 py-16">
+      <section id="contact" className="bg-zinc-900 py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left: Contact Form */}
