@@ -103,7 +103,7 @@ export default function HomePage() {
               
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-200">
                 <div className="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center text-white text-sm font-bold">★</div>
-                <span className="text-slate-700 font-medium">50-Year Warranty</span>
+                <span className="text-slate-700 font-medium">25+ Year Product Warranties</span>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">50-Year Warranties</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">25+ Year Product Warranties</h3>
               <p className="text-slate-600">Industry-leading warranties on materials and workmanship.</p>
             </div>
 
@@ -264,7 +264,8 @@ export default function HomePage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
               <div className="bg-gradient-to-br from-blue-800 to-blue-700 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 6l9-4 9 4v8a2 2 0 01-2 2H5a2 2 0 01-2-2V6z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14h8" />
                 </svg>
                 <h3 className="text-xl font-semibold mb-2">Premium Materials</h3>
                 <p className="text-blue-100">High-quality roofing materials from trusted manufacturers.</p>
@@ -427,8 +428,8 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <div>
-                      <p className="text-white font-medium">123 Main Street</p>
-                      <p className="text-slate-300">Nashville, TN 37201</p>
+                      <p className="text-white font-medium">163 Quail DR</p>
+                      <p className="text-slate-300">La Vergne, TN 37086</p>
                     </div>
                   </div>
                   
@@ -438,9 +439,7 @@ export default function HomePage() {
                     </svg>
                     <div>
                       <p className="text-white font-medium">Business Hours</p>
-                      <p className="text-slate-300">Mon-Fri: 7AM - 6PM</p>
-                      <p className="text-slate-300">Sat: 8AM - 4PM</p>
-                      <p className="text-slate-300">24/7 Emergency Service</p>
+                      <p className="text-slate-300">24/7</p>
                     </div>
                   </div>
                 </div>

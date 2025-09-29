@@ -63,20 +63,20 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
             <div>
               <label htmlFor="service" className="block text-sm text-slate-300">Choose Service*</label>
               <select id="service" name="service" required
-                className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-slate-100 outline-none ring-blue-700 focus:ring">
-                <option value="">Select…</option>
-                <option>Roof Replacement</option>
-                <option>Roof Repair</option>
-                <option>Storm Damage</option>
-                <option>Residential Roofing</option>
-                <option>Commercial Roofing</option>
+                className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white outline-none focus:border-yellow-500 focus:ring-0">
+                <option value="" className="bg-black text-white">Select…</option>
+                <option className="bg-black text-white">Roof Replacement</option>
+                <option className="bg-black text-white">Roof Repair</option>
+                <option className="bg-black text-white">Storm Damage</option>
+                <option className="bg-black text-white">Residential Roofing</option>
+                <option className="bg-black text-white">Commercial Roofing</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="address" className="block text-sm text-slate-300">Full Address*</label>
               <input id="address" name="address" required placeholder="Street, City, ZIP"
-                className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-slate-100 outline-none ring-blue-700 focus:ring" />
+                className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
             </div>
           </>
         ) : null}
@@ -85,26 +85,26 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
           <div>
             <label htmlFor="name" className="block text-sm text-slate-300">Name*</label>
             <input id="name" name="name" required
-              className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-slate-100 outline-none ring-blue-700 focus:ring" />
+              className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm text-slate-300">Phone Number*</label>
             <input id="phone" name="phone" inputMode="tel" required placeholder={phone}
-              className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-slate-100 outline-none ring-blue-700 focus:ring" />
+              className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
           </div>
         </div>
 
         <div>
           <label htmlFor="email" className="block text-sm text-slate-300">Email*</label>
           <input id="email" name="email" type="email" required placeholder="you@example.com"
-            className="mt-1 w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-slate-100 outline-none ring-blue-700 focus:ring" />
+            className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
         </div>
 
         {kind === "contact" ? (
           <div>
             <label htmlFor="message" className="block text-sm text-slate-300">Message*</label>
             <textarea id="message" name="message" required rows={4} placeholder="How can we help?"
-              className="mt-1 w-full resize-y rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-slate-100 outline-none ring-blue-700 focus:ring" />
+              className="mt-1 w-full resize-y rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
           </div>
         ) : null}
 
@@ -117,10 +117,10 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
         </label>
 
         <button type="submit"
-          className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-800 to-blue-700 px-4 py-3 font-extrabold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-800/25 active:scale-95">
-          <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+          className="group btn-gold neon relative inline-flex items-center justify-center overflow-hidden rounded-xl px-4 py-3 font-extrabold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+        >
           <span className="relative z-10 flex items-center gap-2">
-            {kind === "estimate" ? "Schedule FREE Estimate" : "Send Message"}
+            {kind === "estimate" ? "Schedule FREE Inspection" : "Send Message"}
             <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

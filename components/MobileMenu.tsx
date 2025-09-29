@@ -51,7 +51,10 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
               <a href="#blog" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Blog</a>
               <a href="#faq" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>FAQs</a>
               <div className="pt-4 border-t border-slate-700">
-                <a href={`tel:${phoneHref}`} className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-colors">
+                <a 
+                  href={`tel:${phoneHref}`} 
+                  className="btn-gold block px-4 py-3 rounded-lg font-semibold text-center"
+                >
                   Call {phone}
                 </a>
               </div>

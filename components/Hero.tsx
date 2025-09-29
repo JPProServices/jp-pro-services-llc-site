@@ -9,7 +9,7 @@ export default function Hero() {
           ★ <span className="font-semibold">4.9 / 5</span>
         </span>
         <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-          🛡️ 50-Year Product Warranties
+          🛡️ 25+ Year Product Warranties
         </span>
       </div>
 
