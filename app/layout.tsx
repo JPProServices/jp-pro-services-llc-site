@@ -107,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {children}
 
-        <footer className="bg-slate-800 border-t border-slate-700 py-6 text-slate-400">
+        <footer className="bg-zinc-900 border-t border-zinc-700 py-6 text-slate-400">
           <div className="mx-auto w-[min(1200px,94%)]">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-6">
@@ -125,7 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               
               <div className="flex items-center gap-6 text-sm">
                 <span className="text-slate-300">Middle Tennessee's Trusted Roofing Company</span>
-                <a href={`tel:${phoneHref}`} className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-200">
+                <a href={`tel:${phoneHref}`} className="text-yellow-400 hover:text-yellow-300 font-medium transition-colors duration-200">
                   {phoneHref.replace(/^\+1-/, '').replace(/-/g, '.').replace(/(\d{3})\.(\d{3})\.(\d{4})/, '($1) $2-$3')}
                 </a>
               </div>

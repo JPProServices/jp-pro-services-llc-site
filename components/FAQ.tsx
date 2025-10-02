@@ -54,23 +54,23 @@ export default function FAQ() {
   return (
     <div className="max-w-4xl mx-auto">
       {faqs.map((faq, index) => (
-        <div key={index} className="border-b border-slate-200 last:border-b-0">
+        <div key={index} className="border-b border-zinc-700 last:border-b-0">
           <button
-            className="w-full py-6 px-2 flex items-center justify-between text-left hover:bg-slate-50 transition-colors duration-200 group"
+            className="w-full py-6 px-2 flex items-center justify-between text-left hover:bg-zinc-800 transition-colors duration-200 group"
             onClick={() => toggleFAQ(index)}
           >
-            <h3 className="text-lg font-semibold text-slate-900 pr-4 group-hover:text-blue-600 transition-colors duration-200">
+            <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-yellow-400 transition-colors duration-200">
               {faq.question}
             </h3>
             <div className="flex-shrink-0">
-              <div className={`w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center transition-all duration-300 ${
+              <div className={`w-8 h-8 rounded-full border-2 border-zinc-600 flex items-center justify-center transition-all duration-300 ${
                 openIndexes.has(index)
-                  ? 'border-blue-600 bg-blue-600 rotate-45' 
-                  : 'group-hover:border-blue-600'
+                  ? 'border-yellow-500 bg-yellow-500 rotate-45' 
+                  : 'group-hover:border-yellow-400'
               }`}>
                 <svg
                   className={`w-4 h-4 transition-colors duration-300 ${
-                    openIndexes.has(index) ? 'text-white' : 'text-slate-400 group-hover:text-blue-600'
+                    openIndexes.has(index) ? 'text-black' : 'text-zinc-400 group-hover:text-yellow-400'
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -85,8 +85,8 @@ export default function FAQ() {
           <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
             openIndexes.has(index) ? 'max-h-96 pb-6' : 'max-h-0'
           }`}>
-            <div className="px-2 py-2 bg-slate-50 rounded-lg border-l-4 border-blue-600">
-              <p className="text-slate-700 leading-relaxed text-base">
+            <div className="px-2 py-2 bg-zinc-800 rounded-lg border-l-4 border-yellow-500">
+              <p className="text-slate-300 leading-relaxed text-base">
                 {faq.answer}
               </p>
             </div>
@@ -95,8 +95,8 @@ export default function FAQ() {
       ))}
       
       {/* CTA at bottom */}
-      <div className="text-center mt-12 pt-8 border-t border-slate-200">
-        <p className="text-slate-600 mb-4">
+      <div className="text-center mt-12 pt-8 border-t border-zinc-700">
+        <p className="text-slate-300 mb-4">
           Have more questions? We're here to help with all your roofing needs.
         </p>
         <button

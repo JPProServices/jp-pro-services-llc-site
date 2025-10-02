@@ -26,7 +26,7 @@ export default function HomePage() {
       </section>
 
       {/* Trust & Stats Bar */}
-      <section className="bg-gradient-to-r from-slate-50 to-blue-50 py-12 border-y border-slate-200">
+      <section className="bg-gradient-to-r from-zinc-900 to-black py-12 border-y border-zinc-700">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {/* Satisfaction Guarantee */}
@@ -38,8 +38,8 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-slate-900 mb-1">1,826</div>
-              <div className="text-slate-600 font-medium">Day Guarantee</div>
+              <div className="text-3xl font-bold text-white mb-1">1,826</div>
+              <div className="text-slate-300 font-medium">Day Guarantee</div>
             </div>
 
             {/* Emergency Response */}
@@ -51,8 +51,8 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-slate-900 mb-1">1 Hour</div>
-              <div className="text-slate-600 font-medium">Emergency Response</div>
+              <div className="text-3xl font-bold text-white mb-1">1 Hour</div>
+              <div className="text-slate-300 font-medium">Emergency Response</div>
             </div>
 
             {/* Customer Rating */}
@@ -64,8 +64,8 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-slate-900 mb-1">4.9★</div>
-              <div className="text-slate-600 font-medium">Customer Rating</div>
+              <div className="text-3xl font-bold text-white mb-1">4.9★</div>
+              <div className="text-slate-300 font-medium">Customer Rating</div>
             </div>
 
             {/* BBB A-Rating */}
@@ -77,8 +77,8 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-slate-900 mb-1">BBB A</div>
-              <div className="text-slate-600 font-medium">Accredited Rating</div>
+              <div className="text-3xl font-bold text-white mb-1">BBB A</div>
+              <div className="text-slate-300 font-medium">Accredited Rating</div>
             </div>
           </div>
 
@@ -110,69 +110,69 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose JP Pro Services?</h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Why Choose JP Pro Services?</h2>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
               At JP Pro Services, we're more than just a roofing company — we're Nashville's trusted partner in protecting your home or business. Here are four reasons why Middle Tennessee residents and businesses choose us for their roofing needs:
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-800 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-700 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">BBB-Accredited Excellence</h3>
-                  <p className="text-slate-600 leading-relaxed">As a BBB-accredited, licensed, insured, and bonded roofing company, we uphold the highest standards of quality and trust. With over two years of serving Nashville and Middle Tennessee, our commitment to integrity and craftsmanship ensures your roof is in reliable hands.</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">BBB-Accredited Excellence</h3>
+                  <p className="text-slate-300 leading-relaxed">As a BBB-accredited, licensed, insured, and bonded roofing company, we uphold the highest standards of quality and trust. With over two years of serving Nashville and Middle Tennessee, our commitment to integrity and craftsmanship ensures your roof is in reliable hands.</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-800 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-700 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Local Expertise, Tailored to Nashville</h3>
-                  <p className="text-slate-600 leading-relaxed">We understand Middle Tennessee's unique weather challenges — spring storms, summer heat, and occasional ice. From historic homes in Franklin to modern builds in Brentwood, we specialize in repairs and installations that preserve Nashville's charm and withstand its elements.</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">Local Expertise, Tailored to Nashville</h3>
+                  <p className="text-slate-300 leading-relaxed">We understand Middle Tennessee's unique weather challenges — spring storms, summer heat, and occasional ice. From historic homes in Franklin to modern builds in Brentwood, we specialize in repairs and installations that preserve Nashville's charm and withstand its elements.</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-800 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-700 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Comprehensive Roofing Solutions</h3>
-                  <p className="text-slate-600 leading-relaxed">Whether it's leak repairs, shingle replacements, or emergency storm damage tarping, we offer a full range of services for residential and commercial properties. Our skilled team uses premium materials to deliver lasting results across Davidson, Williamson, Rutherford, Sumner, and beyond.</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">Comprehensive Roofing Solutions</h3>
+                  <p className="text-slate-300 leading-relaxed">Whether it's leak repairs, shingle replacements, or emergency storm damage tarping, we offer a full range of services for residential and commercial properties. Our skilled team uses premium materials to deliver lasting results across Davidson, Williamson, Rutherford, Sumner, and beyond.</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-800 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-700 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Customer-First Service</h3>
-                  <p className="text-slate-600 leading-relaxed">We prioritize your peace of mind with free inspections, transparent pricing, and responsive support. Available Monday–Sunday (8:00 AM–5:00 PM for office) and 24/7 for emergencies, we're here to protect your property with unmatched care.</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">Customer-First Service</h3>
+                  <p className="text-slate-300 leading-relaxed">We prioritize your peace of mind with free inspections, transparent pricing, and responsive support. Available Monday–Sunday (8:00 AM–5:00 PM for office) and 24/7 for emergencies, we're here to protect your property with unmatched care.</p>
                 </div>
               </div>
             </div>
@@ -181,18 +181,18 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-white py-16">
+      <section className="bg-zinc-900 py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Services</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
               From new installations to emergency repairs, we provide comprehensive roofing solutions for every need.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="bg-gradient-to-br from-blue-800 to-blue-700 p-6 text-white">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 21l4-7 4 7" />
@@ -201,16 +201,16 @@ export default function HomePage() {
                 <p className="text-blue-100">Complete roofing solutions for your home including installation, repair, and maintenance.</p>
               </div>
               <div className="p-6">
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> New roof installation</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Roof replacement</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Maintenance & inspections</li>
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> New roof installation</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Roof replacement</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Maintenance & inspections</li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="bg-gradient-to-br from-blue-800 to-blue-700 p-6 text-white">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
@@ -218,16 +218,16 @@ export default function HomePage() {
                 <p className="text-blue-100">Professional roofing services for businesses, warehouses, and commercial properties.</p>
               </div>
               <div className="p-6">
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Flat roof systems</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Metal roofing</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Industrial solutions</li>
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Flat roof systems</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Metal roofing</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Industrial solutions</li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="bg-gradient-to-br from-blue-800 to-blue-700 p-6 text-white">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -235,16 +235,16 @@ export default function HomePage() {
                 <p className="text-blue-100">24/7 emergency roofing services for storm damage and urgent repairs.</p>
               </div>
               <div className="p-6">
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Storm damage repair</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Leak detection & repair</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Emergency tarping</li>
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Storm damage repair</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Leak detection & repair</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Emergency tarping</li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="bg-gradient-to-br from-blue-800 to-blue-700 p-6 text-white">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
@@ -252,16 +252,16 @@ export default function HomePage() {
                 <p className="text-blue-100">Complete roof replacement with premium materials and expert installation.</p>
               </div>
               <div className="p-6">
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Full tear-off & replacement</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Premium materials</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Warranty included</li>
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Full tear-off & replacement</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Premium materials</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Warranty included</li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="bg-gradient-to-br from-blue-800 to-blue-700 p-6 text-white">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -269,16 +269,16 @@ export default function HomePage() {
                 <p className="text-blue-100">Comprehensive storm damage assessment and repair services.</p>
               </div>
               <div className="p-6">
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Insurance claim assistance</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Damage assessment</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Restoration services</li>
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Insurance claim assistance</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Damage assessment</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Restoration services</li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="bg-gradient-to-br from-blue-800 to-blue-700 p-6 text-white">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 6l9-4 9 4v8a2 2 0 01-2 2H5a2 2 0 01-2-2V6z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14h8" />
@@ -287,10 +287,10 @@ export default function HomePage() {
                 <p className="text-blue-100">High-quality roofing materials from trusted manufacturers.</p>
               </div>
               <div className="p-6">
-                <ul className="space-y-2 text-slate-600">
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Asphalt shingles</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Metal roofing</li>
-                  <li className="flex items-center"><span className="text-blue-800 mr-2">•</span> Tile & slate options</li>
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Asphalt shingles</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Metal roofing</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Tile & slate options</li>
                 </ul>
               </div>
             </div>
@@ -299,17 +299,17 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">What Our Customers Say</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">What Our Customers Say</h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our satisfied customers have to say about our work.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -317,21 +317,21 @@ export default function HomePage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-slate-600 mb-4 italic">
+              <p className="text-slate-300 mb-4 italic">
                 "JP Pro Services did an amazing job on our roof replacement. Professional, timely, and the quality of work exceeded our expectations. Highly recommend!"
               </p>
               <div className="flex items-center">
-                <div className="bg-blue-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
+                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   SM
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Sarah Mitchell</p>
-                  <p className="text-slate-500 text-sm">Homeowner</p>
+                  <p className="font-semibold text-white">Sarah Mitchell</p>
+                  <p className="text-slate-400 text-sm">Homeowner</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -339,21 +339,21 @@ export default function HomePage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-slate-600 mb-4 italic">
+              <p className="text-slate-300 mb-4 italic">
                 "After storm damage, JP Pro Services handled everything from insurance claims to completion. Outstanding service and quality workmanship."
               </p>
               <div className="flex items-center">
-                <div className="bg-blue-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
+                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   MJ
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Mike Johnson</p>
-                  <p className="text-slate-500 text-sm">Business Owner</p>
+                  <p className="font-semibold text-white">Mike Johnson</p>
+                  <p className="text-slate-400 text-sm">Business Owner</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -361,33 +361,33 @@ export default function HomePage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-slate-600 mb-4 italic">
+              <p className="text-slate-300 mb-4 italic">
                 "The team was professional, clean, and completed our commercial roof ahead of schedule. Excellent communication throughout the project."
               </p>
               <div className="flex items-center">
-                <div className="bg-blue-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
+                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   LD
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Lisa Davis</p>
-                  <p className="text-slate-500 text-sm">Property Manager</p>
+                  <p className="font-semibold text-white">Lisa Davis</p>
+                  <p className="text-slate-400 text-sm">Property Manager</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="text-center mt-12">
-            <div className="inline-flex items-center bg-white rounded-lg shadow-md px-6 py-4">
-              <svg className="w-8 h-8 text-blue-600 mr-3" viewBox="0 0 24 24" fill="currentColor">
+            <div className="inline-flex items-center bg-zinc-800 rounded-lg shadow-2xl px-6 py-4 border border-zinc-700">
+              <svg className="w-8 h-8 text-blue-400 mr-3" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
               </svg>
               <div className="text-left">
-                <p className="text-lg font-semibold text-slate-900">Google Reviews</p>
+                <p className="text-lg font-semibold text-white">Google Reviews</p>
                 <div className="flex items-center">
-                  <span className="text-2xl font-bold text-slate-900 mr-2">4.9</span>
+                  <span className="text-2xl font-bold text-white mr-2">4.9</span>
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -395,7 +395,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-slate-600 ml-2">(150+ reviews)</span>
+                  <span className="text-slate-300 ml-2">(150+ reviews)</span>
                 </div>
               </div>
             </div>
@@ -404,11 +404,11 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="bg-white py-16">
+      <section id="faq" className="bg-zinc-900 py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
               Answering your questions about our roofing services.
             </p>
           </div>
@@ -418,7 +418,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-zinc-900 py-16">
+      <section id="contact" className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left: Contact Form */}
@@ -437,9 +437,9 @@ export default function HomePage() {
               {/* Business Hours & Location */}
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Visit Our Office</h3>
-                <div className="bg-slate-800 rounded-lg p-6 space-y-4">
+                <div className="bg-zinc-800 rounded-lg p-6 space-y-4 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
                   <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -450,7 +450,7 @@ export default function HomePage() {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
@@ -466,8 +466,8 @@ export default function HomePage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Our Services</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-slate-800 rounded-lg p-4 hover:bg-slate-750 transition-colors duration-200">
-                    <div className="flex items-center gap-2 text-blue-400 mb-2">
+                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                    <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                       </svg>
@@ -475,8 +475,8 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-slate-800 rounded-lg p-4 hover:bg-slate-750 transition-colors duration-200">
-                    <div className="flex items-center gap-2 text-blue-400 mb-2">
+                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                    <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                       </svg>
@@ -484,8 +484,8 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-slate-800 rounded-lg p-4 hover:bg-slate-750 transition-colors duration-200">
-                    <div className="flex items-center gap-2 text-blue-400 mb-2">
+                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                    <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -493,8 +493,8 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-slate-800 rounded-lg p-4 hover:bg-slate-750 transition-colors duration-200">
-                    <div className="flex items-center gap-2 text-blue-400 mb-2">
+                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                    <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
@@ -509,8 +509,8 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-white mb-4">Get In Touch</h3>
                 <div className="space-y-3">
                   <a href={`tel:${phoneDisplay.replace(/\D/g, '')}`} className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-blue-800 p-2 rounded-lg">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
+                      <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
@@ -518,8 +518,8 @@ export default function HomePage() {
                   </a>
                   
                   <a href="mailto:info@jpproservices.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-blue-800 p-2 rounded-lg">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
+                      <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>

@@ -11,7 +11,7 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
   const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
   const wrap =
     variant === "inline"
-      ? "rounded-2xl border border-slate-800 bg-slate-900/70 p-4"
+      ? "rounded-2xl border border-zinc-700 bg-zinc-800/90 p-4"
       : "rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur";
 
   const [msg, setMsg] = useState<string | null>(null);
