@@ -32,11 +32,9 @@ html {
   animation: slide-in-from-top 0.3s ease-out;
 }
 
-/* Cool animated glass morphism button with advanced effects */
+/* Professional solid golden button with subtle effects */
 .btn-gold {
-  background: linear-gradient(135deg, rgba(232, 185, 35, 0.15), rgba(232, 185, 35, 0.05));
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, #e8b923, #d4a21a);
   color: white;
   position: relative;
   overflow: hidden;
@@ -45,15 +43,34 @@ html {
   letter-spacing: 0.5px;
   cursor: pointer;
   
-  /* Multi-layered shadows for depth */
+  /* Professional shadows for depth */
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15),
-    inset 0 -1px 0 rgba(232, 185, 35, 0.1),
-    0 0 0 1px rgba(232, 185, 35, 0.2);
+    0 4px 16px rgba(232, 185, 35, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   
   /* Smooth transitions */
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  
+  /* Very subtle breathing animation */
+  animation: subtleBreathing 4s ease-in-out infinite;
+}
+
+@keyframes subtleBreathing {
+  0%, 100% { 
+    transform: scale(1); 
+    box-shadow: 
+      0 4px 16px rgba(232, 185, 35, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  }
+  50% { 
+    transform: scale(1.005); 
+    box-shadow: 
+      0 6px 20px rgba(232, 185, 35, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Animated shimmer effect */
@@ -105,15 +122,15 @@ html {
 
 /* Hover effects */
 .btn-gold:hover {
-  background: linear-gradient(135deg, rgba(232, 185, 35, 0.25), rgba(232, 185, 35, 0.15)) !important;
+  background: linear-gradient(135deg, #f0c935, #e8b923) !important;
   box-shadow: 
-    0 16px 40px rgba(232, 185, 35, 0.2),
-    inset 0 2px 0 rgba(255, 255, 255, 0.25),
-    inset 0 -2px 0 rgba(232, 185, 35, 0.2),
-    0 0 0 2px rgba(232, 185, 35, 0.4),
-    0 0 60px rgba(232, 185, 35, 0.15) !important;
+    0 8px 24px rgba(232, 185, 35, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1) !important;
   transform: translateY(-2px) scale(1.03);
   letter-spacing: 1px;
+  /* Disable breathing animation on hover */
+  animation: none;
 }
 
 .btn-gold:hover::after {
@@ -125,17 +142,20 @@ html {
 .btn-gold:active {
   transform: translateY(0) scale(0.98) !important;
   box-shadow: 
-    0 4px 16px rgba(232, 185, 35, 0.15),
-    inset 0 2px 4px rgba(232, 185, 35, 0.2) !important;
+    0 2px 8px rgba(232, 185, 35, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  background: linear-gradient(135deg, #d4a21a, #c19216) !important;
+  animation: none;
 }
 
 /* Focus state for accessibility */
 .btn-gold:focus {
   outline: none;
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15),
-    0 0 0 3px rgba(232, 185, 35, 0.3);
+    0 4px 16px rgba(232, 185, 35, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 0 0 3px rgba(232, 185, 35, 0.4);
 }
 
 /* Cool ripple effect on click */

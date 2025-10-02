@@ -14,12 +14,11 @@ export default function Hero() {
       </div>
 
       <h1 className="max-w-xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
-        Top-Rated Roofing Company in Middle Tennessee
+        Nashville's Trusted Roofing Contractor
       </h1>
 
       <p className="mt-4 max-w-2xl text-lg text-slate-200">
-        Professional, reliable roofing solutions for your home or business.
-        Fast inspections, clear quotes, quality craftsmanship.
+        BBB-accredited Nashville roofing contractor - licensed, insured, and bonded. Delivering exceptional craftsmanship across Middle Tennessee for over two years.
       </p>
 
       <div className="mt-6">

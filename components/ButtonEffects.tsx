@@ -139,7 +139,7 @@ export default function ButtonEffects() {
     // Initialize all effects
     setTimeout(() => {
       addRippleEffect();
-      addParticleBurst();
+      // addParticleBurst(); // Disabled for more professional look
       add3DTiltEffect();
       addFormStates();
     }, 100);
