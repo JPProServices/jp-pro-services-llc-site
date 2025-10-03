@@ -43,12 +43,11 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
               </div>
             </div>
             <nav className="p-4 space-y-2">
+              <a href="/residential-roofing" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Residential Roofing</a>
               <a href="#services" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Services</a>
               <a href="#rooftypes" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Roof Types</a>
               <a href="#locations" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Locations</a>
-              <a href="#financing" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Financing</a>
               <a href="#gallery" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Gallery</a>
-              <a href="#blog" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Blog</a>
               <a href="#faq" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>FAQs</a>
               <div className="pt-4 border-t border-slate-700">
                 <a 

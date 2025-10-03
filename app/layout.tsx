@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       </button>
                       <div className="absolute top-full left-0 mt-1 w-56 bg-white border border-slate-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div className="py-2">
-                          <a href="#residential" className="dropdown-item-gold block px-4 py-3 text-sm">Residential Roofing</a>
+                          <a href="/residential-roofing" className="dropdown-item-gold block px-4 py-3 text-sm">Residential Roofing</a>
                           <a href="#commercial" className="dropdown-item-gold block px-4 py-3 text-sm">Commercial Roofing</a>
                           <a href="#emergency" className="dropdown-item-gold block px-4 py-3 text-sm">Emergency Repairs</a>
                           <a href="#replacement" className="dropdown-item-gold block px-4 py-3 text-sm">Roof Replacement</a>
@@ -79,9 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </div>
 
                     <a href="#locations" className="nav-link-gold py-2">Locations</a>
-                    <a href="#financing" className="nav-link-gold py-2">Financing</a>
                     <a href="#gallery" className="nav-link-gold py-2">Gallery</a>
-                    <a href="#blog" className="nav-link-gold py-2">Blog</a>
                     <a href="#faq" className="nav-link-gold py-2">FAQs</a>
                   </div>
                 </nav>
