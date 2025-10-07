@@ -4,15 +4,15 @@ import { useState } from "react";
 const faqs = [
   {
     question: "How long will my roof replacement project take?",
-    answer: "Timeline varies by project size and weather. Most residential homes take 2-4 days to complete. We provide detailed scheduling during your consultation."
+    answer: "Timeline varies by project size and weather. Most residential homes take 1-2 days to complete. We provide detailed scheduling during your consultation."
   },
   {
     question: "What signs indicate I need a new roof?",
-    answer: "Key indicators include damaged or missing shingles, interior water damage, excessive granule loss, and roofs approaching 20+ years old. Schedule a free inspection for professional assessment."
+    answer: "Key indicators include damaged or missing shingles, interior water damage, excessive granule loss, and roofs approaching 10+ years old. Schedule a free inspection for professional assessment."
   },
   {
     question: "Do you handle insurance claims?",
-    answer: "Absolutely. We work directly with insurance adjusters, document damage thoroughly, and help navigate the claims process from start to finish."
+    answer: "Absolutely. We work directly with all insurance companies, pull storm data, document damage thoroughly, and help navigate the claims process from start to finish."
   },
   {
     question: "What does a new roof typically cost?",
@@ -20,11 +20,11 @@ const faqs = [
   },
   {
     question: "Is it possible to install over existing shingles?",
-    answer: "While sometimes possible, we typically recommend full removal to properly inspect and address underlying issues. This ensures better long-term performance."
+    answer: "We typically recommend full removal to properly inspect and address underlying issues. This ensures better long-term performance."
   },
   {
     question: "What warranties are included?",
-    answer: "We offer comprehensive manufacturer warranties on materials plus our own workmanship guarantee. Coverage details vary by product and are fully explained before installation."
+    answer: "We offer comprehensive manufacturer warranties on materials plus our own workmanship guarantee. Coverage details vary by product and are fully explained before installation. For decking, we solely use all GAF Certified products, shingles include 25+ years warranty."
   },
   {
     question: "Are emergency services available?",

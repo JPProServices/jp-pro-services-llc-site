@@ -22,7 +22,7 @@ export default function ResidentialRoofingPage() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ★ <span className="font-semibold">4.9 / 5</span>
+                ★ <span className="font-semibold">5.0 / 5</span>
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
                 🛡️ 25+ Year Product Warranties
@@ -30,7 +30,7 @@ export default function ResidentialRoofingPage() {
             </div>
 
             <h1 className="max-w-xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
-              Expert Residential Roofing in Nashville
+              Trusted Residential Roofing in Nashville & Middle Tennessee
             </h1>
 
             <p className="mt-4 max-w-2xl text-lg text-slate-200">
@@ -73,7 +73,7 @@ export default function ResidentialRoofingPage() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-1">1-3</div>
+              <div className="text-3xl font-bold text-white mb-1">1-2</div>
               <div className="text-slate-300 font-medium">Days Installation</div>
             </div>
 
@@ -128,7 +128,7 @@ export default function ResidentialRoofingPage() {
               <p className="text-slate-300 mb-4">
                 Water infiltration through damaged shingles, flashing, or seals around vents and chimneys. Critical for spring storms in Antioch and Mt. Juliet.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">✓ Emergency 24-48 hour response</div>
+              <div className="text-yellow-400 text-sm font-medium">✓ Emergency 24 hour response</div>
             </div>
 
             {/* Shingle Replacement */}
@@ -162,8 +162,9 @@ export default function ResidentialRoofingPage() {
             {/* Flashing Repairs */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
               <div className="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                {/* CC Attribution: Icon by Simon Goetz from svgviewer.dev */}
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 512 512">
+                  <path d="M486.4,51.2H25.6C11.46,51.2,0,62.66,0,76.8v358.4c0,14.14,11.46,25.6,25.6,25.6h460.8c14.14,0,25.6-11.46,25.6-25.6V76.8    C512,62.66,500.54,51.2,486.4,51.2z M25.6,76.8h153.6v102.4H25.6V76.8z M25.6,204.8h307.2v102.4H25.6V204.8z M179.2,435.2H25.6    V332.8h153.6V435.2z M486.4,435.2H204.8V332.8h281.6V435.2z M486.4,307.2h-128V204.8h128V307.2z M486.4,179.2H204.8V76.8h281.6    V179.2z"/>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Flashing Repairs</h3>

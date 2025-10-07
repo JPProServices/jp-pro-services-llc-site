@@ -4,7 +4,7 @@ import { useState } from "react";
 const residentialFaqs = [
   {
     question: "How long does a roof installation take?",
-    answer: "A typical residential roof installation in Nashville takes 1–3 days, depending on the roof's size, complexity, and weather conditions. Larger or intricate roofs (e.g., historic homes in Franklin or commercial buildings in downtown Nashville) may take 4–7 days. Our team works efficiently Monday–Friday, 7:00 AM–5:00 PM, to minimize disruption, with weather delays rescheduled promptly."
+    answer: "A typical residential roof installation in Nashville takes 1–2 days, depending on the roof's size, complexity, and weather conditions. Larger or intricate roofs (e.g., historic homes in Franklin or commercial buildings in downtown Nashville) may take longer. Our team works efficiently Monday–Friday, 8:00 AM–5:00 PM, to minimize disruption, with weather delays rescheduled promptly."
   },
   {
     question: "What is the cost of a new roof installation?",
@@ -20,7 +20,7 @@ const residentialFaqs = [
   },
   {
     question: "Do I need a full roof replacement or just repairs?",
-    answer: "If your roof has widespread damage, missing shingles, or is nearing the end of its lifespan (20–30 years for asphalt shingles), a full replacement may be more cost-effective. For minor issues like leaks or isolated storm damage, repairs may suffice. Our free inspection in areas like Brentwood or Lebanon will provide clarity."
+    answer: "If your roof has widespread damage, missing shingles, or is nearing the end of its lifespan (25+ years for asphalt shingles), a full replacement may be more cost-effective. For minor issues like leaks or isolated storm damage, repairs may suffice. Our free inspection in areas like Brentwood or Lebanon will provide clarity."
   },
   {
     question: "How do you handle insurance claims for roof installations?",
@@ -28,7 +28,7 @@ const residentialFaqs = [
   },
   {
     question: "What warranties do you offer on new roof installations?",
-    answer: "We provide manufacturer warranties (20–50 years for materials like asphalt or metal) and our own workmanship warranty (typically 5–10 years) for all installations. This ensures peace of mind for homes and businesses in Nashville, Franklin, and beyond. Ask about extended warranty options during your free quote."
+    answer: "We provide manufacturer warranties (25+ years for materials like asphalt or metal) and our own workmanship warranty (5 years) for all installations. This ensures peace of mind for homes and businesses in Nashville, Franklin, and beyond. Ask about extended warranty options during your free quote."
   },
   {
     question: "Can you install a new roof in winter or during rainy seasons?",
