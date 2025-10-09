@@ -8,7 +8,7 @@ import ScrollHeader from "@/components/ScrollHeader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "JP Pro Services - Roofing & Waterproofing",
+  title: "JP Pro Services - Roofing & Renovations",
   description: "Top-rated roofing company in Middle Tennessee.",
 };
 
