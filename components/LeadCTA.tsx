@@ -59,52 +59,52 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
         <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
         {kind === "estimate" ? (
-          <>
-            <div>
-              <label htmlFor="service" className="block text-sm text-slate-300">Choose Service*</label>
-              <select id="service" name="service" required
-                className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white outline-none focus:border-yellow-500 focus:ring-0">
-                <option value="" className="bg-black text-white">Select…</option>
-                <option className="bg-black text-white">Roof Replacement</option>
-                <option className="bg-black text-white">Roof Repair</option>
-                <option className="bg-black text-white">Storm Damage</option>
-                <option className="bg-black text-white">Residential Roofing</option>
-                <option className="bg-black text-white">Commercial Roofing</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="address" className="block text-sm text-slate-300">Full Address*</label>
-              <input id="address" name="address" required placeholder="Street, City, ZIP"
-                className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
-            </div>
-          </>
+          <div>
+            <label htmlFor="service" className="block text-sm text-slate-300">Choose Service*</label>
+            <select id="service" name="service" required
+              className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white outline-none focus:border-yellow-500 focus:ring-0 focus:shadow-lg focus:shadow-yellow-500/25 transition-all duration-200">
+              <option value="" className="bg-black text-white">Select…</option>
+              <option className="bg-black text-white">Roof Replacement</option>
+              <option className="bg-black text-white">Roof Repair</option>
+              <option className="bg-black text-white">Storm Damage</option>
+              <option className="bg-black text-white">Residential Roofing</option>
+              <option className="bg-black text-white">Commercial Roofing</option>
+            </select>
+          </div>
         ) : null}
 
         <div className="grid gap-3 md:grid-cols-2">
           <div>
             <label htmlFor="name" className="block text-sm text-slate-300">Name*</label>
             <input id="name" name="name" required
-              className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
+              className="form-input-glow mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm text-slate-300">Phone Number*</label>
             <input id="phone" name="phone" inputMode="tel" required placeholder={phone}
-              className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
+              className="form-input-glow mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
           </div>
         </div>
 
         <div>
           <label htmlFor="email" className="block text-sm text-slate-300">Email*</label>
           <input id="email" name="email" type="email" required placeholder="you@example.com"
-            className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
+            className="form-input-glow mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
         </div>
+
+        {kind === "estimate" ? (
+          <div>
+            <label htmlFor="address" className="block text-sm text-slate-300">Full Address*</label>
+            <input id="address" name="address" required placeholder="Street, City, ZIP"
+              className="form-input-glow mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
+          </div>
+        ) : null}
 
         {kind === "contact" ? (
           <div>
             <label htmlFor="message" className="block text-sm text-slate-300">Message*</label>
             <textarea id="message" name="message" required rows={4} placeholder="How can we help?"
-              className="mt-1 w-full resize-y rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0" />
+              className="form-input-glow mt-1 w-full resize-y rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
           </div>
         ) : null}
 

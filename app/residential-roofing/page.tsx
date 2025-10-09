@@ -1,8 +1,11 @@
+"use client";
+import { useState } from "react";
 import LeadCTA from "@/components/LeadCTA";
 import ResidentialFAQ from "@/components/ResidentialFAQ";
 import TrustBadges from "@/components/TrustBadges";
 
 export default function ResidentialRoofingPage() {
+  const [activeProcess, setActiveProcess] = useState<'insurance' | 'direct-pay'>('insurance');
   const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
 
   return (
@@ -81,12 +84,12 @@ export default function ResidentialRoofingPage() {
             <div className="group">
               <div className="flex items-center justify-center mb-3">
                 <div className="bg-yellow-500 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-1">50 Year</div>
+              <div className="text-3xl font-bold text-white mb-1">25+ Years</div>
               <div className="text-slate-300 font-medium">Material Warranty</div>
             </div>
 
@@ -119,7 +122,7 @@ export default function ResidentialRoofingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Leak Repairs */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 3c0 0-6 8-6 12 0 3.31 2.69 6 6 6s6-2.69 6-6c0-4-6-12-6-12z"/>
                 </svg>
@@ -147,7 +150,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Storm Damage */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-orange-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -161,7 +164,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Flashing Repairs */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 {/* CC Attribution: Icon by Simon Goetz from svgviewer.dev */}
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 512 512">
                   <path d="M486.4,51.2H25.6C11.46,51.2,0,62.66,0,76.8v358.4c0,14.14,11.46,25.6,25.6,25.6h460.8c14.14,0,25.6-11.46,25.6-25.6V76.8    C512,62.66,500.54,51.2,486.4,51.2z M25.6,76.8h153.6v102.4H25.6V76.8z M25.6,204.8h307.2v102.4H25.6V204.8z M179.2,435.2H25.6    V332.8h153.6V435.2z M486.4,435.2H204.8V332.8h281.6V435.2z M486.4,307.2h-128V204.8h128V307.2z M486.4,179.2H204.8V76.8h281.6    V179.2z"/>
@@ -176,7 +179,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Gutter Services */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-teal-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -190,7 +193,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Ventilation */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 512 512">
                   <g>
                     <g>
@@ -242,14 +245,14 @@ export default function ResidentialRoofingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Asphalt Shingles */}
             <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-gray-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Asphalt Shingles</h3>
               <p className="text-slate-300 text-sm mb-3">Cost-effective, durable, 20-30 year lifespan</p>
-              <div className="text-yellow-400 font-medium">$5,000 - $15,000</div>
+              <div className="text-yellow-400 font-medium">GAF Certified</div>
             </div>
 
             {/* Metal Roofing */}
@@ -275,7 +278,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Slate & Tile */}
             <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
@@ -287,7 +290,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Gutters */}
             <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-teal-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -304,53 +307,127 @@ export default function ResidentialRoofingPage() {
       <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our 4-Step Residential Roofing Process</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Our Residential Roofing Process</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              From initial inspection to final cleanup, here's exactly what to expect when you choose JP Pro Services for your home.
+              We specialize in both insurance claims and direct-pay projects. Choose your path below to see our tailored process.
             </p>
+            
+            {/* Process Type Tabs */}
+            <div className="flex justify-center mt-8 mb-8">
+              <div className="bg-zinc-800 rounded-xl p-2 border border-zinc-700">
+                <button 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    activeProcess === 'insurance' 
+                      ? 'bg-yellow-500 text-black' 
+                      : 'text-white hover:bg-zinc-700'
+                  }`}
+                  onClick={() => setActiveProcess('insurance')}
+                >
+                  🛡️ Insurance Claims (Our Specialty)
+                </button>
+                <button 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    activeProcess === 'direct-pay' 
+                      ? 'bg-yellow-500 text-black' 
+                      : 'text-white hover:bg-zinc-700'
+                  }`}
+                  onClick={() => setActiveProcess('direct-pay')}
+                >
+                  💳 Direct Pay
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Insurance Claims Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'insurance' ? '' : 'hidden'}`}>
             {/* Step 1 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4">
+              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-                <h3 className="text-lg font-bold text-white mb-3">FREE Inspection</h3>
-                <p className="text-slate-300 text-sm">
-                  Comprehensive roof assessment with detailed photos and damage documentation. Same-day report provided.
+                <h3 className="text-lg font-bold text-white mb-3">FREE Assessment</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Professional damage inspection with detailed documentation for your insurance claim. We handle all paperwork and communication with your adjuster.
                 </p>
               </div>
             </div>
 
             {/* Step 2 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4">
+              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-                <h3 className="text-lg font-bold text-white mb-3">Transparent Quote</h3>
-                <p className="text-slate-300 text-sm">
-                  Detailed written estimate with material specifications, timeline, and warranty information. No hidden fees.
+                <h3 className="text-lg font-bold text-white mb-3">Insurance Advocacy</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  We work directly with your insurance company to ensure fair coverage. No out-of-pocket costs except your deductible.
                 </p>
               </div>
             </div>
 
             {/* Step 3 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4">
+              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
-                <h3 className="text-lg font-bold text-white mb-3">Expert Installation</h3>
-                <p className="text-slate-300 text-sm">
-                  Professional installation by licensed, insured craftsmen. Daily progress updates and quality checkpoints.
+                <h3 className="text-lg font-bold text-white mb-3">Professional Installation</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Expert installation by licensed, insured craftsmen. Daily progress updates and quality checkpoints throughout the project.
                 </p>
               </div>
             </div>
 
             {/* Step 4 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4">
+              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Final Inspection</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Thorough cleanup with magnetic nail sweep, debris removal, and comprehensive final walkthrough with warranty documentation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Direct Pay Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'direct-pay' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">FREE Consultation</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Comprehensive roof assessment with detailed photos and condition report. Same-day evaluation and recommendations provided.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">Transparent Quote</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Detailed written estimate with material specifications, timeline, and warranty information. No hidden fees or surprises.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Expert Installation</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Professional installation by licensed, insured craftsmen. Daily progress updates and quality checkpoints throughout.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
                 <h3 className="text-lg font-bold text-white mb-3">Complete Cleanup</h3>
-                <p className="text-slate-300 text-sm">
-                  Thorough cleanup with magnetic nail sweep, debris removal, and final walkthrough inspection with you.
+                <p className="text-slate-300 text-sm flex-grow">
+                  Thorough cleanup with magnetic nail sweep, debris removal, and final walkthrough inspection with warranty documentation.
                 </p>
               </div>
             </div>

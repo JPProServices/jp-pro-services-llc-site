@@ -364,9 +364,24 @@ input, select, textarea, button {
   outline: none !important;
 }
 
+/* Allow custom focus styles to work, only remove default browser outline */
 input:focus, select:focus, textarea:focus {
   outline: none !important;
-  box-shadow: none !important;
+}
+
+/* Custom form input glow effect - ALL FORM ELEMENTS IDENTICAL */
+input.form-input-glow:focus,
+input[type="text"].form-input-glow:focus,
+input[type="email"].form-input-glow:focus,
+input[type="tel"].form-input-glow:focus,
+select.form-input-glow:focus,
+textarea.form-input-glow:focus {
+  box-shadow: 0 10px 15px -3px rgba(202, 138, 4, 0.2), 0 4px 6px -2px rgba(202, 138, 4, 0.08) !important;
+  background: #000000 !important;
+  border-color: #ca8a04 !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
 }
 
 /* Override browser default blue highlights */
