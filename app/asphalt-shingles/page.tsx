@@ -314,7 +314,6 @@ export default function AsphaltShinglesPage() {
                 </ul>
               </div>
             </div>
-
             {/* 3-Tab Shingles */}
             <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden">
               <div className="p-6">

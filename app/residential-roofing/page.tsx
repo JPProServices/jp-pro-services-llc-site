@@ -323,7 +323,7 @@ export default function ResidentialRoofingPage() {
                   }`}
                   onClick={() => setActiveProcess('insurance')}
                 >
-                  🛡️ Insurance Claims (Our Specialty)
+                  🛡️ Insurance Claims
                 </button>
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -345,7 +345,7 @@ export default function ResidentialRoofingPage() {
             <div className="text-center">
               <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-                <h3 className="text-lg font-bold text-white mb-3">FREE Assessment</h3>
+                <h3 className="text-lg font-bold text-white mb-3">FREE Inspection</h3>
                 <p className="text-slate-300 text-sm flex-grow">
                   Professional damage inspection with detailed documentation for your insurance claim. We handle all paperwork and communication with your adjuster.
                 </p>
@@ -358,7 +358,7 @@ export default function ResidentialRoofingPage() {
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
                 <h3 className="text-lg font-bold text-white mb-3">Insurance Advocacy</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  We work directly with your insurance company to ensure fair coverage. No out-of-pocket costs except your deductible.
+                  We work directly with your insurance company to ensure fair coverage. Most customers only pay their deductible, though some upgrades may require additional investment.
                 </p>
               </div>
             </div>
@@ -392,7 +392,7 @@ export default function ResidentialRoofingPage() {
             <div className="text-center">
               <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-                <h3 className="text-lg font-bold text-white mb-3">FREE Consultation</h3>
+                <h3 className="text-lg font-bold text-white mb-3">FREE Estimate</h3>
                 <p className="text-slate-300 text-sm flex-grow">
                   Comprehensive roof assessment with detailed photos and condition report. Same-day evaluation and recommendations provided.
                 </p>

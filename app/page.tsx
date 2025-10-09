@@ -96,11 +96,6 @@ export default function HomePage() {
               </div>
               
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-200">
-                <div className="w-8 h-8 bg-green-600 rounded flex items-center justify-center text-white text-sm font-bold">A+</div>
-                <span className="text-slate-700 font-medium">Angie's List</span>
-              </div>
-              
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-200">
                 <div className="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center text-white text-sm font-bold">★</div>
                 <span className="text-slate-700 font-medium">25+ Year Product Warranties</span>
               </div>
