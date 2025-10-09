@@ -317,7 +317,7 @@ export default function AsphaltShinglesPage() {
             {/* 3-Tab Shingles */}
             <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden">
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">3-Tab Value</h3>
+                <h3 className="text-xl font-bold text-white mb-3">N/A</h3>
                 <p className="text-slate-300 text-sm mb-4">
                   Cost-effective solution with reliable protection and clean, traditional appearance.
                 </p>
