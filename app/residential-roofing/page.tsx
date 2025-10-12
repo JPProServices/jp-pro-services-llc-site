@@ -244,19 +244,19 @@ export default function ResidentialRoofingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Asphalt Shingles */}
-            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300">
+            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300 h-full flex flex-col">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Asphalt Shingles</h3>
-              <p className="text-slate-300 text-sm mb-3">Cost-effective, durable, 20-30 year lifespan</p>
-              <div className="text-yellow-400 font-medium">GAF Certified</div>
+              <p className="text-slate-300 text-sm mb-3 flex-grow">Cost-effective, durable, 20-30 year lifespan</p>
+              <div className="text-yellow-400 font-medium mt-auto">GAF Certified</div>
             </div>
 
             {/* Metal Roofing */}
-            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300">
+            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300 h-full flex flex-col">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="currentColor" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 59 56">
                   <path d="M58.452,19.188l-6.14-10.339c-0.003-0.005-0.009-0.008-0.012-0.013c-0.068-0.11-0.158-0.203-0.264-0.28
@@ -272,32 +272,32 @@ export default function ResidentialRoofingPage() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Metal Roofing</h3>
-              <p className="text-slate-300 text-sm mb-3">Long-lasting, energy-efficient, storm-resistant</p>
-              <div className="text-yellow-400 font-medium">Premium Option</div>
+              <p className="text-slate-300 text-sm mb-3 flex-grow">Long-lasting, energy-efficient, storm-resistant</p>
+              <div className="text-yellow-400 font-medium mt-auto">Premium Option</div>
             </div>
 
             {/* Slate & Tile */}
-            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300">
+            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300 h-full flex flex-col">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Slate & Tile</h3>
-              <p className="text-slate-300 text-sm mb-3">Historic homes in Belle Meade & Franklin</p>
-              <div className="text-yellow-400 font-medium">Historic Specialty</div>
+              <p className="text-slate-300 text-sm mb-3 flex-grow">Historic homes in Belle Meade & Franklin</p>
+              <div className="text-yellow-400 font-medium mt-auto">Historic Specialty</div>
             </div>
 
             {/* Gutters */}
-            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300">
+            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300 h-full flex flex-col">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Seamless Gutters</h3>
-              <p className="text-slate-300 text-sm mb-3">Custom-fit aluminum, no leaks</p>
-              <div className="text-yellow-400 font-medium">Installation & Repair</div>
+              <p className="text-slate-300 text-sm mb-3 flex-grow">Custom-fit aluminum, no leaks</p>
+              <div className="text-yellow-400 font-medium mt-auto">Installation & Repair</div>
             </div>
           </div>
         </div>

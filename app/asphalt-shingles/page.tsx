@@ -21,7 +21,7 @@ export default function AsphaltShinglesPage() {
   const asphaltFAQs = [
     {
       question: "How long do GAF asphalt shingles last?",
-      answer: "GAF asphalt shingles typically last 25-50 years depending on the product line, with proper installation and maintenance. Our GAF Master Elite installation ensures maximum lifespan."
+      answer: "GAF asphalt shingles typically last 25-50 years depending on the product line, with proper installation and maintenance. Our professional GAF-certified installation ensures maximum lifespan."
     },
     {
       question: "Are asphalt shingles good for Tennessee weather?",
@@ -29,11 +29,11 @@ export default function AsphaltShinglesPage() {
     },
     {
       question: "What's included in the GAF warranty?",
-      answer: "GAF warranties cover material defects, workmanship (with Master Elite contractors), and can include system warranties covering all roof components when installed together."
+      answer: "GAF warranties cover material defects, workmanship (with certified contractors), and can include system warranties covering all roof components when installed together."
     },
     {
       question: "How much do GAF asphalt shingles cost?",
-      answer: "Costs vary by shingle type and roof complexity. 3-tab shingles are most economical, architectural offer best value, and designer provide luxury appeal. We provide detailed estimates for all options."
+      answer: "Costs vary by shingle type and roof complexity. Architectural shingles offer excellent value, while designer shingles provide luxury appeal. We provide detailed estimates for all options."
     },
     {
       question: "Can you install over existing shingles?",
@@ -63,7 +63,7 @@ export default function AsphaltShinglesPage() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                🏆 GAF Master Elite Contractor
+                🏆 GAF Certified Contractor
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
                 🛡️ 25+ Year Warranties
@@ -134,7 +134,7 @@ export default function AsphaltShinglesPage() {
               </div>
               <h3 className="text-lg font-bold text-white mb-3">Endless Style Options</h3>
               <p className="text-slate-300 text-sm">
-                From traditional 3-tab to luxury architectural shingles. Colors and textures to match any home design.
+                From architectural to luxury designer shingles. Colors and textures to match any home design.
               </p>
             </div>
 
@@ -186,9 +186,9 @@ export default function AsphaltShinglesPage() {
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">GAF Master Elite Certified</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">GAF Certified Excellence</h2>
               <p className="text-lg text-slate-300 mb-6">
-                We're proud to be a GAF Master Elite Contractor - an honor earned by less than 2% of roofing contractors nationwide. This certification means you get the best materials, installation, and warranty protection.
+                We're proud to be a GAF Certified Contractor, committed to providing you with the best materials, professional installation, and comprehensive warranty protection.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -220,8 +220,8 @@ export default function AsphaltShinglesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Enhanced Warranty Coverage</h4>
-                    <p className="text-slate-300 text-sm">Only Master Elite contractors can offer GAF's most comprehensive warranty packages.</p>
+                    <h4 className="font-semibold text-white">Comprehensive Warranty Coverage</h4>
+                    <p className="text-slate-300 text-sm">As GAF certified contractors, we offer comprehensive warranty packages for your peace of mind.</p>
                   </div>
                 </div>
               </div>
@@ -266,7 +266,7 @@ export default function AsphaltShinglesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Architectural Shingles */}
             <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden">
               <div className="p-6">
@@ -310,29 +310,6 @@ export default function AsphaltShinglesPage() {
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
                     Advanced Protection
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* 3-Tab Shingles */}
-            <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">TESTING</h3>
-                <p className="text-slate-300 text-sm mb-4">
-                  Cost-effective solution with reliable protection and clean, traditional appearance.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-300">
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    25 Year Warranty
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Budget-Friendly
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Classic Clean Lines
                   </li>
                 </ul>
               </div>
@@ -398,7 +375,7 @@ export default function AsphaltShinglesPage() {
             Ready for Premium GAF Asphalt Shingles?
           </h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Get your free estimate from Nashville's GAF Master Elite Contractor. 25+ year warranties and expert installation guaranteed.
+            Get your free estimate from Nashville's GAF Certified Contractor. 25+ year warranties and expert installation guaranteed.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -38,8 +38,8 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-1">5</div>
-              <div className="text-slate-300 font-medium">Year Guarantee</div>
+              <div className="text-3xl font-bold text-white mb-1">5 Year</div>
+              <div className="text-slate-300 font-medium">Workmanship Guarantee</div>
             </div>
 
             {/* Emergency Response */}
