@@ -114,7 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* Mobile Footer - Centered logo and copyright only */}
             <div className="flex flex-col items-center gap-4 md:hidden">
               <img 
-                src="/jp_golden.png" 
+                src="/jp_golden_logo.png" 
                 alt="JP Pro Services Logo" 
                 className="h-10 w-auto"
               />
