@@ -309,7 +309,7 @@ export default function ResidentialRoofingPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Our Residential Roofing Process</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              We specialize in both insurance claims and direct-pay projects. Choose your path below to see our tailored process.
+              We specialize in both insurance claims and retail projects. Choose your path below to see our tailored process.
             </p>
             
             {/* Process Type Tabs */}
@@ -324,7 +324,7 @@ export default function ResidentialRoofingPage() {
                   }`}
                   onClick={() => setActiveProcess('insurance')}
                 >
-                  🛡️ Insurance Claims
+                  🛡️ Insurance
                 </button>
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -334,7 +334,7 @@ export default function ResidentialRoofingPage() {
                   }`}
                   onClick={() => setActiveProcess('direct-pay')}
                 >
-                  💳 Direct Pay
+                  💳 Retail
                 </button>
               </div>
             </div>
@@ -352,7 +352,7 @@ export default function ResidentialRoofingPage() {
               
               <div className="bg-zinc-800 rounded-xl border border-zinc-700 mx-4 flex-1 max-w-xs">
                 <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
-                  {activeProcess === 'insurance' ? '🛡️ Insurance Claims' : '💳 Direct Pay'}
+                  {activeProcess === 'insurance' ? '🛡️ Insurance' : '💳 Retail'}
                 </div>
               </div>
               
@@ -367,7 +367,7 @@ export default function ResidentialRoofingPage() {
             </div>
           </div>
 
-          {/* Insurance Claims Process */}
+          {/* Insurance Process */}
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'insurance' ? '' : 'hidden'}`}>
             {/* Step 1 */}
             <div className="text-center">
@@ -414,7 +414,7 @@ export default function ResidentialRoofingPage() {
             </div>
           </div>
 
-          {/* Direct Pay Process */}
+          {/* Retail Process */}
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'direct-pay' ? '' : 'hidden'}`}>
             {/* Step 1 */}
             <div className="text-center">

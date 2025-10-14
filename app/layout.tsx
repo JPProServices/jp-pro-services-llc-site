@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const license = process.env.NEXT_PUBLIC_LICENSE_NUMBER || "TN-XXXXXX";
   const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
   const phoneHref =
     process.env.NEXT_PUBLIC_COMPANY_PHONE || "+1-615-555-0192";
@@ -112,18 +111,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer className="bg-zinc-900 border-t border-zinc-700 py-6 text-slate-400">
           <div className="mx-auto w-[min(1200px,94%)]">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-6">
-                <div className="flex items-center gap-2">
-                  <img 
-                    src="/jp_golden.png" 
-                    alt="JP Pro Services Logo" 
-                    className="h-10 w-auto"
-                  />
-                </div>
-                <div className="text-sm">
-                  License: <strong className="text-white">#{license}</strong>
-                </div>
+            {/* Mobile Footer - Centered logo and copyright only */}
+            <div className="flex flex-col items-center gap-4 md:hidden">
+              <img 
+                src="/jp_golden.png" 
+                alt="JP Pro Services Logo" 
+                className="h-10 w-auto"
+              />
+              <div className="text-xs text-slate-500">
+                © <span suppressHydrationWarning>{new Date().getFullYear()}</span> JP Pro Services. All rights reserved.
+              </div>
+            </div>
+            
+            {/* Desktop Footer */}
+            <div className="hidden md:flex items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <img 
+                  src="/jp_golden.png" 
+                  alt="JP Pro Services Logo" 
+                  className="h-10 w-auto"
+                />
               </div>
               
               <div className="flex items-center gap-6 text-sm">
