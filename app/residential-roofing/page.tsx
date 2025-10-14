@@ -51,7 +51,7 @@ export default function ResidentialRoofingPage() {
       </section>
 
       {/* Trust & Stats Bar */}
-      <section className="bg-gradient-to-r from-zinc-900 to-black py-12 border-y border-zinc-700">
+      <section className="bg-black md:bg-gradient-to-r md:from-zinc-900 md:to-black py-12 border-y border-zinc-700">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {/* Free Inspection */}
@@ -313,7 +313,8 @@ export default function ResidentialRoofingPage() {
             </p>
             
             {/* Process Type Tabs */}
-            <div className="flex justify-center mt-8 mb-8">
+            {/* Desktop Version */}
+            <div className="hidden md:flex justify-center mt-8 mb-8">
               <div className="bg-zinc-800 rounded-xl p-2 border border-zinc-700">
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -336,6 +337,33 @@ export default function ResidentialRoofingPage() {
                   💳 Direct Pay
                 </button>
               </div>
+            </div>
+
+            {/* Mobile Version with Arrow Navigation */}
+            <div className="md:hidden flex items-center justify-center mt-8 mb-8 px-4">
+              <button 
+                onClick={() => setActiveProcess(activeProcess === 'insurance' ? 'direct-pay' : 'insurance')}
+                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <div className="bg-zinc-800 rounded-xl border border-zinc-700 mx-4 flex-1 max-w-xs">
+                <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
+                  {activeProcess === 'insurance' ? '🛡️ Insurance Claims' : '💳 Direct Pay'}
+                </div>
+              </div>
+              
+              <button 
+                onClick={() => setActiveProcess(activeProcess === 'insurance' ? 'direct-pay' : 'insurance')}
+                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
 

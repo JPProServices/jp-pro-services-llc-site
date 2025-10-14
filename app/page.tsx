@@ -26,7 +26,7 @@ export default function HomePage() {
       </section>
 
       {/* Trust & Stats Bar */}
-      <section className="bg-gradient-to-r from-zinc-900 to-black py-12 border-y border-zinc-700">
+      <section className="bg-black md:bg-gradient-to-r md:from-zinc-900 md:to-black py-12 border-y border-zinc-700">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {/* Satisfaction Guarantee */}

@@ -84,7 +84,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       </div>
                     </div>
 
-                    <a href="/#locations" className="nav-link-gold py-2">Locations</a>
                     <a href="/gallery" className="nav-link-gold py-2">Gallery</a>
                     <a href="/#faq" className="nav-link-gold py-2">FAQs</a>
                   </div>
