@@ -3,7 +3,7 @@ import { useState } from "react";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
 
-export default function AsphaltShinglesPage() {
+export default function FlatRoofingPage() {
   const [openFAQs, setOpenFAQs] = useState<Set<number>>(new Set());
 
   const toggleFAQ = (index: number) => {
@@ -18,30 +18,30 @@ export default function AsphaltShinglesPage() {
     });
   };
 
-  const asphaltFAQs = [
+  const flatRoofingFAQs = [
     {
-      question: "How long do GAF asphalt shingles last?",
-      answer: "GAF asphalt shingles typically last 25-50 years depending on the product line, with proper installation and maintenance. Our professional GAF-certified installation ensures maximum lifespan."
+      question: "What are the benefits of flat roofing systems?",
+      answer: "Flat roofs offer cost-effective installation, easy maintenance access, maximum interior space utilization, and excellent performance for commercial and industrial buildings."
     },
     {
-      question: "Are asphalt shingles good for Tennessee weather?",
-      answer: "Absolutely. GAF shingles are engineered for extreme weather conditions including high winds, hail, and temperature fluctuations common in Middle Tennessee."
+      question: "How long do flat roofing systems last?",
+      answer: "Quality flat roofing systems typically last 15-30 years depending on the membrane type and maintenance. TPO and EPDM systems offer excellent longevity with proper installation."
     },
     {
-      question: "What's included in the GAF warranty?",
-      answer: "GAF warranties cover material defects, workmanship (with certified contractors), and can include system warranties covering all roof components when installed together."
+      question: "Which flat roofing membrane is best for Middle Tennessee?",
+      answer: "TPO and EPDM perform excellently in Tennessee's climate. We evaluate your specific needs, building use, and budget to recommend the optimal membrane system."
     },
     {
-      question: "How much do GAF asphalt shingles cost?",
-      answer: "Costs vary by shingle type and roof complexity. Architectural shingles offer excellent value, while designer shingles provide luxury appeal. We provide detailed estimates for all options."
+      question: "Can flat roofs handle snow and ice loads?",
+      answer: "Yes, properly designed flat roofs easily handle Tennessee's snow loads. Our installations include proper drainage and structural considerations for all weather conditions."
     },
     {
-      question: "Can you install over existing shingles?",
-      answer: "In some cases, yes. However, we typically recommend full removal for best results and warranty compliance. We'll assess your specific situation during our free inspection."
+      question: "What maintenance do flat roofs require?",
+      answer: "Regular inspections, drain cleaning, and minor repairs. Flat roofs are actually easier to maintain than sloped roofs due to safe, easy access for routine maintenance."
     },
     {
-      question: "Do you handle insurance claims?",
-      answer: "Yes! We specialize in insurance claims and work directly with your insurance company to ensure you get the coverage you deserve for storm damage repairs."
+      question: "Are flat roofs energy efficient?",
+      answer: "Very energy efficient, especially white TPO membranes that reflect heat. Flat roofs also accommodate insulation upgrades and rooftop HVAC equipment efficiently."
     }
   ];
   const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
@@ -63,19 +63,19 @@ export default function AsphaltShinglesPage() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                🏆 GAF Certified Contractor
+                🏢 Commercial Grade
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                🛡️ 25+ Year Warranties
+                💰 Cost Effective
               </span>
             </div>
 
             <h1 className="max-w-xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
-              Premium GAF Asphalt Shingles in Nashville
+              Commercial Flat Roofing in Nashville
             </h1>
 
             <p className="mt-4 max-w-2xl text-lg text-slate-200">
-              Tennessee's most trusted roofing choice. GAF certified shingles with unmatched durability, style, and value backed by industry-leading warranties.
+              Reliable, durable flat roofing systems for commercial and industrial properties. Professional installation and maintenance for Middle Tennessee businesses.
             </p>
 
             <div className="mt-6">
@@ -88,13 +88,13 @@ export default function AsphaltShinglesPage() {
         </div>
       </section>
 
-      {/* Why Choose Asphalt Shingles */}
+      {/* Why Choose Flat Roofing */}
       <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Asphalt Shingles?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Flat Roofing?</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              Asphalt shingles remain America's #1 roofing choice for good reason. Perfect for Nashville's climate with unbeatable value.
+              Flat roofing systems offer superior performance, cost-effectiveness, and versatility for commercial, industrial, and modern residential applications.
             </p>
           </div>
 
@@ -106,35 +106,9 @@ export default function AsphaltShinglesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Most Cost-Effective</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Cost Effective</h3>
               <p className="text-slate-300 text-sm">
-                Premium quality at the best value. Lower upfront costs with excellent long-term ROI for your home investment.
-              </p>
-            </div>
-
-            {/* Weather Resistant */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
-              <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.002 4.002 0 003 15z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-3">Tennessee Weather Tough</h3>
-              <p className="text-slate-300 text-sm">
-                Built to withstand Nashville's extreme weather - from scorching summers to ice storms and severe thunderstorms.
-              </p>
-            </div>
-
-            {/* Style Options */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
-              <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2zM16 8v2M8 8v2m0 4v2m8-2v2" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-3">Endless Style Options</h3>
-              <p className="text-slate-300 text-sm">
-                From architectural to luxury designer shingles. Colors and textures to match any home design.
+                Lower installation costs, less material waste, and easier access for maintenance make flat roofs economical choices.
               </p>
             </div>
 
@@ -146,49 +120,75 @@ export default function AsphaltShinglesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Low Maintenance</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Easy Maintenance</h3>
               <p className="text-slate-300 text-sm">
-                Simple upkeep requirements. Regular inspections and basic maintenance keep your roof performing for decades.
+                Safe, easy access for inspections, repairs, and HVAC maintenance. No ladders or dangerous slopes to navigate.
               </p>
             </div>
 
-            {/* Quick Installation */}
+            {/* Space Utilization */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Faster Installation</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Maximum Space</h3>
               <p className="text-slate-300 text-sm">
-                Quick professional installation means less disruption to your daily life and faster protection for your home.
+                Maximizes interior ceiling height and provides usable rooftop space for equipment, gardens, or recreational areas.
               </p>
             </div>
 
-            {/* Proven Performance */}
+            {/* Weather Performance */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Proven Track Record</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Weather Resistant</h3>
               <p className="text-slate-300 text-sm">
-                Decades of reliable performance across millions of homes. The most tested and trusted roofing material in America.
+                Modern membranes handle extreme temperatures, UV exposure, and severe weather conditions with excellent performance.
+              </p>
+            </div>
+
+            {/* Energy Efficiency */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
+              <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Energy Efficient</h3>
+              <p className="text-slate-300 text-sm">
+                White reflective membranes reduce cooling costs and urban heat island effect. Excellent insulation capabilities.
+              </p>
+            </div>
+
+            {/* Versatile Installation */}
+            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
+              <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Versatile Applications</h3>
+              <p className="text-slate-300 text-sm">
+                Perfect for commercial buildings, warehouses, schools, hospitals, and modern residential designs requiring reliable protection.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* GAF Certified Excellence */}
+      {/* Commercial Grade Installation */}
       <section className="bg-zinc-900 py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">GAF Certified Excellence</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Commercial Grade Installation</h2>
               <p className="text-lg text-slate-300 mb-6">
-                We're proud to be a GAF Certified Contractor, committed to providing you with the best materials, professional installation, and comprehensive warranty protection.
+                Our certified technicians specialize in commercial flat roofing systems, ensuring proper installation techniques and long-term performance for your investment.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -198,8 +198,8 @@ export default function AsphaltShinglesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Factory-Trained Installers</h4>
-                    <p className="text-slate-300 text-sm">Our team is certified and continuously trained on the latest GAF installation techniques.</p>
+                    <h4 className="font-semibold text-white">Licensed & Insured</h4>
+                    <p className="text-slate-300 text-sm">Full commercial licensing and comprehensive insurance coverage for all flat roofing projects.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -209,8 +209,8 @@ export default function AsphaltShinglesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Premium Product Access</h4>
-                    <p className="text-slate-300 text-sm">Exclusive access to GAF's complete line of premium roofing products and accessories.</p>
+                    <h4 className="font-semibold text-white">Quality Materials</h4>
+                    <p className="text-slate-300 text-sm">Premium TPO, EPDM, and modified bitumen systems from trusted manufacturers with proven performance.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -220,8 +220,8 @@ export default function AsphaltShinglesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Comprehensive Warranty Coverage</h4>
-                    <p className="text-slate-300 text-sm">As GAF certified contractors, we offer comprehensive warranty packages for your peace of mind.</p>
+                    <h4 className="font-semibold text-white">Proper Drainage</h4>
+                    <p className="text-slate-300 text-sm">Expert design and installation of drainage systems to prevent water accumulation and structural issues.</p>
                   </div>
                 </div>
               </div>
@@ -229,25 +229,23 @@ export default function AsphaltShinglesPage() {
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
               <div className="text-center">
                 <div className="bg-yellow-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-black">GAF</span>
+                  <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">25+ Year Warranty Protection</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Comprehensive Warranties</h3>
                 <div className="space-y-3 text-left">
                   <div className="flex justify-between py-2 border-b border-zinc-600">
-                    <span className="text-slate-300">Material Coverage:</span>
-                    <span className="text-white font-semibold">25-50 Years</span>
+                    <span className="text-slate-300">TPO Membrane:</span>
+                    <span className="text-white font-semibold">15-20 Years</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-zinc-600">
-                    <span className="text-slate-300">Workmanship:</span>
-                    <span className="text-white font-semibold">5 Years</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b border-zinc-600">
-                    <span className="text-slate-300">System Warranty:</span>
-                    <span className="text-white font-semibold">Available</span>
+                    <span className="text-slate-300">EPDM Membrane:</span>
+                    <span className="text-white font-semibold">15-25 Years</span>
                   </div>
                   <div className="flex justify-between py-2">
-                    <span className="text-slate-300">Transferable:</span>
-                    <span className="text-white font-semibold">Yes</span>
+                    <span className="text-slate-300">Workmanship:</span>
+                    <span className="text-white font-semibold">5 Years</span>
                   </div>
                 </div>
               </div>
@@ -256,60 +254,60 @@ export default function AsphaltShinglesPage() {
         </div>
       </section>
 
-      {/* Shingle Types & Styles */}
+      {/* Membrane System Options */}
       <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">GAF Shingle Options</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Flat Roofing System Options</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              From budget-friendly to luxury designer shingles, we offer GAF's complete line to match your style and budget.
+              Choose from proven membrane systems designed for Middle Tennessee's climate and your specific building requirements.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Architectural Shingles */}
+            {/* TPO Systems */}
             <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden">
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Architectural Shingles</h3>
+                <h3 className="text-xl font-bold text-white mb-3">TPO Membrane Systems</h3>
                 <p className="text-slate-300 text-sm mb-4">
-                  Our most popular choice. Dimensional design with enhanced curb appeal and superior weather protection.
+                  Thermoplastic Polyolefin (TPO) systems offer excellent heat reflectivity, energy efficiency, and resistance to UV radiation and chemical exposure.
                 </p>
                 <ul className="space-y-2 text-sm text-slate-300">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    25-30 Year Warranty
+                    Energy Star Qualified
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Dimensional Appearance
+                    Heat Weldable Seams
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Multiple Color Options
+                    Chemical Resistant
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Designer Shingles */}
+            {/* EPDM Systems */}
             <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden">
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Designer Luxury</h3>
+                <h3 className="text-xl font-bold text-white mb-3">EPDM Membrane Systems</h3>
                 <p className="text-slate-300 text-sm mb-4">
-                  Premium luxury shingles that replicate the look of wood shake or slate with superior durability.
+                  Ethylene Propylene Diene Monomer (EPDM) rubber systems provide exceptional durability, flexibility, and resistance to extreme weather conditions.
                 </p>
                 <ul className="space-y-2 text-sm text-slate-300">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Lifetime Limited Warranty
+                    Superior Flexibility
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Ultra-Premium Appearance
+                    Weather Resistant
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Advanced Protection
+                    Proven Performance
                   </li>
                 </ul>
               </div>
@@ -322,15 +320,15 @@ export default function AsphaltShinglesPage() {
       <section className="bg-zinc-900 py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Asphalt Shingle FAQs</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Flat Roofing FAQs</h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Common questions about GAF asphalt shingles from Nashville homeowners.
+              Common questions about commercial flat roofing systems from Nashville business owners.
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
-              {asphaltFAQs.map((faq, index) => (
+              {flatRoofingFAQs.map((faq, index) => (
                 <div 
                   key={index}
                   className="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:bg-zinc-750 transition-all duration-300"

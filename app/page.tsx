@@ -303,7 +303,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700 h-full flex flex-col">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -311,10 +311,10 @@ export default function HomePage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-slate-300 mb-4 italic">
+              <p className="text-slate-300 mb-4 italic flex-grow">
                 "JP Pro Services did an amazing job on our roof replacement. Professional, timely, and the quality of work exceeded our expectations. Highly recommend!"
               </p>
-              <div className="flex items-center">
+              <div className="flex items-center mt-auto">
                 <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   SM
                 </div>
@@ -325,7 +325,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700 h-full flex flex-col">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -333,10 +333,10 @@ export default function HomePage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-slate-300 mb-4 italic">
+              <p className="text-slate-300 mb-4 italic flex-grow">
                 "After storm damage, JP Pro Services handled everything from insurance claims to completion. Outstanding service and quality workmanship."
               </p>
-              <div className="flex items-center">
+              <div className="flex items-center mt-auto">
                 <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   MJ
                 </div>
@@ -347,7 +347,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700 h-full flex flex-col">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -355,10 +355,10 @@ export default function HomePage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-slate-300 mb-4 italic">
+              <p className="text-slate-300 mb-4 italic flex-grow">
                 "The team was professional, clean, and completed our commercial roof ahead of schedule. Excellent communication throughout the project."
               </p>
-              <div className="flex items-center">
+              <div className="flex items-center mt-auto">
                 <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   LD
                 </div>

@@ -55,10 +55,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       }}>
                         <div className="py-2">
                           <a href="/residential-roofing" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Residential Roofing</a>
-                          <a href="#commercial" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Commercial Roofing</a>
-                          <a href="#repair" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Roof Repair</a>
-                          <a href="#replacement" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Roof Replacement</a>
-                          <a href="#storm" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Storm Damage</a>
+                          <a href="/commercial-roofing" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Commercial Roofing</a>
+                          <a href="/roof-repair" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Roof Repair</a>
+                          <a href="/roof-replacement" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Roof Replacement</a>
+                          <a href="/storm-damage" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Storm Damage</a>
                         </div>
                       </div>
                     </div>
@@ -77,9 +77,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       }}>
                         <div className="py-2">
                           <a href="/asphalt-shingles" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Asphalt Shingles</a>
-                          <a href="#metal" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Metal Roofing</a>
-                          <a href="#tile" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Tile & Slate</a>
-                          <a href="#flat" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Flat Roofing</a>
+                          <a href="/metal-roofing" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Metal Roofing</a>
+                          <a href="/tile-slate" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Tile & Slate</a>
+                          <a href="/flat-roofing" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Flat Roofing</a>
                         </div>
                       </div>
                     </div>

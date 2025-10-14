@@ -3,7 +3,7 @@ import { useState } from "react";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
 
-export default function AsphaltShinglesPage() {
+export default function MetalRoofingPage() {
   const [openFAQs, setOpenFAQs] = useState<Set<number>>(new Set());
 
   const toggleFAQ = (index: number) => {
@@ -18,30 +18,30 @@ export default function AsphaltShinglesPage() {
     });
   };
 
-  const asphaltFAQs = [
+  const metalFAQs = [
     {
-      question: "How long do GAF asphalt shingles last?",
-      answer: "GAF asphalt shingles typically last 25-50 years depending on the product line, with proper installation and maintenance. Our professional GAF-certified installation ensures maximum lifespan."
+      question: "How long do metal roofs last?",
+      answer: "Quality metal roofs typically last 50-70 years with minimal maintenance, significantly longer than traditional asphalt shingles which last 15-25 years."
     },
     {
-      question: "Are asphalt shingles good for Tennessee weather?",
-      answer: "Absolutely. GAF shingles are engineered for extreme weather conditions including high winds, hail, and temperature fluctuations common in Middle Tennessee."
+      question: "Are metal roofs noisy during rain or storms?",
+      answer: "Modern metal roofing with proper insulation and installation is no noisier than other roofing materials. Proper decking and insulation eliminate noise concerns."
     },
     {
-      question: "What's included in the GAF warranty?",
-      answer: "GAF warranties cover material defects, workmanship (with certified contractors), and can include system warranties covering all roof components when installed together."
+      question: "What warranty comes with metal roofing?",
+      answer: "Metal roofing typically comes with 40-50 year manufacturer warranties on materials, plus our workmanship warranty. Many systems include paint warranties as well."
     },
     {
-      question: "How much do GAF asphalt shingles cost?",
-      answer: "Costs vary by shingle type and roof complexity. Architectural shingles offer excellent value, while designer shingles provide luxury appeal. We provide detailed estimates for all options."
+      question: "Is metal roofing energy efficient?",
+      answer: "Yes! Metal roofs reflect heat and can reduce cooling costs by up to 25%. Many qualify for energy efficiency tax credits and rebates."
     },
     {
-      question: "Can you install over existing shingles?",
-      answer: "In some cases, yes. However, we typically recommend full removal for best results and warranty compliance. We'll assess your specific situation during our free inspection."
+      question: "Can metal roofing be installed over existing shingles?",
+      answer: "In many cases, yes. Metal roofing can often be installed over one layer of existing shingles, saving on removal costs and reducing waste."
     },
     {
-      question: "Do you handle insurance claims?",
-      answer: "Yes! We specialize in insurance claims and work directly with your insurance company to ensure you get the coverage you deserve for storm damage repairs."
+      question: "Do metal roofs attract lightning?",
+      answer: "No, metal roofs do not attract lightning. If struck, metal roofing actually disperses energy more safely than other materials and is non-combustible."
     }
   ];
   const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
@@ -63,19 +63,19 @@ export default function AsphaltShinglesPage() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                🏆 GAF Certified Contractor
+                🔧 Metal Roofing Specialists
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                🛡️ 25+ Year Warranties
+                ⚡ 50+ Year Lifespan
               </span>
             </div>
 
             <h1 className="max-w-xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
-              Premium GAF Asphalt Shingles in Nashville
+              Premium Metal Roofing in Nashville
             </h1>
 
             <p className="mt-4 max-w-2xl text-lg text-slate-200">
-              Tennessee's most trusted roofing choice. GAF certified shingles with unmatched durability, style, and value backed by industry-leading warranties.
+              Durable, energy-efficient metal roofing systems that last decades. Superior weather protection with modern aesthetics for Middle Tennessee homes.
             </p>
 
             <div className="mt-6">
@@ -88,27 +88,27 @@ export default function AsphaltShinglesPage() {
         </div>
       </section>
 
-      {/* Why Choose Asphalt Shingles */}
+      {/* Why Choose Metal Roofing */}
       <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Asphalt Shingles?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Metal Roofing?</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              Asphalt shingles remain America's #1 roofing choice for good reason. Perfect for Nashville's climate with unbeatable value.
+              Metal roofing offers exceptional longevity, energy efficiency, and weather resistance. Perfect for Tennessee's climate with superior performance.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Cost Effective */}
+            {/* Long Lasting */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Most Cost-Effective</h3>
+              <h3 className="text-lg font-bold text-white mb-3">50+ Year Lifespan</h3>
               <p className="text-slate-300 text-sm">
-                Premium quality at the best value. Lower upfront costs with excellent long-term ROI for your home investment.
+                Metal roofs can last 50-70 years with minimal maintenance, far exceeding traditional roofing materials.
               </p>
             </div>
 
@@ -116,29 +116,29 @@ export default function AsphaltShinglesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.002 4.002 0 003 15z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Tennessee Weather Tough</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Superior Weather Protection</h3>
               <p className="text-slate-300 text-sm">
-                Built to withstand Nashville's extreme weather - from scorching summers to ice storms and severe thunderstorms.
+                Exceptional resistance to wind, hail, fire, and extreme weather conditions common in Middle Tennessee.
               </p>
             </div>
 
-            {/* Style Options */}
+            {/* Energy Efficient */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2zM16 8v2M8 8v2m0 4v2m8-2v2" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Endless Style Options</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Energy Efficient</h3>
               <p className="text-slate-300 text-sm">
-                From architectural to luxury designer shingles. Colors and textures to match any home design.
+                Reflective coatings reduce cooling costs by up to 25%, making your home more energy efficient year-round.
               </p>
             </div>
 
-            {/* Easy Maintenance */}
+            {/* Low Maintenance */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,49 +146,49 @@ export default function AsphaltShinglesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Low Maintenance</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Minimal Maintenance</h3>
               <p className="text-slate-300 text-sm">
-                Simple upkeep requirements. Regular inspections and basic maintenance keep your roof performing for decades.
+                Metal roofs require very little maintenance beyond periodic inspections and basic gutter cleaning.
               </p>
             </div>
 
-            {/* Quick Installation */}
+            {/* Environmentally Friendly */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Faster Installation</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Eco-Friendly</h3>
               <p className="text-slate-300 text-sm">
-                Quick professional installation means less disruption to your daily life and faster protection for your home.
+                Made from recycled materials and fully recyclable at end of life. Supports sustainable building practices.
               </p>
             </div>
 
-            {/* Proven Performance */}
+            {/* Property Value */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
               <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Proven Track Record</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Increases Property Value</h3>
               <p className="text-slate-300 text-sm">
-                Decades of reliable performance across millions of homes. The most tested and trusted roofing material in America.
+                Premium metal roofing significantly increases home value and curb appeal with modern, attractive designs.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* GAF Certified Excellence */}
+      {/* Professional Installation Excellence */}
       <section className="bg-zinc-900 py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">GAF Certified Excellence</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Professional Metal Roof Installation</h2>
               <p className="text-lg text-slate-300 mb-6">
-                We're proud to be a GAF Certified Contractor, committed to providing you with the best materials, professional installation, and comprehensive warranty protection.
+                Metal roofing requires specialized installation techniques. Our certified team ensures proper installation for maximum performance and longevity.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -198,8 +198,8 @@ export default function AsphaltShinglesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Factory-Trained Installers</h4>
-                    <p className="text-slate-300 text-sm">Our team is certified and continuously trained on the latest GAF installation techniques.</p>
+                    <h4 className="font-semibold text-white">Specialized Training</h4>
+                    <p className="text-slate-300 text-sm">Our team is trained in advanced metal roofing installation techniques and safety protocols.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -209,8 +209,8 @@ export default function AsphaltShinglesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Premium Product Access</h4>
-                    <p className="text-slate-300 text-sm">Exclusive access to GAF's complete line of premium roofing products and accessories.</p>
+                    <h4 className="font-semibold text-white">Quality Materials</h4>
+                    <p className="text-slate-300 text-sm">We use premium metal roofing systems from trusted manufacturers with proven performance records.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -220,8 +220,8 @@ export default function AsphaltShinglesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Comprehensive Warranty Coverage</h4>
-                    <p className="text-slate-300 text-sm">As GAF certified contractors, we offer comprehensive warranty packages for your peace of mind.</p>
+                    <h4 className="font-semibold text-white">Comprehensive Warranty</h4>
+                    <p className="text-slate-300 text-sm">Manufacturer warranties plus our workmanship guarantee for complete peace of mind.</p>
                   </div>
                 </div>
               </div>
@@ -229,21 +229,23 @@ export default function AsphaltShinglesPage() {
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">
               <div className="text-center">
                 <div className="bg-yellow-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-black">GAF</span>
+                  <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">25+ Year Warranty Protection</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Premium Warranty Protection</h3>
                 <div className="space-y-3 text-left">
                   <div className="flex justify-between py-2 border-b border-zinc-600">
                     <span className="text-slate-300">Material Coverage:</span>
-                    <span className="text-white font-semibold">25-50 Years</span>
+                    <span className="text-white font-semibold">40-50 Years</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-zinc-600">
+                    <span className="text-slate-300">Paint Warranty:</span>
+                    <span className="text-white font-semibold">30-40 Years</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-zinc-600">
                     <span className="text-slate-300">Workmanship:</span>
                     <span className="text-white font-semibold">5 Years</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b border-zinc-600">
-                    <span className="text-slate-300">System Warranty:</span>
-                    <span className="text-white font-semibold">Available</span>
                   </div>
                   <div className="flex justify-between py-2">
                     <span className="text-slate-300">Transferable:</span>
@@ -256,60 +258,60 @@ export default function AsphaltShinglesPage() {
         </div>
       </section>
 
-      {/* Shingle Types & Styles */}
+      {/* Metal Roofing Types & Styles */}
       <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">GAF Shingle Options</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Metal Roofing Options</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              From budget-friendly to luxury designer shingles, we offer GAF's complete line to match your style and budget.
+              We offer various metal roofing systems to match your style preferences, budget, and performance requirements.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Architectural Shingles */}
+            {/* Standing Seam */}
             <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden">
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Architectural Shingles</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Standing Seam Metal</h3>
                 <p className="text-slate-300 text-sm mb-4">
-                  Our most popular choice. Dimensional design with enhanced curb appeal and superior weather protection.
+                  Premium concealed fastener system with clean lines and maximum weather protection. The gold standard for metal roofing.
                 </p>
                 <ul className="space-y-2 text-sm text-slate-300">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    25-30 Year Warranty
+                    50+ Year Lifespan
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Dimensional Appearance
+                    Superior Weather Sealing
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Multiple Color Options
+                    Modern Clean Lines
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Designer Shingles */}
+            {/* Metal Shingles */}
             <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden">
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Designer Luxury</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Metal Shingles</h3>
                 <p className="text-slate-300 text-sm mb-4">
-                  Premium luxury shingles that replicate the look of wood shake or slate with superior durability.
+                  Traditional shingle appearance with metal durability. Available in styles that mimic slate, wood shake, or tile.
                 </p>
                 <ul className="space-y-2 text-sm text-slate-300">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Lifetime Limited Warranty
+                    Classic Aesthetic Appeal
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Ultra-Premium Appearance
+                    Multiple Design Options
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Advanced Protection
+                    Easier Installation
                   </li>
                 </ul>
               </div>
@@ -322,15 +324,15 @@ export default function AsphaltShinglesPage() {
       <section className="bg-zinc-900 py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Asphalt Shingle FAQs</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Metal Roofing FAQs</h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Common questions about GAF asphalt shingles from Nashville homeowners.
+              Common questions about metal roofing from Nashville homeowners.
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
-              {asphaltFAQs.map((faq, index) => (
+              {metalFAQs.map((faq, index) => (
                 <div 
                   key={index}
                   className="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:bg-zinc-750 transition-all duration-300"

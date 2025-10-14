@@ -44,8 +44,11 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
             </div>
             <nav className="p-4 space-y-2">
               <a href="/residential-roofing" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Residential Roofing</a>
-              <a href="#services" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Services</a>
+              <a href="/commercial-roofing" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Commercial Roofing</a>
               <a href="/asphalt-shingles" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Asphalt Shingles</a>
+              <a href="/metal-roofing" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Metal Roofing</a>
+              <a href="/tile-slate" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Tile & Slate</a>
+              <a href="/flat-roofing" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Flat Roofing</a>
               <a href="/#locations" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Locations</a>
               <a href="/gallery" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>Gallery</a>
               <a href="/#faq" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors" onClick={closeMenu}>FAQs</a>
