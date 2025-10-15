@@ -1,9 +1,25 @@
 /* Tailwind v4 */
 @import "tailwindcss";
 
-/* Global smooth scrolling */
+/* Global smooth scrolling and mobile viewport fixes */
 html {
   scroll-behavior: smooth;
+  /* Prevent horizontal scrolling on mobile */
+  overflow-x: hidden;
+  /* Lock viewport width to prevent bounce scrolling on iOS */
+  width: 100%;
+  position: relative;
+}
+
+/* Prevent body from showing white space on mobile scroll */
+body {
+  overflow-x: hidden;
+  /* Prevent iOS bounce/rubber band scrolling horizontally */
+  -webkit-overflow-scrolling: touch;
+  /* Ensure body takes full width */
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Focus outline styling */
