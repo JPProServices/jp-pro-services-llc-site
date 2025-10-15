@@ -6,9 +6,18 @@ export default function TrustBadges({ size = "sm" }: Props) {
   return (
     <div className="flex flex-wrap items-center gap-3">
       {/* Replace placeholders with official client-provided assets and link to their profiles */}
-      <span className={`${base} ${size === "lg" ? lg : ""}`} title="BBB Accredited">BBB ✓</span>
-      <span className={`${base} ${size === "lg" ? lg : ""}`} title="GAF Certified">GAF</span>
-      <span className={`${base} ${size === "lg" ? lg : ""}`} title="Licensed & Insured">Licensed • Insured</span>
+      <span className={`${base} ${size === "lg" ? lg : ""}`} title="BBB Accredited">
+        <div className="w-5 h-5 bg-blue-600 rounded flex items-center justify-center text-white text-xs font-bold">B</div>
+        BBB Accredited
+      </span>
+      <span className={`${base} ${size === "lg" ? lg : ""}`} title="GAF Certified">
+        <div className="w-5 h-5 bg-red-600 rounded flex items-center justify-center text-white text-xs font-bold">G</div>
+        GAF Certified
+      </span>
+      <span className={`${base} ${size === "lg" ? lg : ""}`} title="Licensed & Insured">
+        <div className="w-5 h-5 bg-yellow-500 rounded flex items-center justify-center text-white text-xs font-bold">★</div>
+        Licensed • Insured
+      </span>
     </div>
   );
 }

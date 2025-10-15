@@ -82,25 +82,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Trust Badges Row */}
-          <div className="mt-8 pt-8 border-t border-slate-300">
-            <div className="flex flex-wrap items-center justify-center gap-6">
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-200">
-                <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white text-sm font-bold">B</div>
-                <span className="text-slate-700 font-medium">BBB Accredited</span>
-              </div>
-              
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-200">
-                <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center text-white text-sm font-bold">G</div>
-                <span className="text-slate-700 font-medium">GAF Certified</span>
-              </div>
-              
-              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-200">
-                <div className="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center text-white text-sm font-bold">★</div>
-                <span className="text-slate-700 font-medium">25+ Year Product Warranties</span>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
