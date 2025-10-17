@@ -77,7 +77,7 @@ export default function HomePage() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-1">BBB A</div>
+              <div className="text-3xl font-bold text-white mb-1">BBB A+</div>
               <div className="text-slate-300 font-medium">Accredited Rating</div>
             </div>
           </div>
@@ -97,9 +97,9 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-colors duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
@@ -111,9 +111,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-colors duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -126,9 +126,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-colors duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
@@ -140,9 +140,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-colors duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
@@ -158,7 +158,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-zinc-900 py-16">
+      <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
@@ -168,8 +168,8 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 21l4-7 4 7" />
@@ -186,8 +186,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
@@ -203,8 +203,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -220,8 +220,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
@@ -237,8 +237,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -254,8 +254,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12.0001L2 14.5001L11.6422 19.3212C11.7734 19.3868 11.839 19.4196 11.9078 19.4325C11.9687 19.4439 12.0313 19.4439 12.0922 19.4325C12.161 19.4196 12.2266 19.3868 12.3578 19.3212L22 14.5001L17 12.0001M2 9.50006L11.6422 4.67895C11.7734 4.61336 11.839 4.58056 11.9078 4.56766C11.9687 4.55622 12.0313 4.55622 12.0922 4.56766C12.161 4.58056 12.2266 4.61336 12.3578 4.67895L22 9.50006L12.3578 14.3212C12.2266 14.3868 12.161 14.4196 12.0922 14.4325C12.0313 14.4439 11.9687 14.4439 11.9078 14.4325C11.839 14.4196 11.7734 14.3868 11.6422 14.3212L2 9.50006Z" />
                 </svg>
@@ -285,7 +285,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700 h-full flex flex-col">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/15 h-full flex flex-col">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -297,7 +297,7 @@ export default function HomePage() {
                 "JP Pro Services did an amazing job on our roof replacement. Professional, timely, and the quality of work exceeded our expectations. Highly recommend!"
               </p>
               <div className="flex items-center mt-auto">
-                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
+                <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   SM
                 </div>
                 <div>
@@ -307,7 +307,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700 h-full flex flex-col">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/15 h-full flex flex-col">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -319,7 +319,7 @@ export default function HomePage() {
                 "After storm damage, JP Pro Services handled everything from insurance claims to completion. Outstanding service and quality workmanship."
               </p>
               <div className="flex items-center mt-auto">
-                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
+                <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   MJ
                 </div>
                 <div>
@@ -329,7 +329,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700 h-full flex flex-col">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/15 h-full flex flex-col">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -341,7 +341,7 @@ export default function HomePage() {
                 "The team was professional, clean, and completed our commercial roof ahead of schedule. Excellent communication throughout the project."
               </p>
               <div className="flex items-center mt-auto">
-                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
+                <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-semibold mr-3">
                   LD
                 </div>
                 <div>
@@ -357,7 +357,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="bg-zinc-900 py-16">
+      <section id="faq" className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
@@ -390,7 +390,7 @@ export default function HomePage() {
               {/* Business Hours & Location */}
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Visit Our Office</h3>
-                <div className="bg-zinc-800 rounded-lg p-6 space-y-4 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -419,7 +419,7 @@ export default function HomePage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Our Services</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
@@ -428,7 +428,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -437,7 +437,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -446,7 +446,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -462,7 +462,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-white mb-4">Get In Touch</h3>
                 <div className="space-y-3">
                   <a href={`tel:${phoneDisplay.replace(/\D/g, '')}`} className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
+                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
                       <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
@@ -471,7 +471,7 @@ export default function HomePage() {
                   </a>
                   
                   <a href="mailto:info@jpproservices.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
+                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
                       <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>

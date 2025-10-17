@@ -36,7 +36,17 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50" onClick={closeMenu}>
-          <div className="bg-black w-64 h-full shadow-lg border-r border-zinc-700" style={{ backgroundColor: '#000000' }} onClick={(e) => e.stopPropagation()}>
+          <div 
+            className="bg-black w-64 h-full shadow-lg border-r border-zinc-700" 
+            style={{ 
+              backgroundColor: '#000000',
+              backgroundImage: 'none',
+              opacity: '1',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden'
+            }} 
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="p-4 border-b border-zinc-700">
               <div className="flex items-center justify-between">
                 <span className="text-white font-semibold">Menu</span>

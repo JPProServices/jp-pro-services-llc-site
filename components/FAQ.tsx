@@ -56,7 +56,7 @@ export default function FAQ() {
       {faqs.map((faq, index) => (
         <div key={index} className="border-b border-zinc-700 last:border-b-0">
           <button
-            className="w-full py-6 px-2 flex items-center justify-between text-left hover:bg-zinc-800 transition-colors duration-200 group"
+            className="w-full py-6 px-2 flex items-center justify-between text-left transition-colors duration-200 group"
             onClick={() => toggleFAQ(index)}
           >
             <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-yellow-400 transition-colors duration-200">
@@ -85,7 +85,7 @@ export default function FAQ() {
           <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
             openIndexes.has(index) ? 'max-h-96 pb-6' : 'max-h-0'
           }`}>
-            <div className="px-2 py-2 bg-zinc-800 rounded-lg border-l-4 border-yellow-500">
+            <div className="px-2 py-2 border-l-4 border-yellow-500">
               <p className="text-slate-300 leading-relaxed text-base">
                 {faq.answer}
               </p>

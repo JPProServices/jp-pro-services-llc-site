@@ -90,7 +90,7 @@ export default function RoofReplacementPage() {
       </section>
 
       {/* Why Choose Our Roof Replacement */}
-      <section className="bg-zinc-900 py-16">
+      <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Professional Roof Replacement</h2>
@@ -100,9 +100,9 @@ export default function RoofReplacementPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
@@ -114,9 +114,9 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12.0001L2 14.5001L11.6422 19.3212C11.7734 19.3868 11.839 19.4196 11.9078 19.4325C11.9687 19.4439 12.0313 19.4439 12.0922 19.4325C12.161 19.4196 12.2266 19.3868 12.3578 19.3212L22 14.5001L17 12.0001M2 9.50006L11.6422 4.67895C11.7734 4.61336 11.839 4.58056 11.9078 4.56766C11.9687 4.55622 12.0313 4.55622 12.0922 4.56766C12.161 4.58056 12.2266 4.61336 12.3578 4.67895L22 9.50006L12.3578 14.3212C12.2266 14.3868 12.161 14.4196 12.0922 14.4325C12.0313 14.4439 11.9687 14.4439 11.9078 14.4325C11.839 14.4196 11.7734 14.3868 11.6422 14.3212L2 9.50006Z" />
                   </svg>
@@ -128,9 +128,9 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -142,9 +142,9 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2m5 0h2a2 2 0 002-2V7a2 2 0 00-2-2h-2m-5 4v2m0 0v2m0-2h2m-2 0H9" />
                   </svg>
@@ -170,8 +170,8 @@ export default function RoofReplacementPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   1
                 </div>
@@ -204,8 +204,8 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   3
                 </div>
@@ -221,8 +221,8 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   4
                 </div>
@@ -238,8 +238,8 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   5
                 </div>
@@ -255,8 +255,8 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   6
                 </div>
@@ -276,7 +276,7 @@ export default function RoofReplacementPage() {
       </section>
 
       {/* Roof Replacement FAQ Section */}
-      <section className="bg-zinc-900 py-16">
+      <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Roof Replacement FAQs</h2>
@@ -287,10 +287,10 @@ export default function RoofReplacementPage() {
           
           <div className="max-w-4xl mx-auto space-y-4">
             {replacementFAQs.map((faq, index) => (
-              <div key={index} className="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden">
+              <div key={index} className="bg-white/10 backdrop-blur rounded-lg border border-white/15 overflow-hidden">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-left p-6 hover:bg-zinc-750 transition-colors duration-200 flex items-center justify-between"
+                  className="w-full text-left p-6 hover:bg-white/15 transition-colors duration-200 flex items-center justify-between"
                 >
                   <h3 className="text-lg font-semibold text-white pr-8">{faq.question}</h3>
                   <div className="flex-shrink-0">
@@ -337,7 +337,7 @@ export default function RoofReplacementPage() {
               {/* Business Hours & Location */}
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Visit Our Office</h3>
-                <div className="bg-zinc-800 rounded-lg p-6 space-y-4 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -366,7 +366,7 @@ export default function RoofReplacementPage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Replacement Services</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
@@ -375,7 +375,7 @@ export default function RoofReplacementPage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -384,7 +384,7 @@ export default function RoofReplacementPage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -393,7 +393,7 @@ export default function RoofReplacementPage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2m5 0h2a2 2 0 002-2V7a2 2 0 00-2-2h-2m-5 4v2m0 0v2m0-2h2m-2 0H9" />
@@ -409,7 +409,7 @@ export default function RoofReplacementPage() {
                 <h3 className="text-xl font-semibold text-white mb-4">Get In Touch</h3>
                 <div className="space-y-3">
                   <a href={`tel:${phoneDisplay.replace(/\D/g, '')}`} className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
+                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
                       <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
@@ -418,7 +418,7 @@ export default function RoofReplacementPage() {
                   </a>
                   
                   <a href="mailto:info@jpproservices.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
+                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
                       <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>

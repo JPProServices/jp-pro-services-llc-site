@@ -9,6 +9,9 @@ html {
   /* Lock viewport width to prevent bounce scrolling on iOS */
   width: 100%;
   position: relative;
+  /* Fix white background issues on iOS */
+  background-color: #000000;
+  background: #000000;
 }
 
 /* Prevent body from showing white space on mobile scroll */
@@ -20,6 +23,12 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  /* Fix white background on over-scroll */
+  background-color: #000000;
+  background: #000000;
+  /* Prevent bounce scrolling completely on iOS */
+  overscroll-behavior: none;
+  -webkit-overscroll-behavior: none;
 }
 
 /* Focus outline styling */
@@ -425,4 +434,28 @@ textarea:focus {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* iOS Safari specific fixes for white background issues */
+@supports (-webkit-touch-callout: none) {
+  html {
+    /* Fix iOS Safari white background around Dynamic Island */
+    background-color: #000000 !important;
+    background: #000000 !important;
+  }
+  
+  body {
+    /* Fix iOS Safari white over-scroll bounce */
+    background-color: #000000 !important;
+    background: #000000 !important;
+    /* Completely disable bounce scrolling */
+    overscroll-behavior-y: none;
+    -webkit-overscroll-behavior-y: none;
+  }
+  
+  /* Target the root viewport for iOS */
+  #__next {
+    background-color: #000000;
+    min-height: 100vh;
+  }
 }

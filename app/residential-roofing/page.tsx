@@ -121,8 +121,8 @@ export default function ResidentialRoofingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Leak Repairs */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 hover:bg-white/15 transition-all duration-300">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 3c0 0-6 8-6 12 0 3.31 2.69 6 6 6s6-2.69 6-6c0-4-6-12-6-12z"/>
                 </svg>
@@ -135,8 +135,8 @@ export default function ResidentialRoofingPage() {
             </div>
 
             {/* Shingle Replacement */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 hover:bg-white/15 transition-all duration-300">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                 </svg>
@@ -149,8 +149,8 @@ export default function ResidentialRoofingPage() {
             </div>
 
             {/* Storm Damage */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 hover:bg-white/15 transition-all duration-300">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -163,8 +163,8 @@ export default function ResidentialRoofingPage() {
             </div>
 
             {/* Flashing Repairs */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 hover:bg-white/15 transition-all duration-300">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 {/* CC Attribution: Icon by Simon Goetz from svgviewer.dev */}
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 512 512">
                   <path d="M486.4,51.2H25.6C11.46,51.2,0,62.66,0,76.8v358.4c0,14.14,11.46,25.6,25.6,25.6h460.8c14.14,0,25.6-11.46,25.6-25.6V76.8    C512,62.66,500.54,51.2,486.4,51.2z M25.6,76.8h153.6v102.4H25.6V76.8z M25.6,204.8h307.2v102.4H25.6V204.8z M179.2,435.2H25.6    V332.8h153.6V435.2z M486.4,435.2H204.8V332.8h281.6V435.2z M486.4,307.2h-128V204.8h128V307.2z M486.4,179.2H204.8V76.8h281.6    V179.2z"/>
@@ -178,8 +178,8 @@ export default function ResidentialRoofingPage() {
             </div>
 
             {/* Gutter Services */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 hover:bg-white/15 transition-all duration-300">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -192,8 +192,8 @@ export default function ResidentialRoofingPage() {
             </div>
 
             {/* Ventilation */}
-            <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
-              <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 hover:bg-white/15 transition-all duration-300">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 512 512">
                   <g>
                     <g>
@@ -233,7 +233,7 @@ export default function ResidentialRoofingPage() {
       </section>
 
       {/* Roofing Materials for Nashville Homes */}
-      <section className="bg-zinc-900 py-16">
+      <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Premium Materials for Nashville's Climate</h2>
@@ -244,8 +244,8 @@ export default function ResidentialRoofingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Asphalt Shingles */}
-            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300 h-full flex flex-col">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-lg p-6 border border-white/15 text-center hover:bg-white/15 transition-all duration-300 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                 </svg>
@@ -256,8 +256,8 @@ export default function ResidentialRoofingPage() {
             </div>
 
             {/* Metal Roofing */}
-            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300 h-full flex flex-col">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-lg p-6 border border-white/15 text-center hover:bg-white/15 transition-all duration-300 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="currentColor" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 59 56">
                   <path d="M58.452,19.188l-6.14-10.339c-0.003-0.005-0.009-0.008-0.012-0.013c-0.068-0.11-0.158-0.203-0.264-0.28
 	c-0.017-0.013-0.033-0.025-0.051-0.037c-0.018-0.012-0.033-0.027-0.053-0.038L41.224,2.63c-0.364-0.199-0.814-0.152-1.131,0.119
@@ -277,8 +277,8 @@ export default function ResidentialRoofingPage() {
             </div>
 
             {/* Slate & Tile */}
-            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300 h-full flex flex-col">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-lg p-6 border border-white/15 text-center hover:bg-white/15 transition-all duration-300 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
@@ -289,8 +289,8 @@ export default function ResidentialRoofingPage() {
             </div>
 
             {/* Gutters */}
-            <div className="bg-zinc-800 rounded-lg p-6 border border-zinc-700 text-center hover:bg-zinc-750 transition-all duration-300 h-full flex flex-col">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white/10 backdrop-blur rounded-lg p-6 border border-white/15 text-center hover:bg-white/15 transition-all duration-300 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -315,12 +315,12 @@ export default function ResidentialRoofingPage() {
             {/* Process Type Tabs */}
             {/* Desktop Version */}
             <div className="hidden md:flex justify-center mt-8 mb-8">
-              <div className="bg-zinc-800 rounded-xl p-2 border border-zinc-700">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-2 border border-white/15">
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     activeProcess === 'insurance' 
                       ? 'bg-yellow-500 text-black' 
-                      : 'text-white hover:bg-zinc-700'
+                      : 'text-white hover:bg-white/15'
                   }`}
                   onClick={() => setActiveProcess('insurance')}
                 >
@@ -330,7 +330,7 @@ export default function ResidentialRoofingPage() {
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     activeProcess === 'direct-pay' 
                       ? 'bg-yellow-500 text-black' 
-                      : 'text-white hover:bg-zinc-700'
+                      : 'text-white hover:bg-white/15'
                   }`}
                   onClick={() => setActiveProcess('direct-pay')}
                 >
@@ -350,7 +350,7 @@ export default function ResidentialRoofingPage() {
                 </svg>
               </button>
               
-              <div className="bg-zinc-800 rounded-xl border border-zinc-700 mx-4 flex-1 max-w-xs">
+              <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
                 <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
                   {activeProcess === 'insurance' ? '🛡️ Insurance' : '💳 Retail'}
                 </div>
@@ -371,7 +371,7 @@ export default function ResidentialRoofingPage() {
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'insurance' ? '' : 'hidden'}`}>
             {/* Step 1 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
                 <h3 className="text-lg font-bold text-white mb-3">FREE Inspection</h3>
                 <p className="text-slate-300 text-sm flex-grow">
@@ -382,7 +382,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Step 2 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
                 <h3 className="text-lg font-bold text-white mb-3">Insurance Advocacy</h3>
                 <p className="text-slate-300 text-sm flex-grow">
@@ -393,7 +393,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Step 3 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
                 <h3 className="text-lg font-bold text-white mb-3">Professional Installation</h3>
                 <p className="text-slate-300 text-sm flex-grow">
@@ -404,7 +404,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Step 4 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
                 <h3 className="text-lg font-bold text-white mb-3">Final Inspection</h3>
                 <p className="text-slate-300 text-sm flex-grow">
@@ -418,7 +418,7 @@ export default function ResidentialRoofingPage() {
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'direct-pay' ? '' : 'hidden'}`}>
             {/* Step 1 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
                 <h3 className="text-lg font-bold text-white mb-3">FREE Estimate</h3>
                 <p className="text-slate-300 text-sm flex-grow">
@@ -429,7 +429,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Step 2 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
                 <h3 className="text-lg font-bold text-white mb-3">Transparent Quote</h3>
                 <p className="text-slate-300 text-sm flex-grow">
@@ -440,7 +440,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Step 3 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
                 <h3 className="text-lg font-bold text-white mb-3">Expert Installation</h3>
                 <p className="text-slate-300 text-sm flex-grow">
@@ -451,7 +451,7 @@ export default function ResidentialRoofingPage() {
 
             {/* Step 4 */}
             <div className="text-center">
-              <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 mb-4 h-full flex flex-col">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
                 <h3 className="text-lg font-bold text-white mb-3">Complete Cleanup</h3>
                 <p className="text-slate-300 text-sm flex-grow">
@@ -464,7 +464,7 @@ export default function ResidentialRoofingPage() {
       </section>
 
       {/* Residential FAQ Section */}
-      <section id="faq" className="bg-zinc-900 py-16">
+      <section id="faq" className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">Residential Roofing FAQs</h2>
@@ -497,7 +497,7 @@ export default function ResidentialRoofingPage() {
               {/* Business Hours & Location */}
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Visit Our Office</h3>
-                <div className="bg-zinc-800 rounded-lg p-6 space-y-4 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -526,7 +526,7 @@ export default function ResidentialRoofingPage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Our Services</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
@@ -535,7 +535,7 @@ export default function ResidentialRoofingPage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -544,7 +544,7 @@ export default function ResidentialRoofingPage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -553,7 +553,7 @@ export default function ResidentialRoofingPage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -569,7 +569,7 @@ export default function ResidentialRoofingPage() {
                 <h3 className="text-xl font-semibold text-white mb-4">Get In Touch</h3>
                 <div className="space-y-3">
                   <a href={`tel:${phoneDisplay.replace(/\D/g, '')}`} className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
+                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
                       <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
@@ -578,7 +578,7 @@ export default function ResidentialRoofingPage() {
                   </a>
                   
                   <a href="mailto:info@jpproservices.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
+                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
                       <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>

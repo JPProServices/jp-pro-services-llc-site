@@ -90,7 +90,7 @@ export default function StormDamagePage() {
       </section>
 
       {/* Storm Damage Services */}
-      <section className="bg-zinc-900 py-16">
+      <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Complete Storm Damage Solutions</h2>
@@ -100,9 +100,9 @@ export default function StormDamagePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
@@ -114,9 +114,9 @@ export default function StormDamagePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
@@ -128,9 +128,9 @@ export default function StormDamagePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
@@ -142,9 +142,9 @@ export default function StormDamagePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-xl p-8 shadow-2xl hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 shadow-2xl hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300 flex-shrink-0">
+                <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7c0 2.21-3.582 4-8 4s-8-1.79-8-4z" />
                   </svg>
@@ -170,8 +170,8 @@ export default function StormDamagePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 3v10a1 1 0 001 1h8a1 1 0 001-1V7M9 7h6" />
                 </svg>
@@ -187,8 +187,8 @@ export default function StormDamagePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2c0-.55.45-1 1-1h8c.55 0 1 .45 1 1v2m-9 3v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V7" />
                 </svg>
@@ -204,8 +204,8 @@ export default function StormDamagePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3l14 9-14 9V3z" />
                 </svg>
@@ -221,8 +221,8 @@ export default function StormDamagePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7.5 13.5L10 16L16.5 9.5" />
                 </svg>
@@ -238,8 +238,8 @@ export default function StormDamagePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7c0 2.21-3.582 4-8 4s-8-1.79-8-4z" />
                 </svg>
@@ -255,8 +255,8 @@ export default function StormDamagePage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -276,7 +276,7 @@ export default function StormDamagePage() {
       </section>
 
       {/* Storm Damage FAQ Section */}
-      <section className="bg-zinc-900 py-16">
+      <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Storm Damage FAQs</h2>
@@ -287,10 +287,10 @@ export default function StormDamagePage() {
           
           <div className="max-w-4xl mx-auto space-y-4">
             {stormFAQs.map((faq, index) => (
-              <div key={index} className="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden">
+              <div key={index} className="bg-white/10 backdrop-blur rounded-lg border border-white/15 overflow-hidden">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-left p-6 hover:bg-zinc-750 transition-colors duration-200 flex items-center justify-between"
+                  className="w-full text-left p-6 hover:bg-white/15 transition-colors duration-200 flex items-center justify-between"
                 >
                   <h3 className="text-lg font-semibold text-white pr-8">{faq.question}</h3>
                   <div className="flex-shrink-0">
@@ -337,7 +337,7 @@ export default function StormDamagePage() {
               {/* Business Hours & Location */}
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Visit Our Office</h3>
-                <div className="bg-zinc-800 rounded-lg p-6 space-y-4 border border-zinc-700 hover:bg-zinc-750 transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -366,7 +366,7 @@ export default function StormDamagePage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4">Storm Services</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -375,7 +375,7 @@ export default function StormDamagePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 3v10a1 1 0 001 1h8a1 1 0 001-1V7M9 7h6" />
@@ -384,7 +384,7 @@ export default function StormDamagePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -393,7 +393,7 @@ export default function StormDamagePage() {
                     </div>
                   </div>
                   
-                  <div className="bg-zinc-800 rounded-lg p-4 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
                     <div className="flex items-center gap-2 text-yellow-400 mb-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7c0 2.21-3.582 4-8 4s-8-1.79-8-4z" />
