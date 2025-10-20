@@ -8,7 +8,7 @@ type Props = {
 
 export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) {
   const action = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "";
-  const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
+  const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 705-0779";
   const wrap =
     variant === "inline"
       ? "rounded-2xl border border-zinc-700 bg-zinc-800/90 p-4"

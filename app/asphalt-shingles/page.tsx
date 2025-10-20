@@ -37,14 +37,14 @@ export default function AsphaltShinglesPage() {
     },
     {
       question: "Can you install over existing shingles?",
-      answer: "In some cases, yes. However, we typically recommend full removal for best results and warranty compliance. We'll assess your specific situation during our free inspection."
+      answer: "No, not usually. We typically recommend full removal of existing shingles for best results, proper inspection of the roof deck, and full warranty compliance. This ensures optimal performance and longevity of your new GAF shingles."
     },
     {
       question: "Do you handle insurance claims?",
       answer: "Yes! We specialize in insurance claims and work directly with your insurance company to ensure you get the coverage you deserve for storm damage repairs."
     }
   ];
-  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
+  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 705-0779";
 
   return (
     <main>
@@ -321,7 +321,7 @@ export default function AsphaltShinglesPage() {
       {/* FAQ Section */}
       <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">Asphalt Shingle FAQs</h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">
               Common questions about GAF asphalt shingles from Nashville homeowners.
@@ -329,40 +329,66 @@ export default function AsphaltShinglesPage() {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
-              {asphaltFAQs.map((faq, index) => (
-                <div 
-                  key={index}
-                  className="bg-white/10 backdrop-blur rounded-lg border border-white/15 overflow-hidden hover:bg-white/15 transition-all duration-300"
+            {asphaltFAQs.map((faq, index) => (
+              <div key={index} className="border-b border-zinc-700 last:border-b-0">
+                <button
+                  className="w-full py-6 px-2 flex items-center justify-between text-left transition-colors duration-200 group"
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50"
-                    aria-expanded={openFAQs.has(index)}
-                  >
-                    <span className="text-lg font-medium text-white pr-4">
-                      {faq.question}
-                    </span>
-                    <div className={`flex-shrink-0 transition-transform duration-300 ${openFAQs.has(index) ? 'rotate-180' : ''}`}>
-                      <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-yellow-400 transition-colors duration-200">
+                    {faq.question}
+                  </h3>
+                  <div className="flex-shrink-0">
+                    <div className={`w-8 h-8 rounded-full border-2 border-zinc-600 flex items-center justify-center transition-all duration-300 ${
+                      openFAQs.has(index)
+                        ? 'border-yellow-500 bg-yellow-500 rotate-45' 
+                        : 'group-hover:border-yellow-400'
+                    }`}>
+                      <svg
+                        className={`w-4 h-4 transition-colors duration-300 ${
+                          openFAQs.has(index) ? 'text-black' : 'text-zinc-400 group-hover:text-yellow-400'
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                       </svg>
                     </div>
-                  </button>
-                  
-                  <div 
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      openFAQs.has(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    <div className="px-6 pb-4">
-                      <div className="text-slate-300 leading-relaxed">
-                        {faq.answer}
-                      </div>
-                    </div>
+                  </div>
+                </button>
+                
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openFAQs.has(index) ? 'max-h-96 pb-6' : 'max-h-0'
+                }`}>
+                  <div className="px-2 py-2 border-l-4 border-yellow-500">
+                    <p className="text-slate-300 leading-relaxed text-base">
+                      {faq.answer}
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
+            
+            {/* CTA at bottom */}
+            <div className="text-center mt-12 pt-8 border-t border-zinc-700">
+              <p className="text-slate-300 mb-4">
+                Have more questions? We're here to help with all your GAF asphalt shingle needs.
+              </p>
+              <button
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                  });
+                }}
+                className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl group"
+              >
+                <span>Contact Us</span>
+                <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

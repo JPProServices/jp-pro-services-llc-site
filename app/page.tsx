@@ -4,7 +4,7 @@ import TrustBadges from "@/components/TrustBadges";
 import FAQ from "@/components/FAQ";
 
 export default function HomePage() {
-  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
+  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 705-0779";
   return (
     <main>
       {/* Hero Section */}

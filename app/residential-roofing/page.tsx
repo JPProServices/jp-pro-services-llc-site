@@ -6,7 +6,7 @@ import TrustBadges from "@/components/TrustBadges";
 
 export default function ResidentialRoofingPage() {
   const [activeProcess, setActiveProcess] = useState<'insurance' | 'direct-pay'>('insurance');
-  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 555-0192";
+  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 705-0779";
 
   return (
     <main>
