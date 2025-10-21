@@ -146,7 +146,7 @@ export default function StormDamagePage() {
               <div className="flex items-start gap-4">
                 <div className="bg-gradient-to-br from-blue-700 to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:from-blue-600 group-hover:to-blue-500 transition-all duration-300 flex-shrink-0">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7c0 2.21-3.582 4-8 4s-8-1.79-8-4z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
                 </div>
                 <div>
@@ -172,8 +172,34 @@ export default function StormDamagePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
-                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 3v10a1 1 0 001 1h8a1 1 0 001-1V7M9 7h6" />
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 182 180">
+                  <g>
+                    <g>
+                      <g>
+                        <path d="M146.069,48.175c-1.881-25.887-24.296-46.392-51.576-46.392c-21.642,0-40.714,12.797-48.323,32.12
+                          c-0.529-0.019-1.062-0.028-1.598-0.028C19.995,33.876,0,53.871,0,78.449s19.995,44.573,44.573,44.573
+                          c0.467,0,0.93-0.007,1.389-0.021c0.129,0.014,0.261,0.021,0.394,0.021h99.843c0.258,0,0.512-0.028,0.759-0.083
+                          c19.619-1.313,34.899-17.61,34.899-37.358C181.856,65.49,165.95,49.045,146.069,48.175z M146,115.847
+                          c-0.126,0.007-0.251,0.021-0.376,0.042H46.888c-0.216-0.031-0.446-0.056-0.669-0.035c-0.547,0.021-1.093,0.035-1.647,0.035
+                          c-20.646,0-37.441-16.795-37.441-37.441c0-20.645,16.795-37.441,37.441-37.441c1.243,0,2.476,0.061,3.691,0.179
+                          c1.64,0.169,3.211-0.843,3.733-2.43C57.892,20.907,74.973,8.915,94.494,8.915c24.578,0,44.573,19.196,44.573,42.835
+                          c0,0.977,0.4,1.91,1.107,2.584c0.71,0.674,1.675,1.047,2.636,0.977c0.533-0.026,1.065-0.04,1.605-0.04
+                          c16.711,0,30.309,13.596,30.309,30.309C174.725,101.727,162.108,115.022,146,115.847z"/>
+                        <path d="M40.053,134.999c-2.521,3.019-15.092,18.518-15.092,27.245c0,9.83,7.999,17.829,17.829,17.829
+                          c9.83,0,17.829-7.999,17.829-17.829c0-8.727-12.571-24.226-15.092-27.245C44.169,133.378,41.411,133.378,40.053,134.999z
+                           M42.79,172.943c-5.899,0-10.697-4.799-10.697-10.697c0-3.827,5.596-12.585,10.697-19.246
+                          c5.102,6.658,10.697,15.412,10.697,19.246C53.487,168.144,48.689,172.943,42.79,172.943z"/>
+                        <path d="M86.408,134.999c-2.521,3.019-15.092,18.518-15.092,27.245c0,9.83,7.999,17.829,17.829,17.829
+                          c9.83,0,17.829-7.999,17.829-17.829c0-8.727-12.571-24.226-15.092-27.245C90.524,133.378,87.766,133.378,86.408,134.999z
+                           M89.145,172.943c-5.899,0-10.697-4.799-10.697-10.697c0-3.827,5.596-12.585,10.697-19.246
+                          c5.102,6.658,10.697,15.412,10.697,19.246C99.843,168.144,95.044,172.943,89.145,172.943z"/>
+                        <path d="M132.764,134.999c-2.521,3.019-15.092,18.518-15.092,27.245c0,9.83,7.999,17.829,17.829,17.829
+                          c9.83,0,17.829-7.999,17.829-17.829c0-8.727-12.571-24.226-15.092-27.245C136.88,133.378,134.122,133.378,132.764,134.999z
+                           M135.501,172.943c-5.899,0-10.697-4.799-10.697-10.697c0-3.827,5.596-12.585,10.697-19.246
+                          c5.102,6.658,10.697,15.412,10.697,19.246C146.198,168.144,141.4,172.943,135.501,172.943z"/>
+                      </g>
+                    </g>
+                  </g>
                 </svg>
                 <h3 className="text-xl font-semibold mb-2">Hail Damage</h3>
                 <p className="text-blue-100">Repair damaged shingles, dented flashing, and compromised granule coverage from hailstorms.</p>
@@ -189,8 +215,27 @@ export default function StormDamagePage() {
 
             <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
-                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2c0-.55.45-1 1-1h8c.55 0 1 .45 1 1v2m-9 3v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V7" />
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 512 512">
+                  <g>
+                    <path d="M287.64,94.921c-31.721,0-57.528,25.807-57.528,57.528h34.517c0-12.688,10.323-23.011,23.011-23.011
+                      c12.688,0,23.011,10.323,23.011,23.011c0,12.688-10.323,23.011-23.011,23.011H46.022v34.517H287.64
+                      c31.721,0,57.528-25.807,57.528-57.528C345.169,120.728,319.361,94.921,287.64,94.921z"/>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M431.461,106.427c-34.893,0-63.281,28.388-63.281,63.281c0,25.377,20.646,46.022,46.022,46.022
+                        c25.377,0,46.022-20.646,46.022-46.022h-34.517c0,6.344-5.161,11.506-11.506,11.506c-6.344,0-11.506-5.161-11.506-11.506
+                        c0-15.861,12.904-28.764,28.764-28.764c25.377,0,46.022,20.646,46.022,46.022c0,25.377-20.646,46.022-46.022,46.022H0v34.517
+                        h431.461c44.409,0,80.539-36.13,80.539-80.539C512,142.557,475.87,106.427,431.461,106.427z"/>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M345.169,290.517H46.022v34.517h299.146c15.861,0,28.764,12.904,28.764,28.764c0,15.861-12.904,28.764-28.764,28.764
+                        c-15.86,0-28.764-12.904-28.764-28.764h-34.517c0,34.893,28.388,63.281,63.281,63.281c34.893,0,63.281-28.388,63.281-63.281
+                        C408.449,318.905,380.062,290.517,345.169,290.517z"/>
+                    </g>
+                  </g>
                 </svg>
                 <h3 className="text-xl font-semibold mb-2">Wind Damage</h3>
                 <p className="text-blue-100">Fix wind-lifted shingles, damaged gutters, and structural issues from high winds.</p>
@@ -206,8 +251,17 @@ export default function StormDamagePage() {
 
             <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
-                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3l14 9-14 9V3z" />
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 400 400">
+                  <path d="M269.079,158.489c10.034-7.365,15.37-16.582,15.37-27.38c0-12.41-13.664-27.438-41.773-45.944
+                    c-3.719-2.448-7.521-4.843-11.329-7.164c12.478-4.98,18.636-12.525,18.636-22.714c0-17.096-36.483-38.621-67.089-53.668
+                    c-4.222-2.074-9.266-2.163-13.214-0.231c-30.82,15.101-67.56,36.709-67.56,53.899c0,10.189,6.158,17.734,18.635,22.714
+                    c-3.58,2.182-7.155,4.431-10.664,6.728c-28.556,18.703-42.438,33.874-42.438,46.379c0,10.797,5.335,20.014,15.368,27.379
+                    c-33.51,22.759-49.834,41.257-49.834,56.444c0,20.557,15.039,37.558,43.49,49.164c25.117,10.246,60.408,15.888,99.372,15.888
+                    c38.965,0,74.256-5.643,99.372-15.888c28.452-11.606,43.491-28.607,43.491-49.164C318.914,199.745,302.589,181.251,269.079,158.489
+                    z"/>
+                  <path d="M197.037,301.491c-0.445,0-0.863,0.013-1.236,0.03c-6.539,0.307-13.185,0.463-19.75,0.463
+                    c-6.722,0-14.608-0.152-20.093-0.389c-0.229-0.01-0.464-0.015-0.7-0.015c-6.92,0-11.754,3.911-11.754,9.511v33.01
+                    c0,4.411,3.589,8,8,8h49c4.411,0,8-3.589,8-8v-33.004C208.504,306.454,205.491,301.491,197.037,301.491z"/>
                 </svg>
                 <h3 className="text-xl font-semibold mb-2">Fallen Tree Damage</h3>
                 <p className="text-blue-100">Complete restoration from tree damage including structural repairs and roof reconstruction.</p>
@@ -223,8 +277,8 @@ export default function StormDamagePage() {
 
             <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
               <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
-                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7.5 13.5L10 16L16.5 9.5" />
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 3c0 0-6 8-6 12 0 3.31 2.69 6 6 6s6-2.69 6-6c0-4-6-12-6-12z"/>
                 </svg>
                 <h3 className="text-xl font-semibold mb-2">Water Damage</h3>
                 <p className="text-blue-100">Address water infiltration and prevent mold growth from storm-related roof leaks.</p>

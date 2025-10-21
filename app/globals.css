@@ -459,3 +459,36 @@ textarea:focus {
     min-height: 100vh;
   }
 }
+
+/* Enhanced iOS 18+ Mobile Menu Support */
+@supports (-webkit-touch-callout: none) {
+  /* Mobile menu overlay enhancements for iOS 18+ */
+  .fixed[style*="z-index: 9999"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    -webkit-transform: translateZ(0) !important;
+    transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    will-change: transform !important;
+  }
+  
+  /* Mobile menu sidebar enhancements for iOS 18+ */
+  .fixed[style*="z-index: 10000"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    background-color: #000000 !important;
+    -webkit-transform: translateZ(0) !important;
+    transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    will-change: transform !important;
+    isolation: isolate !important;
+  }
+}

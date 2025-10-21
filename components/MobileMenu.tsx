@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Props = {
   phone: string;
@@ -10,6 +10,28 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [roofTypesOpen, setRoofTypesOpen] = useState(false);
+
+  // Handle body scroll lock for iOS 18+ compatibility
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.top = '0';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.top = '';
+    };
+  }, [isOpen]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => {
@@ -35,15 +57,43 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
       
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50" onClick={closeMenu}>
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75" 
+          style={{
+            zIndex: 9999,
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+            WebkitBackfaceVisibility: 'hidden',
+            backfaceVisibility: 'hidden',
+            WebkitTransform: 'translateZ(0)',
+            transform: 'translateZ(0)',
+            touchAction: 'none',
+            overscrollBehavior: 'none'
+          }}
+          onClick={closeMenu}
+        >
           <div 
-            className="bg-black w-64 h-full shadow-lg border-r border-zinc-700" 
+            className="w-64 h-full shadow-lg border-r border-zinc-700" 
             style={{ 
+              position: 'fixed',
+              top: 0,
+              left: 0,
               backgroundColor: '#000000',
               backgroundImage: 'none',
               opacity: '1',
+              zIndex: 10000,
               WebkitBackfaceVisibility: 'hidden',
-              backfaceVisibility: 'hidden'
+              backfaceVisibility: 'hidden',
+              WebkitTransform: 'translateZ(0)',
+              transform: 'translateZ(0)',
+              height: '100vh',
+              maxHeight: '100vh',
+              overflowY: 'auto',
+              WebkitOverflowScrolling: 'touch'
             }} 
             onClick={(e) => e.stopPropagation()}
           >
