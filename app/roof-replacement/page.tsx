@@ -187,13 +187,13 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-800 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-750 transition-all duration-300 group border border-zinc-700">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-6 text-white">
+            <div className="bg-zinc-900 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-800/80 transition-all duration-300 group border border-zinc-800">
+              <div className="bg-gradient-to-br from-zinc-800 to-zinc-700 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   2
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Material Selection</h3>
-                <p className="text-blue-100">Choose from quality roofing materials that fit your budget and style preferences.</p>
+                <p className="text-zinc-200">Choose from quality roofing materials that fit your budget and style preferences.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">

@@ -209,7 +209,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <h3 className="text-xl font-semibold mb-2">Emergency Repairs</h3>
-                <p className="text-blue-100">24/7 emergency roofing services for storm damage and urgent repairs.</p>
+                <p className="text-blue-100">24/7 emergency roofing services for storm damage, urgent repairs, and immediate protection.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
