@@ -187,13 +187,13 @@ export default function RoofReplacementPage() {
               </div>
             </div>
 
-            <div className="bg-zinc-900 rounded-lg shadow-2xl overflow-hidden hover:bg-zinc-800/80 transition-all duration-300 group border border-zinc-800">
-              <div className="bg-gradient-to-br from-zinc-800 to-zinc-700 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   2
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Material Selection</h3>
-                <p className="text-zinc-200">Choose from quality roofing materials that fit your budget and style preferences.</p>
+                <p className="text-blue-100">Choose from quality roofing materials that fit your budget and style preferences.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
@@ -370,7 +370,7 @@ export default function RoofReplacementPage() {
             <div className="space-y-8">
               {/* Business Hours & Location */}
               <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Visit Our Office</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Schedule An Appointment</h3>
                 <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

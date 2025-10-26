@@ -181,11 +181,6 @@ export default function GalleryPage() {
                       View Project
                     </div>
                   </div>
-                  
-                  {/* Project Badge */}
-                  <div className="absolute top-3 left-3 bg-black/70 backdrop-blur text-white px-2 py-1 rounded text-xs font-medium">
-                    {project.name}
-                  </div>
                 </div>
               </div>
             ))}

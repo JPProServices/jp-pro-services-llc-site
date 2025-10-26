@@ -424,7 +424,7 @@ export default function StormDamagePage() {
             <div className="space-y-8">
               {/* Business Hours & Location */}
               <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Visit Our Office</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Schedule An Appointment</h3>
                 <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
