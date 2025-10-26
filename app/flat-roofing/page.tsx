@@ -11,10 +11,7 @@ export default function FlatRoofingPage() {
       const newSet = new Set(prev);
       if (newSet.has(index)) {
         newSet.delete(index);
-               {/* Business Hours & Location */}
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Schedule An Appointment</h3>
-                <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300"> } else {
+      } else {
         newSet.add(index);
       }
       return newSet;
