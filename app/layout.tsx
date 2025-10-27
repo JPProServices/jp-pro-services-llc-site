@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         {/* MAIN HEADER — NOW sticky with dynamic transparency */}
-        <header id="main-header" className="sticky top-0 z-50 border-b border-slate-800 shadow-xl transition-all duration-300" style={{ 
+        <header id="main-header" className="sticky top-0 z-50 shadow-xl transition-all duration-300" style={{ 
           background: 'rgb(0, 0, 0)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)'

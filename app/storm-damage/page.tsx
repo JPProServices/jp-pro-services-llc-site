@@ -5,6 +5,7 @@ import TrustBadges from "@/components/TrustBadges";
 
 export default function StormDamagePage() {
   const [openFAQs, setOpenFAQs] = useState<Set<number>>(new Set());
+  const [activeProcess, setActiveProcess] = useState<'emergency' | 'insurance'>('emergency');
 
   const toggleFAQ = (index: number) => {
     setOpenFAQs(prev => {
@@ -85,6 +86,168 @@ export default function StormDamagePage() {
           </div>
           <div className="md:pt-6">
             <LeadCTA />
+          </div>
+        </div>
+      </section>
+
+      {/* Storm Damage Process Section */}
+      <section className="bg-black py-16">
+        <div className="mx-auto w-[min(1200px,94%)]">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Storm Damage Process</h2>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+              Whether you need immediate <strong>emergency response</strong> or help with <strong>insurance claims</strong>, we guide you through every step of storm damage restoration.
+            </p>
+          </div>
+
+          {/* Process Type Selector */}
+          <div className="flex justify-center mb-12">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-2 border border-white/15">
+              {/* Desktop buttons */}
+              <div className="hidden md:flex">
+                <button
+                  onClick={() => setActiveProcess('emergency')}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    activeProcess === 'emergency'
+                      ? 'bg-yellow-500 text-black shadow-lg'
+                      : 'text-slate-300 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  ⚡ Emergency Response
+                </button>
+                <button
+                  onClick={() => setActiveProcess('insurance')}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    activeProcess === 'insurance'
+                      ? 'bg-yellow-500 text-black shadow-lg'
+                      : 'text-slate-300 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  🛡️ Insurance Claims
+                </button>
+              </div>
+
+              {/* Mobile dropdown */}
+              <div className="md:hidden">
+                <div className="flex items-center justify-between px-4 py-3">
+                  <span className="text-white font-semibold">
+                    {activeProcess === 'emergency' ? '⚡ Emergency Response' : '🛡️ Insurance Claims'}
+                  </span>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setActiveProcess(activeProcess === 'emergency' ? 'insurance' : 'emergency')}
+                      className="text-yellow-400 hover:text-yellow-300 transition-colors duration-200"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={() => setActiveProcess(activeProcess === 'emergency' ? 'insurance' : 'emergency')}
+                      className="text-yellow-400 hover:text-yellow-300 transition-colors duration-200"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Emergency Response Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'emergency' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">Emergency Call</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Call us immediately after storm damage. Our 24/7 emergency response team will dispatch within hours to assess and secure your property.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">Rapid Assessment</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  On-site damage evaluation and safety assessment. We identify immediate threats and prioritize emergency stabilization needs.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Emergency Tarping</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Immediate weatherproofing with professional tarping and boarding to prevent further water damage and secure your property.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Next Steps Plan</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Detailed assessment report with repair recommendations and coordination with insurance adjusters for permanent restoration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Insurance Claims Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'insurance' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">FREE Inspection</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Comprehensive storm damage inspection with detailed photo documentation and damage assessment for your insurance claim filing.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">Claims Assistance</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  We work directly with your insurance adjuster, provide detailed damage reports, and advocate for full coverage of necessary repairs.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Professional Restoration</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Complete storm damage restoration by licensed craftsmen using insurance-approved materials and methods with daily progress updates.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Final Approval</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Thorough cleanup, final inspection, and warranty documentation. Property restored to pre-storm condition with insurance sign-off.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

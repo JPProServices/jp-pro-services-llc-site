@@ -109,6 +109,166 @@ export default function ResidentialRoofingPage() {
         </div>
       </section>
 
+      {/* Our Residential Process */}
+      <section className="bg-black py-16">
+        <div className="mx-auto w-[min(1200px,94%)]">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Residential Roofing Process</h2>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+              We specialize in both <strong>insurance</strong> claims and <strong>retail</strong> projects. Choose your path below to see our tailored process.
+            </p>
+            
+            {/* Process Type Tabs */}
+            {/* Desktop Version */}
+            <div className="hidden md:flex justify-center mt-8 mb-8">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-2 border border-white/15">
+                <button 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    activeProcess === 'insurance' 
+                      ? 'bg-yellow-500 text-black' 
+                      : 'text-white hover:bg-white/15'
+                  }`}
+                  onClick={() => setActiveProcess('insurance')}
+                >
+                  🛡️ Insurance
+                </button>
+                <button 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    activeProcess === 'direct-pay' 
+                      ? 'bg-yellow-500 text-black' 
+                      : 'text-white hover:bg-white/15'
+                  }`}
+                  onClick={() => setActiveProcess('direct-pay')}
+                >
+                  💳 Retail
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile Version with Arrow Navigation */}
+            <div className="md:hidden flex items-center justify-center mt-8 mb-8 px-4">
+              <button 
+                onClick={() => setActiveProcess(activeProcess === 'insurance' ? 'direct-pay' : 'insurance')}
+                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
+                <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
+                  {activeProcess === 'insurance' ? '🛡️ Insurance' : '💳 Retail'}
+                </div>
+              </div>
+              
+              <button 
+                onClick={() => setActiveProcess(activeProcess === 'insurance' ? 'direct-pay' : 'insurance')}
+                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Insurance Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'insurance' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">FREE Inspection</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Professional damage inspection with detailed documentation for your insurance claim. We handle all paperwork and communication with your adjuster.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">Insurance Advocacy</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  We work directly with your insurance company to ensure fair coverage. Most customers only pay their deductible, though some upgrades may require additional investment.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Professional Installation</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Expert installation by licensed, insured craftsmen. Daily progress updates and quality checkpoints throughout the project.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Final Inspection</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Thorough cleanup with magnetic nail sweep, debris removal, and comprehensive final walkthrough with warranty documentation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Retail Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'direct-pay' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">FREE Estimate</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Comprehensive roof assessment with detailed photos and condition report. Same-day evaluation and recommendations provided.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">Transparent Quote</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Detailed written estimate with material specifications, timeline, and warranty information. No hidden fees or surprises.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Expert Installation</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Professional installation by licensed, insured craftsmen. Daily progress updates and quality checkpoints throughout.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Complete Cleanup</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Thorough cleanup with magnetic nail sweep, debris removal, and final walkthrough inspection with warranty documentation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Common Residential Roofing Problems */}
       <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
@@ -298,166 +458,6 @@ export default function ResidentialRoofingPage() {
               <h3 className="text-lg font-bold text-white mb-2">Seamless Gutters</h3>
               <p className="text-slate-300 text-sm mb-3 flex-grow">Custom-fit aluminum, no leaks</p>
               <div className="text-yellow-400 font-medium mt-auto">Installation & Repair</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Residential Process */}
-      <section className="bg-black py-16">
-        <div className="mx-auto w-[min(1200px,94%)]">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Residential Roofing Process</h2>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              We specialize in both insurance claims and retail projects. Choose your path below to see our tailored process.
-            </p>
-            
-            {/* Process Type Tabs */}
-            {/* Desktop Version */}
-            <div className="hidden md:flex justify-center mt-8 mb-8">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-2 border border-white/15">
-                <button 
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    activeProcess === 'insurance' 
-                      ? 'bg-yellow-500 text-black' 
-                      : 'text-white hover:bg-white/15'
-                  }`}
-                  onClick={() => setActiveProcess('insurance')}
-                >
-                  🛡️ Insurance
-                </button>
-                <button 
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    activeProcess === 'direct-pay' 
-                      ? 'bg-yellow-500 text-black' 
-                      : 'text-white hover:bg-white/15'
-                  }`}
-                  onClick={() => setActiveProcess('direct-pay')}
-                >
-                  💳 Retail
-                </button>
-              </div>
-            </div>
-
-            {/* Mobile Version with Arrow Navigation */}
-            <div className="md:hidden flex items-center justify-center mt-8 mb-8 px-4">
-              <button 
-                onClick={() => setActiveProcess(activeProcess === 'insurance' ? 'direct-pay' : 'insurance')}
-                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
-              >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              
-              <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
-                <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
-                  {activeProcess === 'insurance' ? '🛡️ Insurance' : '💳 Retail'}
-                </div>
-              </div>
-              
-              <button 
-                onClick={() => setActiveProcess(activeProcess === 'insurance' ? 'direct-pay' : 'insurance')}
-                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
-              >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          {/* Insurance Process */}
-          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'insurance' ? '' : 'hidden'}`}>
-            {/* Step 1 */}
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
-                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-                <h3 className="text-lg font-bold text-white mb-3">FREE Inspection</h3>
-                <p className="text-slate-300 text-sm flex-grow">
-                  Professional damage inspection with detailed documentation for your insurance claim. We handle all paperwork and communication with your adjuster.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
-                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-                <h3 className="text-lg font-bold text-white mb-3">Insurance Advocacy</h3>
-                <p className="text-slate-300 text-sm flex-grow">
-                  We work directly with your insurance company to ensure fair coverage. Most customers only pay their deductible, though some upgrades may require additional investment.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
-                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
-                <h3 className="text-lg font-bold text-white mb-3">Professional Installation</h3>
-                <p className="text-slate-300 text-sm flex-grow">
-                  Expert installation by licensed, insured craftsmen. Daily progress updates and quality checkpoints throughout the project.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
-                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
-                <h3 className="text-lg font-bold text-white mb-3">Final Inspection</h3>
-                <p className="text-slate-300 text-sm flex-grow">
-                  Thorough cleanup with magnetic nail sweep, debris removal, and comprehensive final walkthrough with warranty documentation.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Retail Process */}
-          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'direct-pay' ? '' : 'hidden'}`}>
-            {/* Step 1 */}
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
-                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-                <h3 className="text-lg font-bold text-white mb-3">FREE Estimate</h3>
-                <p className="text-slate-300 text-sm flex-grow">
-                  Comprehensive roof assessment with detailed photos and condition report. Same-day evaluation and recommendations provided.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
-                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-                <h3 className="text-lg font-bold text-white mb-3">Transparent Quote</h3>
-                <p className="text-slate-300 text-sm flex-grow">
-                  Detailed written estimate with material specifications, timeline, and warranty information. No hidden fees or surprises.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
-                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
-                <h3 className="text-lg font-bold text-white mb-3">Expert Installation</h3>
-                <p className="text-slate-300 text-sm flex-grow">
-                  Professional installation by licensed, insured craftsmen. Daily progress updates and quality checkpoints throughout.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
-                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
-                <h3 className="text-lg font-bold text-white mb-3">Complete Cleanup</h3>
-                <p className="text-slate-300 text-sm flex-grow">
-                  Thorough cleanup with magnetic nail sweep, debris removal, and final walkthrough inspection with warranty documentation.
-                </p>
-              </div>
             </div>
           </div>
         </div>

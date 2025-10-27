@@ -4,6 +4,7 @@ import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
 
 export default function CommercialRoofingPage() {
+  const [activeProcess, setActiveProcess] = useState<'maintenance' | 'new-build'>('maintenance');
   const [openFAQs, setOpenFAQs] = useState<Set<number>>(new Set());
 
   const toggleFAQ = (index: number) => {
@@ -85,6 +86,166 @@ export default function CommercialRoofingPage() {
           </div>
           <div className="md:pt-6">
             <LeadCTA />
+          </div>
+        </div>
+      </section>
+
+      {/* Our Commercial Process */}
+      <section className="bg-black py-16">
+        <div className="mx-auto w-[min(1200px,94%)]">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Commercial Roofing Process</h2>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+              We specialize in both <strong>maintenance & repair</strong> and <strong>new construction</strong> projects. Choose your path below to see our tailored process.
+            </p>
+            
+            {/* Process Type Tabs */}
+            {/* Desktop Version */}
+            <div className="hidden md:flex justify-center mt-8 mb-8">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-2 border border-white/15">
+                <button 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    activeProcess === 'maintenance' 
+                      ? 'bg-yellow-500 text-black' 
+                      : 'text-white hover:bg-white/15'
+                  }`}
+                  onClick={() => setActiveProcess('maintenance')}
+                >
+                  🔧 Maintenance & Repair
+                </button>
+                <button 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    activeProcess === 'new-build' 
+                      ? 'bg-yellow-500 text-black' 
+                      : 'text-white hover:bg-white/15'
+                  }`}
+                  onClick={() => setActiveProcess('new-build')}
+                >
+                  🏢 New Construction
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile Version with Arrow Navigation */}
+            <div className="md:hidden flex items-center justify-center mt-8 mb-8 px-4">
+              <button 
+                onClick={() => setActiveProcess(activeProcess === 'maintenance' ? 'new-build' : 'maintenance')}
+                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
+                <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
+                  {activeProcess === 'maintenance' ? '🔧 Maintenance' : '🏢 New Construction'}
+                </div>
+              </div>
+              
+              <button 
+                onClick={() => setActiveProcess(activeProcess === 'maintenance' ? 'new-build' : 'maintenance')}
+                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Maintenance & Repair Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'maintenance' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">Property Assessment</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Comprehensive commercial roof inspection with detailed condition report. We coordinate with property managers to minimize business disruption.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">Repair Strategy</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Detailed repair plan with timeline and budget. Options for temporary fixes and permanent solutions to maintain business operations.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Efficient Repairs</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Professional maintenance and repair work by licensed commercial crews. Coordinated scheduling and daily progress updates.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Preventive Plan</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Complete documentation with maintenance recommendations. Optional ongoing maintenance programs to prevent future issues.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* New Construction Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'new-build' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">Project Consultation</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Comprehensive project assessment with architectural review and material recommendations. Custom solutions for new commercial buildings.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">System Design</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Detailed commercial roofing system design with material specifications, warranties, and timeline. TPO, metal, or modified bitumen options.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Professional Installation</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Expert commercial installation by licensed, insured crews. Quality control checkpoints and project management throughout construction.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Warranty & Maintenance</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Final inspection, complete warranty documentation, and optional maintenance programs. Long-term protection for your commercial investment.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
