@@ -201,11 +201,11 @@ export default function GalleryPage() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="tel:(615) 705-0779"
+              href="tel:(615) 636-6126"
               className="group btn-gold neon relative inline-flex items-center justify-center overflow-hidden rounded-xl px-8 py-4 font-extrabold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
             >
               <span className="relative z-10 flex items-center gap-2">
-                📞 Call Now: (615) 705-0779
+                📞 Call Now: (615) 636-6126
               </span>
             </a>
             

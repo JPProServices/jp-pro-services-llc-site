@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 705-0779";
+  const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 636-6126";
   const phoneHref =
-    process.env.NEXT_PUBLIC_COMPANY_PHONE || "+1-615-705-0779";
+    process.env.NEXT_PUBLIC_COMPANY_PHONE || "+1-615-636-6126";
 
   return (
     <html lang="en" suppressHydrationWarning>

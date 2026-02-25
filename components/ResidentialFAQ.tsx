@@ -8,7 +8,7 @@ const residentialFaqs = [
   },
   {
     question: "What is the cost of a new roof installation?",
-    answer: "Retail costs for a new asphalt shingle roof in Middle Tennessee depends on various factors including the size of the home, materials (e.g., asphalt, metal, slate) and roof complexity. For an accurate estimate, we offer free inspections. Contact us at (615) 705-0779 or online for a tailored quote."
+    answer: "Retail costs for a new asphalt shingle roof in Middle Tennessee depends on various factors including the size of the home, materials (e.g., asphalt, metal, slate) and roof complexity. For an accurate estimate, we offer free inspections. Contact us at (615) 636-6126 or online for a tailored quote."
   },
   {
     question: "Will my homeowner's insurance cover a new roof?",
