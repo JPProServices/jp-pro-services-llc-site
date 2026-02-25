@@ -3,6 +3,13 @@ import { useState } from "react";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function RoofReplacementPage() {
   const [activeProcess, setActiveProcess] = useState<'insurance' | 'retail'>('insurance');
   const [openFAQs, setOpenFAQs] = useState<Set<number>>(new Set());

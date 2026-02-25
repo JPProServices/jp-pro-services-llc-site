@@ -2,6 +2,12 @@
 import { useState } from "react";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export default function RoofRepairPage() {
   const [activeProcess, setActiveProcess] = useState<'emergency' | 'scheduled'>('emergency');
