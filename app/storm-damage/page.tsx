@@ -614,7 +614,7 @@ export default function StormDamagePage() {
                     <div>
                       <p className="text-white font-medium">Business Hours</p>
                       <p className="text-slate-300">Mon-Sun: 8:00 AM - 5:00 PM</p>
-                      <p className="text-slate-300 text-sm font-semibold text-red-400">Emergency Service: 24/7</p>
+                      <p className="text-red-400 text-sm font-semibold">Emergency Service: 24/7</p>
                     </div>
                   </div>
                 </div>
