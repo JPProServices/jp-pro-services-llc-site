@@ -50,7 +50,7 @@ export default function AsphaltShinglesPage() {
       answer: "Yes! We specialize in insurance claims and work directly with your insurance company to ensure you get the coverage you deserve for storm damage repairs."
     }
   ];
-  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 636-6126";
+  const phoneDisplay = "(615) 636-6126";
 
   return (
     <main>
