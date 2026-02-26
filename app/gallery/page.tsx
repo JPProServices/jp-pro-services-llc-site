@@ -1,63 +1,15 @@
-"use client";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import GalleryClient from "./GalleryClient";
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
 };
 
 export default function GalleryPage() {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedProject === null) return;
-      
-      switch (e.key) {
-        case 'Escape':
-          closeProject();
-          break;
-        case 'ArrowLeft':
-          e.preventDefault();
-          navigateInProject('prev');
-          break;
-        case 'ArrowRight':
-          e.preventDefault();
-          navigateInProject('next');
-          break;
-      }
-    };
-
-    if (selectedProject !== null) {
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-  }, [selectedProject, currentImageIndex]);
-  
-  // Organized roof projects with all their images
-  const roofProjects = [
-    {
-      id: 1,
-      name: "Residential Roofing Project",
-      images: [
-        { src: "/roof1_1.jpeg", alt: "Residential roof project 1 - main view" },
-        { src: "/roof1_2.jpeg", alt: "Residential roof project 1 - detail view" }
-      ]
-    },
-    {
-      id: 2,
-      name: "Commercial Roofing Project", 
-      images: [
-        { src: "/roof2_1.jpeg", alt: "Commercial roof project 2 - main view" },
-        { src: "/roof2_2.jpeg", alt: "Commercial roof project 2 - side view" },
-        { src: "/roof2_3.jpeg", alt: "Commercial roof project 2 - detail view" },
-        { src: "/roof2_4.jpeg", alt: "Commercial roof project 2 - completion view" },
-        { src: "/roof2_5.jpeg", alt: "Commercial roof project 2 - final inspection" }
+  return <GalleryClient />;
+}
       ]
     },
     {

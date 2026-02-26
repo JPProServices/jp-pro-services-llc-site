@@ -1,23 +1,15 @@
-"use client";
-import { useState } from "react";
-import LeadCTA from "@/components/LeadCTA";
-import ResidentialFAQ from "@/components/ResidentialFAQ";
-import TrustBadges from "@/components/TrustBadges";
+import ResidentialRoofingClient from "./ResidentialRoofingClient";
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
 };
 
 export default function ResidentialRoofingPage() {
-  const [activeProcess, setActiveProcess] = useState<'insurance' | 'direct-pay'>('insurance');
-  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 636-6126";
-
-  return (
-    <main>
-      {/* Hero Section */}
+  return <ResidentialRoofingClient />;
+}
       <section className="relative min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
