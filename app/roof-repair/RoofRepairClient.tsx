@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
-
 export default function RoofRepairClient() {
   const [activeProcess, setActiveProcess] = useState<'emergency' | 'scheduled'>('emergency');
   const [openFAQs, setOpenFAQs] = useState<Set<number>>(new Set());
+
   const toggleFAQ = (index: number) => {
     setOpenFAQs(prev => {
       const newSet = new Set(prev);
@@ -17,15 +17,546 @@ export default function RoofRepairClient() {
       return newSet;
     });
   };
+
   const repairFAQs = [
-    { question: "How do I know if I need roof repairs or a full replacement?", answer: "Minor issues like a few missing shingles or small leaks can often be repaired. However, extensive damage, multiple leaks, or roofs over 20 years old may require replacement. We provide honest assessments during our free inspection." },
-    { question: "How quickly can you fix emergency roof leaks?", answer: "We offer emergency roof repair services with response times typically within 1-2 hours for urgent leaks. We'll provide immediate temporary solutions and schedule permanent repairs as soon as weather permits." },
-    { question: "Do you provide temporary weatherproofing while waiting for repairs?", answer: "Yes! We provide emergency tarping and temporary weatherproofing to prevent further damage while permanent repairs are scheduled or insurance claims are processed." },
-    { question: "Will insurance cover my roof repairs?", answer: "Insurance coverage depends on the cause of damage. Storm damage, hail, and wind damage are typically covered. We work directly with insurance companies and can help with the claims process." },
-    { question: "How long do roof repairs typically take?", answer: "Most standard repairs can be completed in 1-2 days, depending on weather conditions and the extent of damage. Emergency repairs and temporary fixes are often completed the same day." },
-    { question: "Do you warranty your roof repair work?", answer: "Yes, all our roof repairs come with a 5-year workmanship warranty. We also provide material warranties from manufacturers for any replacement components used." }
+    {
+      question: "How do I know if I need roof repairs or a full replacement?",
+      answer: "Minor issues like a few missing shingles or small leaks can often be repaired. However, extensive damage, multiple leaks, or roofs over 20 years old may require replacement. We provide honest assessments during our free inspection."
+    },
+    {
+      question: "How quickly can you fix emergency roof leaks?",
+      answer: "We offer emergency roof repair services with response times typically within 1-2 hours for urgent leaks. We'll provide immediate temporary solutions and schedule permanent repairs as soon as weather permits."
+    },
+    {
+      question: "Do you provide temporary weatherproofing while waiting for repairs?",
+      answer: "Yes! We provide emergency tarping and temporary weatherproofing to prevent further damage while permanent repairs are scheduled or insurance claims are processed."
+    },
+    {
+      question: "Will insurance cover my roof repairs?",
+      answer: "Insurance coverage depends on the cause of damage. Storm damage, hail, and wind damage are typically covered. We work directly with insurance companies and can help with the claims process."
+    },
+    {
+      question: "How long do roof repairs typically take?",
+      answer: "Most standard repairs can be completed in 1-2 days, depending on weather conditions and the extent of damage. Emergency repairs and temporary fixes are often completed the same day."
+    },
+    {
+      question: "Do you warranty your roof repair work?",
+      answer: "Yes, all our roof repairs come with a 5-year workmanship warranty. We also provide material warranties from manufacturers for any replacement components used."
+    }
   ];
+
   const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 636-6126";
-  // ...existing JSX from RoofRepairPage goes here...
-  return null;
+
+  return (
+    <main>
+      {/* Hero Section */}
+      <section className="relative min-h-[80vh]">
+        <div aria-hidden className="absolute inset-0 -z-10">
+          <img
+            src="/hero.jpg"
+            alt=""
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/40" />
+        </div>
+        <div className="relative z-10 mx-auto w-[min(1200px,94%)] grid items-start gap-8 py-10 md:grid-cols-2 md:py-14">
+          <div>
+            {/* Top badges */}
+            <div className="mb-6 flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
+                ? Emergency Response
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
+                ??? 5-Year Warranty
+              </span>
+            </div>
+
+            <h1 className="max-w-xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
+              Expert Roof Repair Services in Nashville
+            </h1>
+
+            <p className="mt-4 max-w-2xl text-lg text-slate-200">
+              Fast, reliable roof repairs when you need them most. From emergency leaks to storm damage, we restore your roof's protection with quality craftsmanship.
+            </p>
+
+            <div className="mt-6">
+              <TrustBadges />
+            </div>
+          </div>
+          <div className="md:pt-6">
+            <LeadCTA />
+          </div>
+        </div>
+      </section>
+
+      {/* Our Roof Repair Process */}
+      <section className="bg-black py-16">
+        <div className="mx-auto w-[min(1200px,94%)]">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Roof Repair Process</h2>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+              We handle both <strong>emergency repairs</strong> and <strong>scheduled maintenance</strong>. Choose your path below to see our tailored approach.
+            </p>
+            
+            {/* Process Type Tabs */}
+            {/* Desktop Version */}
+            <div className="hidden md:flex justify-center mt-8 mb-8">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-2 border border-white/15">
+                <button 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    activeProcess === 'emergency' 
+                      ? 'bg-yellow-500 text-black' 
+                      : 'text-white hover:bg-white/15'
+                  }`}
+                  onClick={() => setActiveProcess('emergency')}
+                >
+                  ? Emergency Repair
+                </button>
+                <button 
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    activeProcess === 'scheduled' 
+                      ? 'bg-yellow-500 text-black' 
+                      : 'text-white hover:bg-white/15'
+                  }`}
+                  onClick={() => setActiveProcess('scheduled')}
+                >
+                  ?? Scheduled Repair
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile Version with Arrow Navigation */}
+            <div className="md:hidden flex items-center justify-center mt-8 mb-8 px-4">
+              <button 
+                onClick={() => setActiveProcess(activeProcess === 'emergency' ? 'scheduled' : 'emergency')}
+                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
+                <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
+                  {activeProcess === 'emergency' ? '? Emergency' : '?? Scheduled'}
+                </div>
+              </div>
+              
+              <button 
+                onClick={() => setActiveProcess(activeProcess === 'emergency' ? 'scheduled' : 'emergency')}
+                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Emergency Repair Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'emergency' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">Emergency Call</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  24/7 emergency response with 1-hour arrival time. Immediate assessment of urgent leaks and storm damage to prevent further property damage.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">Immediate Protection</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Emergency tarping and temporary weatherproofing to stop active leaks. Quick damage assessment and immediate solutions to protect your property.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Permanent Repair</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Professional permanent repairs once weather permits. Quality materials and expert craftsmanship to restore your roof's protection.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Insurance Coordination</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Complete documentation for insurance claims and follow-up inspection. 5-year workmanship warranty on all emergency repair work.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Scheduled Repair Process */}
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'scheduled' ? '' : 'hidden'}`}>
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                <h3 className="text-lg font-bold text-white mb-3">FREE Inspection</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Comprehensive roof assessment with detailed photos and condition report. Advanced leak detection using thermal imaging and moisture mapping.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                <h3 className="text-lg font-bold text-white mb-3">Detailed Estimate</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Written repair estimate with material specifications and timeline. Honest assessment of repair vs. replacement options with transparent pricing.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                <h3 className="text-lg font-bold text-white mb-3">Quality Repairs</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Professional repairs using premium materials. Perfect color matching for shingle replacement and seamless integration with existing roof.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
+                <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                <h3 className="text-lg font-bold text-white mb-3">Warranty & Follow-up</h3>
+                <p className="text-slate-300 text-sm flex-grow">
+                  Complete cleanup and final inspection. 5-year workmanship warranty and optional maintenance program to prevent future issues.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Repair Services */}
+      <section className="bg-black py-16">
+        <div className="mx-auto w-[min(1200px,94%)]">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Professional Roof Repair Services</h2>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+              Don't let minor roof issues become major problems. Our expert repair services protect your home and investment.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <h3 className="text-xl font-semibold mb-2">Emergency Repairs</h3>
+                <p className="text-blue-100">24/7 emergency response for urgent leaks and storm damage.</p>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> 1-hour response time</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Temporary weatherproofing</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Available weekends</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+                <h3 className="text-xl font-semibold mb-2">Storm Damage Repair</h3>
+                <p className="text-blue-100">Comprehensive storm damage restoration and insurance assistance.</p>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Hail damage repair</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Wind damage restoration</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Insurance claim help</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 className="text-xl font-semibold mb-2">Preventive Maintenance</h3>
+                <p className="text-blue-100">Regular maintenance to prevent costly major repairs.</p>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Annual inspections</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Gutter cleaning</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Minor repairs</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <h3 className="text-xl font-semibold mb-2">Leak Detection & Repair</h3>
+                <p className="text-blue-100">Advanced leak detection and permanent waterproofing solutions.</p>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Thermal imaging</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Moisture mapping</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Permanent solutions</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                </svg>
+                <h3 className="text-xl font-semibold mb-2">Shingle Replacement</h3>
+                <p className="text-blue-100">Expert replacement of damaged, missing, or worn shingles.</p>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Color matching</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Quality materials</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Seamless integration</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+                <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+                <h3 className="text-xl font-semibold mb-2">Quality Guarantee</h3>
+                <p className="text-blue-100">All repairs backed by our comprehensive workmanship warranty.</p>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-2 text-slate-300">
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> 5-year workmanship warranty</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Licensed & insured</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Satisfaction guaranteed</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roof Repair FAQs */}
+      <section className="bg-black py-16">
+        <div className="mx-auto w-[min(1200px,94%)]">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Roof Repair FAQs</h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              Common questions about roof repair services in Nashville and Middle Tennessee.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            {repairFAQs.map((faq, index) => (
+              <div key={index} className="border-b border-zinc-700 last:border-b-0">
+                <button
+                  className="w-full py-6 px-2 flex items-center justify-between text-left transition-colors duration-200 group"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-yellow-400 transition-colors duration-200">
+                    {faq.question}
+                  </h3>
+                  <div className="flex-shrink-0">
+                    <div className={`w-8 h-8 rounded-full border-2 border-zinc-600 flex items-center justify-center transition-all duration-300 ${
+                      openFAQs.has(index)
+                        ? 'border-yellow-500 bg-yellow-500 rotate-45' 
+                        : 'group-hover:border-yellow-400'
+                    }`}>
+                      <svg
+                        className={`w-4 h-4 transition-colors duration-300 ${
+                          openFAQs.has(index) ? 'text-black' : 'text-zinc-400 group-hover:text-yellow-400'
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+                
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openFAQs.has(index) ? 'max-h-96 pb-6' : 'max-h-0'
+                }`}>
+                  <div className="px-2 py-2 border-l-4 border-yellow-500">
+                    <p className="text-slate-300 leading-relaxed text-base">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            {/* CTA at bottom */}
+            <div className="text-center mt-12 pt-8 border-t border-zinc-700">
+              <p className="text-slate-300 mb-4">
+                Have more questions? We're here to help with all your roof repair needs.
+              </p>
+              <button
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                  });
+                }}
+                className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl group"
+              >
+                <span>Contact Us</span>
+                <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="bg-black py-16">
+        <div className="mx-auto w-[min(1200px,94%)]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left: Contact Form */}
+            <div>
+              <h2 className="mb-2 text-3xl font-bold text-white">Need Emergency Roof Repairs?</h2>
+              <p className="mb-6 text-slate-300 text-lg">
+                Get immediate help for roof leaks and storm damage. Our emergency response team is ready to protect your home.
+              </p>
+              <div>
+                <LeadCTA variant="inline" kind="contact" />
+              </div>
+            </div>
+
+            {/* Right: Emergency Info & Services */}
+            <div className="space-y-8">
+              {/* Emergency Contact */}
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Emergency Service</h3>
+                <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <div>
+                      <p className="text-white font-medium">24/7 Emergency Response</p>
+                      <p className="text-slate-300">Available for urgent leaks and storm damage</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                      <p className="text-white font-medium">1-Hour Response Time</p>
+                      <p className="text-slate-300">Fast response when you need it most</p>
+                      <p className="text-slate-300 text-sm">Call: {phoneDisplay}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Repair Services */}
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Repair Services</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
+                    <div className="flex items-center gap-2 text-yellow-400 mb-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span className="text-white text-sm font-medium">Emergency Leaks</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
+                    <div className="flex items-center gap-2 text-yellow-400 mb-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                      <span className="text-white text-sm font-medium">Storm Damage</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
+                    <div className="flex items-center gap-2 text-yellow-400 mb-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                      </svg>
+                      <span className="text-white text-sm font-medium">Shingle Repair</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/15 transition-all duration-300 border border-white/15">
+                    <div className="flex items-center gap-2 text-yellow-400 mb-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span className="text-white text-sm font-medium">Maintenance</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Methods */}
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Get Help Now</h3>
+                <div className="space-y-3">
+                  <a href={`tel:${phoneDisplay.replace(/\D/g, '')}`} className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
+                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
+                      <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <span className="font-medium">{phoneDisplay}</span>
+                  </a>
+                  
+                  <a href="mailto:admin@jpproservicesllc.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
+                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
+                      <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <span className="font-medium">admin@jpproservicesllc.com</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
+
