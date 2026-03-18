@@ -31,6 +31,19 @@ export default function GalleryClient() {
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [selectedProject, currentImageIndex]);
+
+  useEffect(() => {
+    if (selectedProject === null) {
+      return undefined;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [selectedProject]);
   
   // Organized roof projects with all their images
   const roofProjects = [
@@ -109,13 +122,11 @@ export default function GalleryClient() {
   const openProject = (projectId: number) => {
     setSelectedProject(projectId);
     setCurrentImageIndex(0);
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   };
 
   const closeProject = () => {
     setSelectedProject(null);
     setCurrentImageIndex(0);
-    document.body.style.overflow = 'unset'; // Restore scrolling
   };
 
   const navigateInProject = (direction: 'prev' | 'next') => {

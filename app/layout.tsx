@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import MobileMenu from "@/components/MobileMenu";
 import ButtonEffects from "@/components/ButtonEffects";
 import ScrollHeader from "@/components/ScrollHeader";
+import DesktopNav from "@/components/DesktopNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,56 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   />
                 </a>
                 
-                {/* Centered Navigation */}
-                <nav className="hidden lg:flex items-center justify-center flex-1 mx-12" aria-label="Main">
-                  <div className="flex items-center gap-8 text-slate-300 font-medium">
-                    {/* Services Dropdown */}
-                    <div className="relative group">
-                      <button className="nav-link-gold flex items-center gap-1 py-2">
-                        Services
-                        <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      <div className="absolute top-full left-0 mt-1 w-56 bg-black/90 backdrop-blur-md border border-zinc-600/50 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style={{ 
-                        backdropFilter: 'blur(12px)', 
-                        WebkitBackdropFilter: 'blur(12px)' 
-                      }}>
-                        <div className="py-2">
-                          <a href="/residential-roofing" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Residential Roofing</a>
-                          <a href="/commercial-roofing" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Commercial Roofing</a>
-                          <a href="/roof-repair" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Roof Repair</a>
-                          <a href="/roof-replacement" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Roof Replacement</a>
-                          <a href="/storm-damage" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Storm Damage</a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Roof Types Dropdown */}
-                    <div className="relative group">
-                      <button className="nav-link-gold flex items-center gap-1 py-2">
-                        Roof Types
-                        <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      <div className="absolute top-full left-0 mt-1 w-48 bg-black/90 backdrop-blur-md border border-zinc-600/50 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style={{ 
-                        backdropFilter: 'blur(12px)', 
-                        WebkitBackdropFilter: 'blur(12px)' 
-                      }}>
-                        <div className="py-2">
-                          <a href="/asphalt-shingles" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Asphalt Shingles</a>
-                          <a href="/metal-roofing" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Metal Roofing</a>
-                          <a href="/tile-slate" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Tile & Slate</a>
-                          <a href="/flat-roofing" className="dropdown-item-gold block px-4 py-3 text-sm text-white hover:bg-zinc-700/60 hover:text-yellow-400 transition-all duration-200 hover:backdrop-blur-sm">Flat Roofing</a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <a href="/gallery" className="nav-link-gold py-2">Gallery</a>
-                    <a href="/#faq" className="nav-link-gold py-2">FAQs</a>
-                  </div>
-                </nav>
+                <DesktopNav />
 
                 {/* CTA Button */}
                 <div className="hidden lg:block">

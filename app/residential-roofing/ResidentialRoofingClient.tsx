@@ -291,7 +291,7 @@ export default function ResidentialRoofingClient() {
               <p className="text-slate-300 mb-4">
                 Water infiltration through damaged shingles, flashing, or seals around vents and chimneys. Critical for spring storms in Antioch and Mt. Juliet.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">? Emergency 24 hour response</div>
+              <div className="text-yellow-400 text-sm font-medium">Emergency 24 hour response</div>
             </div>
 
             {/* Shingle Replacement */}
@@ -305,7 +305,7 @@ export default function ResidentialRoofingClient() {
               <p className="text-slate-300 mb-4">
                 Missing, cracked, or wind-damaged shingles. Common in Rutherford and Sumner Counties where high winds affect homes in Murfreesboro and Hendersonville.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">{"\u{1F3A8}"} Perfect color matching guaranteed</div>
+              <div className="text-yellow-400 text-sm font-medium">Perfect color matching guaranteed</div>
             </div>
 
             {/* Storm Damage */}
@@ -319,7 +319,7 @@ export default function ResidentialRoofingClient() {
               <p className="text-slate-300 mb-4">
                 Hail, wind, and fallen tree damage from Tennessee's frequent storms. Especially common in exposed areas like Springfield and La Vergne.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">? Full insurance claim assistance</div>
+              <div className="text-yellow-400 text-sm font-medium">Full insurance claim assistance</div>
             </div>
 
             {/* Flashing Repairs */}
@@ -334,7 +334,7 @@ export default function ResidentialRoofingClient() {
               <p className="text-slate-300 mb-4">
                 Metal strips around chimneys, vents, and valleys. Critical for historic homes in Franklin and Belle Meade with complex rooflines.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">? Premium galvanized materials</div>
+              <div className="text-yellow-400 text-sm font-medium">Premium galvanized materials</div>
             </div>
 
             {/* Gutter Services */}
@@ -348,7 +348,7 @@ export default function ResidentialRoofingClient() {
               <p className="text-slate-300 mb-4">
                 Essential for Davidson County's heavy rainfall. Prevent roof and siding damage, especially in wooded areas like Green Hills.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">? Seamless aluminum gutters</div>
+              <div className="text-yellow-400 text-sm font-medium">Seamless aluminum gutters</div>
             </div>
 
             {/* Ventilation */}
@@ -386,7 +386,7 @@ export default function ResidentialRoofingClient() {
               <p className="text-slate-300 mb-4">
                 Critical for Middle Tennessee's high summer humidity. Prevents mold and extends roof life in homes throughout Brentwood and Gallatin.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">? Ridge, soffit & gable vents</div>
+              <div className="text-yellow-400 text-sm font-medium">Ridge, soffit & gable vents</div>
             </div>
           </div>
         </div>

@@ -331,8 +331,8 @@ export default function RoofReplacementClient() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
-              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white flex-1">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   1
                 </div>
@@ -348,8 +348,8 @@ export default function RoofReplacementClient() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
-              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white flex-1">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   2
                 </div>
@@ -365,8 +365,8 @@ export default function RoofReplacementClient() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
-              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white flex-1">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   3
                 </div>
@@ -382,8 +382,8 @@ export default function RoofReplacementClient() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
-              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white flex-1">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   4
                 </div>
@@ -399,8 +399,8 @@ export default function RoofReplacementClient() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
-              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white flex-1">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   5
                 </div>
@@ -416,8 +416,8 @@ export default function RoofReplacementClient() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15">
-              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white">
+            <div className="bg-white/10 backdrop-blur rounded-lg shadow-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group border border-white/15 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-blue-700 to-blue-600 p-6 text-white flex-1">
                 <div className="w-12 h-12 mb-4 bg-white/20 rounded-lg flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                   6
                 </div>

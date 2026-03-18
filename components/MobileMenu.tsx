@@ -11,29 +11,44 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [roofTypesOpen, setRoofTypesOpen] = useState(false);
 
-  // Handle body scroll lock for iOS 18+ compatibility
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
-      document.body.style.top = '0';
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-      document.body.style.top = '';
+    if (!isOpen) {
+      return undefined;
     }
 
+    const scrollY = window.scrollY;
+    const previousOverflow = document.body.style.overflow;
+    const previousPosition = document.body.style.position;
+    const previousWidth = document.body.style.width;
+    const previousTop = document.body.style.top;
+    const previousLeft = document.body.style.left;
+    const previousRight = document.body.style.right;
+
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+
     return () => {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-      document.body.style.top = '';
+      document.body.style.overflow = previousOverflow;
+      document.body.style.position = previousPosition;
+      document.body.style.width = previousWidth;
+      document.body.style.top = previousTop;
+      document.body.style.left = previousLeft;
+      document.body.style.right = previousRight;
+      window.scrollTo(0, scrollY);
     };
   }, [isOpen]);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    if (isOpen) {
+      setServicesOpen(false);
+      setRoofTypesOpen(false);
+    }
+    setIsOpen(!isOpen);
+  };
   const closeMenu = () => {
     setIsOpen(false);
     setServicesOpen(false);
