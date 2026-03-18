@@ -62,10 +62,10 @@ export default function MetalRoofingClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ?? Metal Roofing Specialists
+                {"\u{1F527}"} Metal Roofing Specialists
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ? 50+ Year Lifespan
+                {"\u23F3"} 50+ Year Lifespan
               </span>
             </div>
 

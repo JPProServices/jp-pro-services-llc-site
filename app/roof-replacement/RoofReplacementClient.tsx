@@ -65,10 +65,10 @@ export default function RoofReplacementClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ?? Complete Replacement
+                {"\u{1F3E0}"} Complete Replacement
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ? Quality Materials
+                {"\u2B50"} Quality Materials
               </span>
             </div>
 
@@ -111,7 +111,7 @@ export default function RoofReplacementClient() {
                   }`}
                   onClick={() => setActiveProcess('insurance')}
                 >
-                  ??? Insurance
+                  {"\u{1F6E1}\uFE0F"} Insurance
                 </button>
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -121,7 +121,7 @@ export default function RoofReplacementClient() {
                   }`}
                   onClick={() => setActiveProcess('retail')}
                 >
-                  ?? Retail
+                  {"\u{1F4B3}"} Retail
                 </button>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function RoofReplacementClient() {
               
               <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
                 <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
-                  {activeProcess === 'insurance' ? '??? Insurance' : '?? Retail'}
+                  {activeProcess === 'insurance' ? '\u{1F6E1}\uFE0F Insurance' : '\u{1F4B3} Retail'}
                 </div>
               </div>
               

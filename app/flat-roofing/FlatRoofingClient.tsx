@@ -63,10 +63,10 @@ export default function FlatRoofingClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ?? Commercial Grade
+                {"\u{1F3E2}"} Commercial Grade
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ?? Cost Effective
+                {"\u{1F4B0}"} Cost Effective
               </span>
             </div>
 

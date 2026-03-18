@@ -64,10 +64,10 @@ export default function RoofRepairClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ? Emergency Response
+                {"\u26A1"} Emergency Response
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ??? 5-Year Warranty
+                {"\u{1F6E1}\uFE0F"} 5-Year Warranty
               </span>
             </div>
 
@@ -110,7 +110,7 @@ export default function RoofRepairClient() {
                   }`}
                   onClick={() => setActiveProcess('emergency')}
                 >
-                  ? Emergency Repair
+                  {"\u26A1"} Emergency Repair
                 </button>
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -120,7 +120,7 @@ export default function RoofRepairClient() {
                   }`}
                   onClick={() => setActiveProcess('scheduled')}
                 >
-                  ?? Scheduled Repair
+                  {"\u{1F527}"} Scheduled Repair
                 </button>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function RoofRepairClient() {
               
               <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
                 <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
-                  {activeProcess === 'emergency' ? '? Emergency' : '?? Scheduled'}
+                  {activeProcess === 'emergency' ? '\u26A1 Emergency' : '\u{1F527} Scheduled'}
                 </div>
               </div>
               

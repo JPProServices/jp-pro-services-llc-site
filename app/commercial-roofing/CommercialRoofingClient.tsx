@@ -65,10 +65,10 @@ export default function CommercialRoofingClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ?? Commercial Specialist
+                {"\u{1F3E2}"} Commercial Specialist
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ??? Licensed & Insured
+                {"\u{1F6E1}\uFE0F"} Licensed & Insured
               </span>
             </div>
 
@@ -111,7 +111,7 @@ export default function CommercialRoofingClient() {
                   }`}
                   onClick={() => setActiveProcess('maintenance')}
                 >
-                  ?? Maintenance & Repair
+                  {"\u{1F527}"} Maintenance & Repair
                 </button>
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -121,7 +121,7 @@ export default function CommercialRoofingClient() {
                   }`}
                   onClick={() => setActiveProcess('new-build')}
                 >
-                  ?? New Construction
+                  {"\u{1F3D7}\uFE0F"} New Construction
                 </button>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function CommercialRoofingClient() {
               
               <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
                 <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
-                  {activeProcess === 'maintenance' ? '?? Maintenance' : '?? New Construction'}
+                  {activeProcess === 'maintenance' ? '\u{1F527} Maintenance' : '\u{1F3D7}\uFE0F New Construction'}
                 </div>
               </div>
               

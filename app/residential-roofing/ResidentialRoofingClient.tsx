@@ -25,10 +25,10 @@ export default function ResidentialRoofingClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ? <span className="font-semibold">5.0 / 5</span>
+                {"\u2B50"} <span className="font-semibold">5.0 / 5</span>
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ??? 25+ Year Product Warranties
+                {"\u{1F6E1}\uFE0F"} 25+ Year Product Warranties
               </span>
             </div>
 
@@ -130,7 +130,7 @@ export default function ResidentialRoofingClient() {
                   }`}
                   onClick={() => setActiveProcess('insurance')}
                 >
-                  ??? Insurance
+                  {"\u{1F6E1}\uFE0F"} Insurance
                 </button>
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -140,7 +140,7 @@ export default function ResidentialRoofingClient() {
                   }`}
                   onClick={() => setActiveProcess('direct-pay')}
                 >
-                  ?? Retail
+                  {"\u{1F4B3}"} Retail
                 </button>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function ResidentialRoofingClient() {
               
               <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
                 <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
-                  {activeProcess === 'insurance' ? '??? Insurance' : '?? Retail'}
+                  {activeProcess === 'insurance' ? '\u{1F6E1}\uFE0F Insurance' : '\u{1F4B3} Retail'}
                 </div>
               </div>
               
@@ -305,7 +305,7 @@ export default function ResidentialRoofingClient() {
               <p className="text-slate-300 mb-4">
                 Missing, cracked, or wind-damaged shingles. Common in Rutherford and Sumner Counties where high winds affect homes in Murfreesboro and Hendersonville.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">? Perfect color matching guaranteed</div>
+              <div className="text-yellow-400 text-sm font-medium">{"\u{1F3A8}"} Perfect color matching guaranteed</div>
             </div>
 
             {/* Storm Damage */}

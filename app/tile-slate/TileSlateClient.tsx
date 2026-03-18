@@ -62,10 +62,10 @@ export default function TileSlateClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ?? Premium Materials
+                {"\u{1F48E}"} Premium Materials
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ??? Century Lifespan
+                {"\u23F3"} Century Lifespan
               </span>
             </div>
 

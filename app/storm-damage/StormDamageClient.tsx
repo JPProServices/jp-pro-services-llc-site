@@ -65,10 +65,10 @@ export default function StormDamageClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ? Emergency Response
+                {"\u26A1"} Emergency Response
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                ??? Insurance Claims
+                {"\u{1F6E1}\uFE0F"} Insurance Claims
               </span>
             </div>
 
@@ -113,7 +113,7 @@ export default function StormDamageClient() {
                       : 'text-slate-300 hover:text-white hover:bg-white/10'
                   }`}
                 >
-                  ? Emergency Response
+                  {"\u26A1"} Emergency Response
                 </button>
                 <button
                   onClick={() => setActiveProcess('insurance')}
@@ -123,7 +123,7 @@ export default function StormDamageClient() {
                       : 'text-slate-300 hover:text-white hover:bg-white/10'
                   }`}
                 >
-                  ??? Insurance Claims
+                  {"\u{1F6E1}\uFE0F"} Insurance Claims
                 </button>
               </div>
 
@@ -131,7 +131,7 @@ export default function StormDamageClient() {
               <div className="md:hidden">
                 <div className="flex items-center justify-between px-4 py-3">
                   <span className="text-white font-semibold">
-                    {activeProcess === 'emergency' ? '? Emergency Response' : '??? Insurance Claims'}
+                    {activeProcess === 'emergency' ? '\u26A1 Emergency Response' : '\u{1F6E1}\uFE0F Insurance Claims'}
                   </span>
                   <div className="flex gap-2">
                     <button
