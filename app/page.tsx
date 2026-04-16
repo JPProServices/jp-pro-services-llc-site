@@ -1,7 +1,45 @@
-﻿import Hero from "@/components/Hero";
+﻿import type { ReactNode } from "react";
+
+import Hero from "@/components/Hero";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
 import FAQ from "@/components/FAQ";
+import BBBSeal from "@/components/BBBSeal";
+
+function TrustMetricCard({
+  badge,
+  eyebrow,
+  title,
+  description,
+}: {
+  badge: ReactNode;
+  eyebrow: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="group rounded-2xl border border-zinc-800 bg-zinc-950/80 p-6 text-left shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:border-zinc-700">
+      <div className="mb-5 flex h-16 items-center">{badge}</div>
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">{eyebrow}</p>
+      <div className="mt-3 text-3xl font-extrabold tracking-tight text-white">{title}</div>
+      <p className="mt-2 max-w-[18rem] text-base leading-relaxed text-slate-300">{description}</p>
+    </div>
+  );
+}
+
+function MetricIcon({
+  accentClassName,
+  children,
+}: {
+  accentClassName: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg shadow-black/20 ${accentClassName}`}>
+      {children}
+    </div>
+  );
+}
 
 export default function HomePage() {
   const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 636-6126";
@@ -28,61 +66,70 @@ export default function HomePage() {
       {/* Trust & Stats Bar */}
       <section className="bg-black md:bg-gradient-to-r md:from-zinc-900 md:to-black py-12 border-y border-zinc-700">
         <div className="mx-auto w-[min(1200px,94%)]">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {/* Satisfaction Guarantee */}
-            <div className="group">
-              <div className="flex items-center justify-center mb-3">
-                <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <TrustMetricCard
+              badge={
+                <MetricIcon accentClassName="bg-emerald-600">
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.8}
+                      d="M12 3l7 3v5c0 4.97-3.05 8.95-7 10-3.95-1.05-7-5.03-7-10V6l7-3z"
+                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9.5 12.5l1.75 1.75L14.75 10.75" />
                   </svg>
-                </div>
-              </div>
-              <div className="text-3xl font-bold text-white mb-1">5 Year</div>
-              <div className="text-slate-300 font-medium">Workmanship Guarantee</div>
-            </div>
-
-            {/* Emergency Response */}
-            <div className="group">
-              <div className="flex items-center justify-center mb-3">
-                <div className="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </MetricIcon>
+              }
+              eyebrow="Workmanship"
+              title="5 Year"
+              description="Backed by a workmanship guarantee for long-term peace of mind."
+            />
+            <TrustMetricCard
+              badge={
+                <MetricIcon accentClassName="bg-red-600">
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 3L4 14h6l-1 7 9-11h-6l1-7z" />
                   </svg>
-                </div>
-              </div>
-              <div className="text-3xl font-bold text-white mb-1">1 Hour</div>
-              <div className="text-slate-300 font-medium">Emergency Response</div>
-            </div>
-
-            {/* Customer Rating */}
-            <div className="group">
-              <div className="flex items-center justify-center mb-3">
-                <div className="bg-yellow-500 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                </MetricIcon>
+              }
+              eyebrow="Emergency Service"
+              title="1 Hour"
+              description="Rapid response when storm damage or active leaks need attention fast."
+            />
+            <TrustMetricCard
+              badge={
+                <MetricIcon accentClassName="bg-yellow-500 text-black">
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.922-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
+                </MetricIcon>
+              }
+              eyebrow="Reviews"
+              title="5.0 Stars"
+              description="Consistently strong customer feedback across roofing projects in Middle Tennessee."
+            />
+            <TrustMetricCard
+              badge={
+                <div className="inline-flex rounded-2xl bg-white p-2 shadow-lg shadow-black/20 ring-1 ring-black/10">
+                  <BBBSeal imageClassName="h-[42px] w-auto" />
                 </div>
-              </div>
-              <div className="text-3xl font-bold text-white mb-1">5.0★</div>
-              <div className="text-slate-300 font-medium">Customer Rating</div>
-            </div>
-
-            {/* BBB A-Rating */}
-            <div className="group">
-              <div className="flex items-center justify-center mb-3">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-              </div>
-              <div className="text-3xl font-bold text-white mb-1">BBB A+</div>
-              <div className="text-slate-300 font-medium">Accredited Rating</div>
-            </div>
+              }
+              eyebrow="Better Business Bureau"
+              title="BBB A+"
+              description="Official BBB accredited business seal linked directly to the live BBB profile."
+            />
           </div>
 
-
+          {/* Trust Badges Row */}
+          <div className="mt-10 border-t border-zinc-800 pt-8">
+            <div className="mb-4 text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Credentials & Coverage</p>
+            </div>
+            <div className="flex justify-center">
+              <TrustBadges size="lg" />
+            </div>
+          </div>
         </div>
       </section>
 
