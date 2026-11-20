@@ -45,7 +45,7 @@ export default function RoofRepairClient() {
     }
   ];
 
-  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 636-6126";
+  const phoneDisplay = "(615) 956-4920";
 
   return (
     <main>

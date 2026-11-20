@@ -44,7 +44,7 @@ export default function FlatRoofingClient() {
       answer: "Very energy efficient, especially white TPO membranes that reflect heat. Flat roofs also accommodate insulation upgrades and rooftop HVAC equipment efficiently."
     }
   ];
-  const phoneDisplay = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 636-6126";
+  const phoneDisplay = "(615) 956-4920";
 
   return (
     <main>
@@ -444,8 +444,8 @@ export default function FlatRoofingClient() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <div>
-                      <p className="text-white font-medium">163 Quail DR</p>
-                      <p className="text-slate-300">La Vergne, TN 37086</p>
+                      <p className="text-white font-medium">2803 Foster Ave, Suite 101</p>
+                      <p className="text-slate-300">Nashville, TN 37210</p>
                     </div>
                   </div>
                   
@@ -455,7 +455,7 @@ export default function FlatRoofingClient() {
                     </svg>
                     <div>
                       <p className="text-white font-medium">Business Hours</p>
-                      <p className="text-slate-300">Mon-Sun: 8:00 AM - 5:00 PM</p>
+                      <p className="text-slate-300">Mon–Sat: 8:00 AM - 4:00 PM</p>
                       <p className="text-slate-300 text-sm">Emergency Service: 24/7</p>
                     </div>
                   </div>

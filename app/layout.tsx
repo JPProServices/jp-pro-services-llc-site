@@ -9,8 +9,15 @@ import DesktopNav from "@/components/DesktopNav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jpproservicesllc.com"),
   title: "JP Pro Services - Roofing & Renovations",
-  description: "Top-rated roofing company in Middle Tennessee."
+  description: "Top-rated roofing company in Middle Tennessee.",
+  openGraph: {
+    title: "JP Pro Services",
+    description: "Roofing, construction and restoration in Nashville and Middle Tennessee.",
+    siteName: "JP Pro Services",
+    type: "website",
+  },
 };
 
 export const viewport = {
@@ -21,9 +28,9 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const phone = process.env.NEXT_PUBLIC_COMPANY_PHONE_DISPLAY || "(615) 636-6126";
+  const phone = "(615) 956-4920";
   const phoneHref =
-    process.env.NEXT_PUBLIC_COMPANY_PHONE || "+1-615-636-6126";
+    "+1-615-956-4920";
 
   return (
     <html lang="en" suppressHydrationWarning>
