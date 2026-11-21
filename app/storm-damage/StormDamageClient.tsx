@@ -607,7 +607,6 @@ export default function StormDamageClient() {
                     <div>
                       <p className="text-white font-medium">Business Hours</p>
                       <p className="text-slate-300">Mon–Sat: 8:00 AM - 4:00 PM</p>
-                      <p className="text-red-400 text-sm font-semibold">Emergency Service: 24/7</p>
                     </div>
                   </div>
                 </div>
@@ -671,13 +670,13 @@ export default function StormDamageClient() {
                     </div>
                   </a>
                   
-                  <a href="mailto:admin@jpproservicesllc.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
+                  <a href="mailto:jpproservicesllc2024@gmail.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
                     <div className="bg-zinc-700 p-2 rounded-lg border border-zinc-600 hover:bg-zinc-600 transition-all duration-300">
                       <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <span className="font-medium">admin@jpproservicesllc.com</span>
+                    <span className="font-medium">jpproservicesllc2024@gmail.com</span>
                   </a>
                 </div>
               </div>

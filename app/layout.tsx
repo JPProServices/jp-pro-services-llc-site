@@ -5,6 +5,7 @@ import MobileMenu from "@/components/MobileMenu";
 import ButtonEffects from "@/components/ButtonEffects";
 import ScrollHeader from "@/components/ScrollHeader";
 import DesktopNav from "@/components/DesktopNav";
+import SocialLinks from "@/components/SocialLinks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 alt="JP Pro Services Logo" 
                 className="h-10 w-auto"
               />
+              <SocialLinks />
               <div className="text-xs text-slate-500">
                 © <span suppressHydrationWarning>{new Date().getFullYear()}</span> JP Pro Services. All rights reserved.
               </div>
@@ -104,6 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href={`tel:${phoneHref}`} className="text-yellow-400 hover:text-yellow-300 font-medium transition-colors duration-200">
                   {phoneHref.replace(/^\+1-/, '').replace(/-/g, '.').replace(/(\d{3})\.(\d{3})\.(\d{4})/, '($1) $2-$3')}
                 </a>
+                <SocialLinks />
               </div>
               
               <div className="text-xs text-slate-500">

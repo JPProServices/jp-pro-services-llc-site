@@ -93,9 +93,9 @@ export default function HomePage() {
                   </svg>
                 </MetricIcon>
               }
-              eyebrow="Emergency Service"
-              title="1 Hour"
-              description="Rapid response when storm damage or active leaks need attention fast."
+              eyebrow="Owner Experience"
+              title="19 Years"
+              description="Hands-on construction experience behind every project we take on."
             />
             <TrustMetricCard
               badge={
@@ -153,7 +153,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">BBB-Accredited Excellence</h3>
-                  <p className="text-slate-300 leading-relaxed">As a BBB-accredited, licensed, insured, and bonded roofing company, we uphold the highest standards of quality and trust. With over two years of serving Nashville and Middle Tennessee, our commitment to integrity and craftsmanship ensures your roof is in reliable hands.</p>
+                  <p className="text-slate-300 leading-relaxed">As a BBB-accredited, licensed, insured, and bonded roofing company, we uphold the highest standards of quality and trust. Established in 2024 and led by an owner with 19 years of construction experience, our commitment to integrity and craftsmanship ensures your roof is in reliable hands.</p>
                 </div>
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Customer-First Service</h3>
-                  <p className="text-slate-300 leading-relaxed">We prioritize your peace of mind with free inspections, transparent pricing, and responsive support. Available Monday–Saturday (8:00 AM–4:00 PM for office) and 24/7 for emergencies, we're here to protect your property with unmatched care.</p>
+                  <p className="text-slate-300 leading-relaxed">We prioritize your peace of mind with free inspections, transparent pricing, and responsive support. Available Monday–Saturday (8:00 AM–4:00 PM for office), we're here to protect your property with unmatched care.</p>
                 </div>
               </div>
             </div>
@@ -255,8 +255,8 @@ export default function HomePage() {
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <h3 className="text-xl font-semibold mb-2">Emergency Repairs</h3>
-                <p className="text-blue-100">24/7 emergency roofing services for storm damage, urgent repairs, and immediate protection.</p>
+                <h3 className="text-xl font-semibold mb-2">Storm &amp; Leak Repairs</h3>
+                <p className="text-blue-100">Fast, reliable repairs for storm damage, leaks, and other urgent roofing issues.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
@@ -456,7 +456,6 @@ export default function HomePage() {
                     <div>
                       <p className="text-white font-medium">Business Hours</p>
                       <p className="text-slate-300">Mon–Sat: 8:00 AM - 4:00 PM</p>
-                      <p className="text-slate-300 text-sm">Emergency Service: 24/7</p>
                     </div>
                   </div>
                 </div>
@@ -489,7 +488,7 @@ export default function HomePage() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">Emergency</span>
+                      <span className="text-white text-sm font-medium">Storm Repair</span>
                     </div>
                   </div>
                   
@@ -517,13 +516,13 @@ export default function HomePage() {
                     <span className="font-medium">{phoneDisplay}</span>
                   </a>
                   
-                  <a href="mailto:admin@jpproservicesllc.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
+                  <a href="mailto:jpproservicesllc2024@gmail.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
                     <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15 hover:bg-white/15 transition-all duration-300">
                       <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <span className="font-medium">admin@jpproservicesllc.com</span>
+                    <span className="font-medium">jpproservicesllc2024@gmail.com</span>
                   </a>
                 </div>
               </div>
