@@ -27,8 +27,8 @@ const faqs = [
     answer: "We offer comprehensive manufacturer warranties on materials plus our own workmanship guarantee. Coverage details vary by product and are fully explained before installation. For decking, we solely use all GAF Certified products, shingles include 25+ years warranty."
   },
   {
-    question: "Are emergency services available?",
-    answer: "Yes, we provide urgent repair services for storm damage, leaks, and other emergency situations. Contact us immediately for rapid response."
+    question: "How quickly can you schedule a repair?",
+    answer: "We offer fast scheduling for storm damage and leak repairs. Call us during office hours, Monday–Saturday, 8:00 AM–4:00 PM, and we'll find the earliest time that works for you."
   },
   {
     question: "How should I prepare my property?",

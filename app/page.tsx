@@ -210,7 +210,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              From new installations to emergency repairs, we provide comprehensive roofing solutions for every need.
+              From new installations to storm and leak repairs, we provide comprehensive roofing solutions for every need.
             </p>
           </div>
           

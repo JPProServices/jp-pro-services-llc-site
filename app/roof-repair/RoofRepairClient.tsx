@@ -24,12 +24,12 @@ export default function RoofRepairClient() {
       answer: "Minor issues like a few missing shingles or small leaks can often be repaired. However, extensive damage, multiple leaks, or roofs over 20 years old may require replacement. We provide honest assessments during our free inspection."
     },
     {
-      question: "How quickly can you fix emergency roof leaks?",
-      answer: "We offer emergency roof repair services with response times typically within 1-2 hours for urgent leaks. We'll provide immediate temporary solutions and schedule permanent repairs as soon as weather permits."
+      question: "How quickly can you fix roof leaks?",
+      answer: "We offer fast scheduling for storm damage and leak repairs. We'll provide temporary solutions and schedule permanent repairs as soon as weather permits."
     },
     {
       question: "Do you provide temporary weatherproofing while waiting for repairs?",
-      answer: "Yes! We provide emergency tarping and temporary weatherproofing to prevent further damage while permanent repairs are scheduled or insurance claims are processed."
+      answer: "Yes! We provide tarping and temporary weatherproofing to prevent further damage while permanent repairs are scheduled or insurance claims are processed."
     },
     {
       question: "Will insurance cover my roof repairs?",
@@ -37,7 +37,7 @@ export default function RoofRepairClient() {
     },
     {
       question: "How long do roof repairs typically take?",
-      answer: "Most standard repairs can be completed in 1-2 days, depending on weather conditions and the extent of damage. Emergency repairs and temporary fixes are often completed the same day."
+      answer: "Most standard repairs can be completed in 1-2 days, depending on weather conditions and the extent of damage."
     },
     {
       question: "Do you warranty your roof repair work?",
@@ -64,7 +64,7 @@ export default function RoofRepairClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                {"\u26A1"} Emergency Response
+                {"\u26A1"} Storm &amp; Leak Repair
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
                 {"\u{1F6E1}\uFE0F"} 5-Year Warranty
@@ -76,7 +76,7 @@ export default function RoofRepairClient() {
             </h1>
 
             <p className="mt-4 max-w-2xl text-lg text-slate-200">
-              Fast, reliable roof repairs when you need them most. From emergency leaks to storm damage, we restore your roof's protection with quality craftsmanship.
+              Fast, reliable roof repairs when you need them most. From roof leaks to storm damage, we restore your roof's protection with quality craftsmanship.
             </p>
 
             <div className="mt-6">
@@ -95,7 +95,7 @@ export default function RoofRepairClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Our Roof Repair Process</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              We handle both <strong>emergency repairs</strong> and <strong>scheduled maintenance</strong>. Choose your path below to see our tailored approach.
+              We handle both <strong>storm &amp; leak repairs</strong> and <strong>scheduled maintenance</strong>. Choose your path below to see our tailored approach.
             </p>
             
             {/* Process Type Tabs */}
@@ -110,7 +110,7 @@ export default function RoofRepairClient() {
                   }`}
                   onClick={() => setActiveProcess('emergency')}
                 >
-                  {"\u26A1"} Emergency Repair
+                  {"\u26A1"} Storm &amp; Leak Repair
                 </button>
                 <button 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -138,7 +138,7 @@ export default function RoofRepairClient() {
               
               <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
                 <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
-                  {activeProcess === 'emergency' ? '\u26A1 Emergency' : '\u{1F527} Scheduled'}
+                  {activeProcess === 'emergency' ? '\u26A1 Storm & Leak' : '\u{1F527} Scheduled'}
                 </div>
               </div>
               
@@ -153,15 +153,15 @@ export default function RoofRepairClient() {
             </div>
           </div>
 
-          {/* Emergency Repair Process */}
+          {/* Storm & Leak Repair Process */}
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'emergency' ? '' : 'hidden'}`}>
             {/* Step 1 */}
             <div className="text-center">
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-                <h3 className="text-lg font-bold text-white mb-3">Emergency Call</h3>
+                <h3 className="text-lg font-bold text-white mb-3">Call Us</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  24/7 emergency response with 1-hour arrival time. Immediate assessment of urgent leaks and storm damage to prevent further property damage.
+                  Fast scheduling for storm damage and leak repairs. We assess leaks and storm damage to prevent further property damage.
                 </p>
               </div>
             </div>
@@ -170,9 +170,9 @@ export default function RoofRepairClient() {
             <div className="text-center">
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-                <h3 className="text-lg font-bold text-white mb-3">Immediate Protection</h3>
+                <h3 className="text-lg font-bold text-white mb-3">Temporary Protection</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Emergency tarping and temporary weatherproofing to stop active leaks. Quick damage assessment and immediate solutions to protect your property.
+                  Tarping and temporary weatherproofing to stop active leaks. Damage assessment and temporary solutions to protect your property.
                 </p>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function RoofRepairClient() {
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
                 <h3 className="text-lg font-bold text-white mb-3">Insurance Coordination</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Complete documentation for insurance claims and follow-up inspection. 5-year workmanship warranty on all emergency repair work.
+                  Complete documentation for insurance claims and follow-up inspection. 5-year workmanship warranty on all repair work.
                 </p>
               </div>
             </div>
@@ -265,14 +265,14 @@ export default function RoofRepairClient() {
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <h3 className="text-xl font-semibold mb-2">Emergency Repairs</h3>
-                <p className="text-blue-100">24/7 emergency response for urgent leaks and storm damage.</p>
+                <h3 className="text-xl font-semibold mb-2">Storm &amp; Leak Repairs</h3>
+                <p className="text-blue-100">Fast scheduling for storm damage and leak repairs.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> 1-hour response time</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Fast scheduling</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Temporary weatherproofing</li>
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Available weekends</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Open Saturdays</li>
                 </ul>
               </div>
             </div>
@@ -448,28 +448,28 @@ export default function RoofRepairClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left: Contact Form */}
             <div>
-              <h2 className="mb-2 text-3xl font-bold text-white">Need Emergency Roof Repairs?</h2>
+              <h2 className="mb-2 text-3xl font-bold text-white">Need Roof Repairs?</h2>
               <p className="mb-6 text-slate-300 text-lg">
-                Get immediate help for roof leaks and storm damage. Our emergency response team is ready to protect your home.
+                Get help with roof leaks and storm damage. We offer fast scheduling for storm damage and leak repairs.
               </p>
               <div>
                 <LeadCTA variant="inline" kind="contact" />
               </div>
             </div>
 
-            {/* Right: Emergency Info & Services */}
+            {/* Right: Scheduling Info & Services */}
             <div className="space-y-8">
-              {/* Emergency Contact */}
+              {/* Scheduling Contact */}
               <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Emergency Service</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Repair Scheduling</h3>
                 <div className="bg-white/10 backdrop-blur rounded-lg p-6 space-y-4 border border-white/15 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                     <div>
-                      <p className="text-white font-medium">24/7 Emergency Response</p>
-                      <p className="text-slate-300">Available for urgent leaks and storm damage</p>
+                      <p className="text-white font-medium">Fast Scheduling</p>
+                      <p className="text-slate-300">For storm damage and leak repairs</p>
                     </div>
                   </div>
                   
@@ -478,8 +478,8 @@ export default function RoofRepairClient() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
-                      <p className="text-white font-medium">1-Hour Response Time</p>
-                      <p className="text-slate-300">Fast response when you need it most</p>
+                      <p className="text-white font-medium">Office Hours</p>
+                      <p className="text-slate-300">Mon–Sat: 8:00 AM - 4:00 PM</p>
                       <p className="text-slate-300 text-sm">Call: {phoneDisplay}</p>
                     </div>
                   </div>
@@ -495,7 +495,7 @@ export default function RoofRepairClient() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">Emergency Leaks</span>
+                      <span className="text-white text-sm font-medium">Leak Repair</span>
                     </div>
                   </div>
                   

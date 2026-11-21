@@ -22,7 +22,7 @@ export default function StormDamageClient() {
   const stormFAQs = [
     {
       question: "What should I do immediately after storm damage?",
-      answer: "First, ensure everyone's safety. Then, document the damage with photos, contact your insurance company, and call us for emergency tarping to prevent further water damage."
+      answer: "First, ensure everyone's safety. Then, document the damage with photos, contact your insurance company, and call us for tarping to prevent further water damage."
     },
     {
       question: "Will my insurance cover storm damage repairs?",
@@ -30,7 +30,7 @@ export default function StormDamageClient() {
     },
     {
       question: "How quickly can you respond to storm damage?",
-      answer: "We offer 24/7 emergency response for severe storm damage. Our priority is preventing further damage with temporary solutions like tarping while we assess the full scope of repairs needed."
+      answer: "We offer fast scheduling for storm damage and leak repairs. Our priority is preventing further damage with temporary solutions like tarping while we assess the full scope of repairs needed."
     },
     {
       question: "What types of storm damage do you repair?",
@@ -42,7 +42,7 @@ export default function StormDamageClient() {
     },
     {
       question: "Can you provide temporary protection while waiting for repairs?",
-      answer: "Absolutely. We provide emergency tarping and temporary weatherproofing to prevent additional damage while insurance claims are processed and permanent repairs are scheduled."
+      answer: "Absolutely. We provide tarping and temporary weatherproofing to prevent additional damage while insurance claims are processed and permanent repairs are scheduled."
     }
   ];
 
@@ -65,7 +65,7 @@ export default function StormDamageClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                {"\u26A1"} Emergency Response
+                {"\u26A1"} Fast Scheduling
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
                 {"\u{1F6E1}\uFE0F"} Insurance Claims
@@ -77,7 +77,7 @@ export default function StormDamageClient() {
             </h1>
 
             <p className="mt-4 max-w-2xl text-lg text-slate-200">
-              When storms strike Middle Tennessee, we're here to help. Fast emergency response, insurance claim assistance, and quality repairs to restore your roof's protection.
+              When storms strike Middle Tennessee, we're here to help. Fast scheduling, insurance claim assistance, and quality repairs to restore your roof's protection.
             </p>
 
             <div className="mt-6">
@@ -96,7 +96,7 @@ export default function StormDamageClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Our Storm Damage Process</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              Whether you need immediate <strong>emergency response</strong> or help with <strong>insurance claims</strong>, we guide you through every step of storm damage restoration.
+              Whether you need <strong>storm damage repairs</strong> or help with <strong>insurance claims</strong>, we guide you through every step of storm damage restoration.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export default function StormDamageClient() {
                       : 'text-slate-300 hover:text-white hover:bg-white/10'
                   }`}
                 >
-                  {"\u26A1"} Emergency Response
+                  {"\u26A1"} Storm Repair
                 </button>
                 <button
                   onClick={() => setActiveProcess('insurance')}
@@ -131,7 +131,7 @@ export default function StormDamageClient() {
               <div className="md:hidden">
                 <div className="flex items-center justify-between px-4 py-3">
                   <span className="text-white font-semibold">
-                    {activeProcess === 'emergency' ? '\u26A1 Emergency Response' : '\u{1F6E1}\uFE0F Insurance Claims'}
+                    {activeProcess === 'emergency' ? '\u26A1 Storm Repair' : '\u{1F6E1}\uFE0F Insurance Claims'}
                   </span>
                   <div className="flex gap-2">
                     <button
@@ -156,15 +156,15 @@ export default function StormDamageClient() {
             </div>
           </div>
 
-          {/* Emergency Response Process */}
+          {/* Storm Repair Process */}
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'emergency' ? '' : 'hidden'}`}>
             {/* Step 1 */}
             <div className="text-center">
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-                <h3 className="text-lg font-bold text-white mb-3">Emergency Call</h3>
+                <h3 className="text-lg font-bold text-white mb-3">Call Us</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Call us immediately after storm damage. Our 24/7 emergency response team will dispatch within hours to assess and secure your property.
+                  Call us after storm damage. We offer fast scheduling for storm damage and leak repairs to assess and secure your property.
                 </p>
               </div>
             </div>
@@ -173,9 +173,9 @@ export default function StormDamageClient() {
             <div className="text-center">
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-                <h3 className="text-lg font-bold text-white mb-3">Rapid Assessment</h3>
+                <h3 className="text-lg font-bold text-white mb-3">Damage Assessment</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  On-site damage evaluation and safety assessment. We identify immediate threats and prioritize emergency stabilization needs.
+                  On-site damage evaluation and safety assessment. We identify immediate threats and prioritize stabilization needs.
                 </p>
               </div>
             </div>
@@ -184,9 +184,9 @@ export default function StormDamageClient() {
             <div className="text-center">
               <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/15 mb-4 h-full flex flex-col">
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
-                <h3 className="text-lg font-bold text-white mb-3">Emergency Tarping</h3>
+                <h3 className="text-lg font-bold text-white mb-3">Tarping &amp; Weatherproofing</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Immediate weatherproofing with professional tarping and boarding to prevent further water damage and secure your property.
+                  Weatherproofing with professional tarping and boarding to prevent further water damage and secure your property.
                 </p>
               </div>
             </div>
@@ -258,7 +258,7 @@ export default function StormDamageClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Complete Storm Damage Solutions</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              From emergency response to insurance claims and permanent repairs, we handle every aspect of storm damage restoration for Nashville area homes and businesses.
+              From tarping to insurance claims and permanent repairs, we handle every aspect of storm damage restoration for Nashville area homes and businesses.
             </p>
           </div>
           
@@ -271,8 +271,8 @@ export default function StormDamageClient() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">24/7 Emergency Response</h3>
-                  <p className="text-slate-300 leading-relaxed">When storms cause roof damage, every minute counts. Our emergency response team is available around the clock to secure your property and prevent further damage.</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">Fast Scheduling</h3>
+                  <p className="text-slate-300 leading-relaxed">We offer fast scheduling for storm damage and leak repairs to secure your property and prevent further damage.</p>
                 </div>
               </div>
             </div>
@@ -314,7 +314,7 @@ export default function StormDamageClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Complete Restoration</h3>
-                  <p className="text-slate-300 leading-relaxed">From emergency tarping to complete roof replacement, we handle the entire restoration process. Our goal is returning your property to pre-storm condition or better.</p>
+                  <p className="text-slate-300 leading-relaxed">From tarping to complete roof replacement, we handle the entire restoration process. Our goal is returning your property to pre-storm condition or better.</p>
                 </div>
               </div>
             </div>
@@ -460,12 +460,12 @@ export default function StormDamageClient() {
                 <svg className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7c0 2.21-3.582 4-8 4s-8-1.79-8-4z" />
                 </svg>
-                <h3 className="text-xl font-semibold mb-2">Emergency Tarping</h3>
-                <p className="text-blue-100">Immediate protection to prevent further damage while permanent repairs are planned.</p>
+                <h3 className="text-xl font-semibold mb-2">Temporary Tarping</h3>
+                <p className="text-blue-100">Temporary protection to prevent further damage while permanent repairs are planned.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> 24/7 availability</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Fast scheduling</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Secure weatherproofing</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Temporary protection</li>
                 </ul>
@@ -574,9 +574,9 @@ export default function StormDamageClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left: Contact Form */}
             <div>
-              <h2 className="mb-2 text-3xl font-bold text-white">Emergency Storm Damage Response</h2>
+              <h2 className="mb-2 text-3xl font-bold text-white">Storm Damage Repair</h2>
               <p className="mb-6 text-slate-300 text-lg">
-                Storm damage your roof? Don't wait - contact us immediately for emergency response and free damage assessment.
+                Storm damage your roof? Contact us for fast scheduling and a free damage assessment.
               </p>
               <div>
                 <LeadCTA variant="inline" kind="contact" />
@@ -621,7 +621,7 @@ export default function StormDamageClient() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">Emergency</span>
+                      <span className="text-white text-sm font-medium">Wind Damage</span>
                     </div>
                   </div>
                   
@@ -666,7 +666,7 @@ export default function StormDamageClient() {
                     </div>
                     <div>
                       <span className="font-medium">{phoneDisplay}</span>
-                      <p className="text-sm text-red-400 font-medium">24/7 Emergency</p>
+                      <p className="text-sm text-slate-400 font-medium">Mon–Sat: 8:00 AM - 4:00 PM</p>
                     </div>
                   </a>
                   

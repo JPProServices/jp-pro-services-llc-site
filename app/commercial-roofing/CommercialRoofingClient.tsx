@@ -311,8 +311,8 @@ export default function CommercialRoofingClient() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Emergency Response</h3>
-                  <p className="text-slate-300 leading-relaxed">When commercial roof emergencies strike, we respond quickly to minimize business disruption and property damage. Available for urgent repairs and storm damage response.</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">Storm &amp; Leak Repairs</h3>
+                  <p className="text-slate-300 leading-relaxed">We offer fast scheduling for storm damage and leak repairs to minimize business disruption and property damage.</p>
                 </div>
               </div>
             </div>
@@ -394,7 +394,7 @@ export default function CommercialRoofingClient() {
                 <ul className="space-y-2 text-slate-300">
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Regular inspections</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Preventive repairs</li>
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Emergency service</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Leak repairs</li>
                 </ul>
               </div>
             </div>
@@ -405,11 +405,11 @@ export default function CommercialRoofingClient() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 <h3 className="text-xl font-semibold mb-2">Storm Damage Repair</h3>
-                <p className="text-blue-100">Fast response for commercial storm damage and emergency repairs.</p>
+                <p className="text-blue-100">Fast scheduling for commercial storm damage and leak repairs.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> 24/7 emergency response</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Fast scheduling</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Insurance claim assistance</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Temporary weatherproofing</li>
                 </ul>
@@ -592,7 +592,7 @@ export default function CommercialRoofingClient() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">Emergency Repair</span>
+                      <span className="text-white text-sm font-medium">Storm Repair</span>
                     </div>
                   </div>
                 </div>
