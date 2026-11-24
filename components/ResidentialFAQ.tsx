@@ -4,7 +4,7 @@ import { useState } from "react";
 const residentialFaqs = [
   {
     question: "How long does a roof installation take?",
-    answer: "A typical residential roof installation in Nashville takes 1-2 days, depending on the roof's size, complexity, and weather conditions. Larger or intricate roofs (e.g., historic homes in Franklin or commercial buildings in downtown Nashville) may take longer. Our team works efficiently Monday-Friday, 8:00 AM-5:00 PM, to minimize disruption, with weather delays rescheduled promptly."
+    answer: "It depends on the roof's size, complexity and the weather. We give you a schedule with your written estimate. Our office hours are Monday–Saturday, 8:00 AM–4:00 PM, and weather delays are rescheduled promptly."
   },
   {
     question: "What is the cost of a new roof installation?",
@@ -12,7 +12,7 @@ const residentialFaqs = [
   },
   {
     question: "Will my homeowner's insurance cover a new roof?",
-    answer: "Insurance may cover a new roof if damage is caused by a covered peril, like storm or hail damage, common in areas like Murfreesboro or Hendersonville. Coverage depends on your policy (e.g., replacement cost vs. actual cash value). We assist with insurance claims by providing detailed inspections and documentation to streamline the process."
+    answer: "Insurance may cover a new roof if damage is caused by a covered peril, like storm or hail damage. Coverage depends on your policy (e.g., replacement cost vs. actual cash value). We assist with insurance claims by providing detailed inspections and documentation to streamline the process."
   },
   {
     question: "What types of roofing materials do you offer?",
@@ -20,7 +20,7 @@ const residentialFaqs = [
   },
   {
     question: "Do I need a full roof replacement or just repairs?",
-    answer: "If your roof has widespread damage, missing shingles, or is nearing the end of its lifespan (25+ years for asphalt shingles), a full replacement may be more cost-effective. For minor issues like leaks or isolated storm damage, repairs may suffice. Our free inspection in areas like Brentwood or Lebanon will provide clarity."
+    answer: "If your roof has widespread damage, missing shingles, or is nearing the end of its lifespan (25+ years for asphalt shingles), a full replacement may be more cost-effective. For minor issues like leaks or isolated storm damage, repairs may suffice. Our free inspection will tell you which one you need."
   },
   {
     question: "How do you handle insurance claims for roof installations?",
@@ -28,7 +28,7 @@ const residentialFaqs = [
   },
   {
     question: "What warranties do you offer on new roof installations?",
-    answer: "We provide manufacturer warranties (25+ years for materials like asphalt or metal) and our own workmanship warranty (5 years) for all installations. This ensures peace of mind for homes and businesses in Nashville, Franklin, and beyond. Ask about extended warranty options during your free quote."
+    answer: "Roofing comes with a 5-year labor warranty and a 50-year materials warranty. We explain the coverage before work begins."
   },
   {
     question: "Can you install a new roof in winter or during rainy seasons?",
@@ -36,15 +36,15 @@ const residentialFaqs = [
   },
   {
     question: "How do I know if my roof qualifies for an insurance-covered replacement?",
-    answer: "If your roof has significant damage from a covered event (e.g., hail, wind, or fallen trees, common in Springfield or La Vergne), your insurance may cover a full or partial replacement. We conduct a thorough inspection to assess damage and guide you through the claim process, ensuring all damage is documented."
+    answer: "If your roof has significant damage from a covered event (e.g., hail, wind, or fallen trees), your insurance may cover a full or partial replacement. We conduct a thorough inspection to assess damage and guide you through the claim process, ensuring all damage is documented."
   },
   {
     question: "What sets your company apart for roof installations?",
-    answer: "As a BBB-accredited, licensed, insured, and bonded company with over two years serving Middle Tennessee, we combine local expertise with premium materials and customer-first service. From historic restorations in Franklin to modern installs in Green Hills, we deliver durable roofs backed by transparent pricing and free inspections."
+    answer: "We are BBB accredited, insured and bonded, with Tennessee Home Improvement License #13503. Our owner brings 19 years of construction experience, and every job comes with transparent pricing and a free inspection."
   },
   {
     question: "Do you offer financing options?",
-    answer: "Yes, we offer flexible financing options to make your roof installation affordable. Our plans include low monthly payments and competitive rates, tailored to fit your budget. Whether you're in Hendersonville or Columbia, contact us online to discuss financing details and get a free inspection to start the process."
+    answer: "[Financing: confirm with the owners whether this is offered before launch.]"
   }
 ];
 

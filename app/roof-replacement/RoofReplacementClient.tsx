@@ -34,7 +34,7 @@ export default function RoofReplacementClient() {
     },
     {
       question: "Do you handle permits and inspections?",
-      answer: "Yes, we take care of all necessary permits and coordinate inspections with local authorities to ensure your new roof meets all building codes and requirements."
+      answer: "[Permits: confirm with the owners what they handle before launch.]"
     },
     {
       question: "What happens if it rains during my roof replacement?",
@@ -51,7 +51,7 @@ export default function RoofReplacementClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src="/hero.jpg"
@@ -184,7 +184,7 @@ export default function RoofReplacementClient() {
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
                 <h3 className="text-lg font-bold text-white mb-3">Complete Replacement</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Full tear-off and professional installation of your new roof system. Licensed craftsmen with daily progress updates throughout the 1-2 day process.
+                  Full tear-off and professional installation of your new roof system. Experienced craftsmen with daily progress updates.
                 </p>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function RoofReplacementClient() {
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
                 <h3 className="text-lg font-bold text-white mb-3">Complete Replacement</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Full tear-off and professional installation by licensed, insured craftsmen. We handle permits and coordinate for minimal disruption.
+                  Full tear-off and professional installation by an insured, bonded crew, coordinated for minimal disruption.
                 </p>
               </div>
             </div>
@@ -270,7 +270,7 @@ export default function RoofReplacementClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Licensed & Insured</h3>
-                  <p className="text-slate-300 leading-relaxed">Fully licensed, bonded, and insured for your protection. We meet all Tennessee requirements and carry comprehensive liability coverage for every project.</p>
+                  <p className="text-slate-300 leading-relaxed">Tennessee Home Improvement License #13503. Insured and bonded for your protection.</p>
                 </div>
               </div>
             </div>
@@ -371,7 +371,7 @@ export default function RoofReplacementClient() {
                   3
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Permits & Preparation</h3>
-                <p className="text-blue-100">We handle all permits and prepare your property for the replacement process.</p>
+                <p className="text-blue-100">We prepare your property for the replacement process.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">

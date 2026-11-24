@@ -49,7 +49,7 @@ export default function FlatRoofingClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src="/hero.jpg"
@@ -213,7 +213,7 @@ export default function FlatRoofingClient() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Commercial Grade Installation</h2>
               <p className="text-lg text-slate-300 mb-6">
-                Our certified technicians specialize in commercial flat roofing systems, ensuring proper installation techniques and long-term performance for your investment.
+                Our experienced crew specializes in commercial flat roofing systems, ensuring proper installation techniques and long-term performance for your investment.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -224,7 +224,7 @@ export default function FlatRoofingClient() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">Licensed & Insured</h4>
-                    <p className="text-slate-300 text-sm">Full commercial licensing and comprehensive insurance coverage for all flat roofing projects.</p>
+                    <p className="text-slate-300 text-sm">Insured and bonded for every flat roofing project.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -262,11 +262,11 @@ export default function FlatRoofingClient() {
                 <div className="space-y-3 text-left">
                   <div className="flex justify-between py-2 border-b border-white/15">
                     <span className="text-slate-300">TPO Membrane:</span>
-                    <span className="text-white font-semibold">15-20 Years</span>
+                    <span className="text-white font-semibold">[Confirm]</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-white/15">
                     <span className="text-slate-300">EPDM Membrane:</span>
-                    <span className="text-white font-semibold">15-25 Years</span>
+                    <span className="text-white font-semibold">[Confirm]</span>
                   </div>
                   <div className="flex justify-between py-2">
                     <span className="text-slate-300">Workmanship:</span>
@@ -300,7 +300,7 @@ export default function FlatRoofingClient() {
                 <ul className="space-y-2 text-sm text-slate-300">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-                    Energy Star Qualified
+                    [Energy Star: confirm product]
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
@@ -488,7 +488,7 @@ export default function FlatRoofingClient() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">Emergency</span>
+                      <span className="text-white text-sm font-medium">Repairs</span>
                     </div>
                   </div>
                   

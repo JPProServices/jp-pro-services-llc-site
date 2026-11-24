@@ -27,10 +27,10 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
     : `${wrap} max-w-md ml-auto`;
 
   return (
-    <aside className={containerClasses} aria-label={kind === "estimate" ? "Free inspection form" : "Contact form"}>
+    <aside className={containerClasses} aria-label={kind === "estimate" ? "Free estimate form" : "Contact form"}>
       <h3 className="mb-2 text-xl font-semibold text-white">
         {kind === "estimate" ? (
-          <>Schedule your <strong>FREE</strong> Roof Inspection / Estimate</>
+          <>Get your <strong>FREE</strong> Estimate</>
         ) : (
           <>Contact <strong>JP Pro Services</strong></>
         )}
@@ -66,9 +66,11 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
               <option value="" className="bg-black text-white">Select…</option>
               <option className="bg-black text-white">Roof Replacement</option>
               <option className="bg-black text-white">Roof Repair</option>
-              <option className="bg-black text-white">Storm Damage</option>
-              <option className="bg-black text-white">Residential Roofing</option>
-              <option className="bg-black text-white">Commercial Roofing</option>
+              <option className="bg-black text-white">Gutters</option>
+              <option className="bg-black text-white">Decks, Fencing &amp; Outdoor Living</option>
+              <option className="bg-black text-white">Siding &amp; Exterior Finishes</option>
+              <option className="bg-black text-white">Custom Remodeling</option>
+              <option className="bg-black text-white">Storm Damage / Insurance Claim</option>
             </select>
           </div>
         ) : null}
@@ -120,7 +122,7 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
           className="group btn-gold neon relative inline-flex items-center justify-center overflow-hidden rounded-xl px-4 py-3 font-extrabold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
         >
           <span className="relative z-10 flex items-center gap-2">
-            {kind === "estimate" ? "Schedule FREE Inspection" : "Send Message"}
+            {kind === "estimate" ? "Get My FREE Estimate" : "Send Message"}
             <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

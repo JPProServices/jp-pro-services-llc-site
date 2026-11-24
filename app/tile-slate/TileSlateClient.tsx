@@ -48,7 +48,7 @@ export default function TileSlateClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src="/hero.jpg"
@@ -187,7 +187,7 @@ export default function TileSlateClient() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Specialized Installation Expertise</h2>
               <p className="text-lg text-slate-300 mb-6">
-                Tile and slate installation requires specialized knowledge and techniques. Our certified craftsmen ensure proper installation for maximum performance and longevity.
+                Tile and slate installation requires specialized knowledge and techniques. Our experienced craftsmen ensure proper installation for maximum performance and longevity.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -236,11 +236,11 @@ export default function TileSlateClient() {
                 <div className="space-y-3 text-left">
                   <div className="flex justify-between py-2 border-b border-white/15">
                     <span className="text-slate-300">Natural Slate:</span>
-                    <span className="text-white font-semibold">100+ Years</span>
+                    <span className="text-white font-semibold">[Confirm]</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-white/15">
                     <span className="text-slate-300">Clay Tiles:</span>
-                    <span className="text-white font-semibold">50-100 Years</span>
+                    <span className="text-white font-semibold">[Confirm]</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-white/15">
                     <span className="text-slate-300">Workmanship:</span>
@@ -466,7 +466,7 @@ export default function TileSlateClient() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">Emergency</span>
+                      <span className="text-white text-sm font-medium">Repairs</span>
                     </div>
                   </div>
                   

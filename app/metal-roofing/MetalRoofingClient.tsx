@@ -28,7 +28,7 @@ export default function MetalRoofingClient() {
     },
     {
       question: "What warranty comes with metal roofing?",
-      answer: "Metal roofing typically comes with 40-50 year manufacturer warranties on materials, plus our workmanship warranty. Many systems include paint warranties as well."
+      answer: "Roofing comes with a 50-year materials warranty and our 5-year labor warranty. [Confirm paint finish warranty with the owners.]"
     },
     {
       question: "Is metal roofing energy efficient?",
@@ -48,7 +48,7 @@ export default function MetalRoofingClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src="/hero.jpg"
@@ -187,7 +187,7 @@ export default function MetalRoofingClient() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Professional Metal Roof Installation</h2>
               <p className="text-lg text-slate-300 mb-6">
-                Metal roofing requires specialized installation techniques. Our certified team ensures proper installation for maximum performance and longevity.
+                Metal roofing requires specialized installation techniques. Our experienced team ensures proper installation for maximum performance and longevity.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -236,11 +236,11 @@ export default function MetalRoofingClient() {
                 <div className="space-y-3 text-left">
                   <div className="flex justify-between py-2 border-b border-white/15">
                     <span className="text-slate-300">Material Coverage:</span>
-                    <span className="text-white font-semibold">40-50 Years</span>
+                    <span className="text-white font-semibold">50 Years</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-white/15">
                     <span className="text-slate-300">Paint Warranty:</span>
-                    <span className="text-white font-semibold">30-40 Years</span>
+                    <span className="text-white font-semibold">[Confirm]</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-white/15">
                     <span className="text-slate-300">Workmanship:</span>
@@ -466,7 +466,7 @@ export default function MetalRoofingClient() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">Emergency</span>
+                      <span className="text-white text-sm font-medium">Repairs</span>
                     </div>
                   </div>
                   

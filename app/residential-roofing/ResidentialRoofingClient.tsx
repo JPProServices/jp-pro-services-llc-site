@@ -11,7 +11,7 @@ export default function ResidentialRoofingClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src="/hero.jpg"
@@ -25,10 +25,10 @@ export default function ResidentialRoofingClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                {"\u2B50"} <span className="font-semibold">5.0 / 5</span>
+                {"\u2B50"} <span className="font-semibold">BBB Accredited</span>
               </span>
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">
-                {"\u{1F6E1}\uFE0F"} 25+ Year Product Warranties
+                {"\u{1F6E1}\uFE0F"} 5-Year Labor Warranty
               </span>
             </div>
 
@@ -37,7 +37,7 @@ export default function ResidentialRoofingClient() {
             </h1>
 
             <p className="mt-4 max-w-2xl text-lg text-slate-200">
-              Protecting Middle Tennessee homes with premium materials, unmatched craftsmanship, and our industry-leading warranties. From leak repairs to full replacements.
+              Protecting Middle Tennessee homes with GAF materials, careful craftsmanship, and a 5-year labor warranty. From leak repairs to full replacements.
             </p>
 
             <div className="mt-6">
@@ -89,7 +89,7 @@ export default function ResidentialRoofingClient() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-1">25+ Years</div>
+              <div className="text-3xl font-bold text-white mb-1">50 Years</div>
               <div className="text-slate-300 font-medium">Material Warranty</div>
             </div>
 
@@ -102,7 +102,7 @@ export default function ResidentialRoofingClient() {
                   </svg>
                 </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-1">100%</div>
+              <div className="text-3xl font-bold text-white mb-1">Yes</div>
               <div className="text-slate-300 font-medium">Insurance Assistance</div>
             </div>
           </div>
@@ -228,7 +228,7 @@ export default function ResidentialRoofingClient() {
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
                 <h3 className="text-lg font-bold text-white mb-3">FREE Estimate</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Comprehensive roof assessment with detailed photos and condition report. Same-day evaluation and recommendations provided.
+                  Comprehensive roof assessment with detailed photos and condition report. Clear recommendations on repair or replacement.
                 </p>
               </div>
             </div>
@@ -275,7 +275,7 @@ export default function ResidentialRoofingClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Common Residential Roofing Issues We Solve</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              From Belle Meade to Bellevue, Middle Tennessee homeowners face unique roofing challenges. Here's how we solve them with expert craftsmanship.
+              Homeowners around Nashville face these common roofing problems. Here's how we solve them with expert craftsmanship.
             </p>
           </div>
 
@@ -289,9 +289,9 @@ export default function ResidentialRoofingClient() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Leak Repairs</h3>
               <p className="text-slate-300 mb-4">
-                Water infiltration through damaged shingles, flashing, or seals around vents and chimneys. Critical for spring storms in Antioch and Mt. Juliet.
+                Water infiltration through damaged shingles, flashing, or seals around vents and chimneys.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">Emergency 24 hour response</div>
+              <div className="text-yellow-400 text-sm font-medium">Fast scheduling for leak repairs</div>
             </div>
 
             {/* Shingle Replacement */}
@@ -303,9 +303,9 @@ export default function ResidentialRoofingClient() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Shingle Replacement</h3>
               <p className="text-slate-300 mb-4">
-                Missing, cracked, or wind-damaged shingles. Common in Rutherford and Sumner Counties where high winds affect homes in Murfreesboro and Hendersonville.
+                Missing, cracked, or wind-damaged shingles.
               </p>
-              <div className="text-yellow-400 text-sm font-medium">Perfect color matching guaranteed</div>
+              <div className="text-yellow-400 text-sm font-medium">Shingles matched to your existing roof</div>
             </div>
 
             {/* Storm Damage */}
@@ -317,7 +317,7 @@ export default function ResidentialRoofingClient() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Storm Damage Restoration</h3>
               <p className="text-slate-300 mb-4">
-                Hail, wind, and fallen tree damage from Tennessee's frequent storms. Especially common in exposed areas like Springfield and La Vergne.
+                Hail, wind, and fallen tree damage from Tennessee's frequent storms.
               </p>
               <div className="text-yellow-400 text-sm font-medium">Full insurance claim assistance</div>
             </div>
@@ -332,7 +332,7 @@ export default function ResidentialRoofingClient() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Flashing Repairs</h3>
               <p className="text-slate-300 mb-4">
-                Metal strips around chimneys, vents, and valleys. Critical for historic homes in Franklin and Belle Meade with complex rooflines.
+                Metal strips around chimneys, vents, and valleys. Critical on roofs with complex rooflines.
               </p>
               <div className="text-yellow-400 text-sm font-medium">Premium galvanized materials</div>
             </div>
@@ -384,7 +384,7 @@ export default function ResidentialRoofingClient() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Roof Ventilation Systems</h3>
               <p className="text-slate-300 mb-4">
-                Critical for Middle Tennessee's high summer humidity. Prevents mold and extends roof life in homes throughout Brentwood and Gallatin.
+                Critical for Middle Tennessee's high summer humidity. Prevents mold and extends roof life.
               </p>
               <div className="text-yellow-400 text-sm font-medium">Ridge, soffit & gable vents</div>
             </div>
@@ -444,7 +444,7 @@ export default function ResidentialRoofingClient() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Slate & Tile</h3>
-              <p className="text-slate-300 text-sm mb-3 flex-grow">Historic homes in Belle Meade & Franklin</p>
+              <p className="text-slate-300 text-sm mb-3 flex-grow">Historic and older homes</p>
               <div className="text-yellow-400 font-medium mt-auto">Historic Specialty</div>
             </div>
 
@@ -548,7 +548,7 @@ export default function ResidentialRoofingClient() {
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">Emergency</span>
+                      <span className="text-white text-sm font-medium">Repairs</span>
                     </div>
                   </div>
                   

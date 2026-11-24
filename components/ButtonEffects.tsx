@@ -46,7 +46,7 @@ export default function ButtonEffects() {
                 position: absolute;
                 width: 3px;
                 height: 3px;
-                background: rgba(232, 185, 35, ${0.8 - i * 0.1});
+                background: rgba(201, 116, 74, ${0.8 - i * 0.1});
                 border-radius: 50%;
                 pointer-events: none;
                 z-index: 10;

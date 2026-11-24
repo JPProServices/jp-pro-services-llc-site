@@ -3,36 +3,40 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "How long will my roof replacement project take?",
-    answer: "Timeline varies by project size and weather. Most residential homes take 1-2 days to complete. We provide detailed scheduling during your consultation."
+    question: "What services do you offer?",
+    answer: "Roofing and gutters; decks, fencing and outdoor living; siding and exterior finishes; and custom remodeling. Every project starts with a free estimate."
   },
   {
-    question: "What signs indicate I need a new roof?",
-    answer: "Key indicators include damaged or missing shingles, interior water damage, excessive granule loss, and roofs approaching 10+ years old. Schedule a free inspection for professional assessment."
+    question: "What areas do you serve?",
+    answer: "We work with homeowners within 50 miles of Nashville. Our office is at 2803 Foster Ave, Suite 101, Nashville, TN 37210."
   },
   {
-    question: "Do you handle insurance claims?",
-    answer: "Absolutely. We work directly with all insurance companies, pull storm data, document damage thoroughly, and help navigate the claims process from start to finish."
+    question: "Are you licensed and insured?",
+    answer: "Yes. We hold Tennessee Home Improvement License #13503, we are insured and bonded, BBB accredited, and a GAF certified roofing contractor."
   },
   {
-    question: "What does a new roof typically cost?",
-    answer: "Investment varies based on home size, material choice, and project complexity. We provide transparent, detailed estimates with no surprise costs."
+    question: "What products do you use?",
+    answer: "GAF for roofing, and Trex and TimberTech for decks. We walk you through the options for your project during the estimate."
   },
   {
-    question: "Is it possible to install over existing shingles?",
-    answer: "We typically recommend full removal to properly inspect and address underlying issues. This ensures better long-term performance."
+    question: "How long will my project take?",
+    answer: "It depends on the size of the project and the weather. We give you a schedule with your written estimate."
+  },
+  {
+    question: "What does a project typically cost?",
+    answer: "Cost depends on the size of the job, the materials you choose and how complex the work is. We provide transparent, detailed estimates with no surprise costs."
+  },
+  {
+    question: "Do you help with insurance claims?",
+    answer: "Yes. We have experience negotiating and handling insurance claims for storm damage. We document the damage and work with your insurance adjuster."
   },
   {
     question: "What warranties are included?",
-    answer: "We offer comprehensive manufacturer warranties on materials plus our own workmanship guarantee. Coverage details vary by product and are fully explained before installation. For decking, we solely use all GAF Certified products, shingles include 25+ years warranty."
+    answer: "Roofing comes with a 5-year labor warranty and a 50-year materials warranty. All other work comes with a 2-year labor warranty. We explain the coverage before work begins."
   },
   {
     question: "How quickly can you schedule a repair?",
     answer: "We offer fast scheduling for storm damage and leak repairs. Call us during office hours, Monday–Saturday, 8:00 AM–4:00 PM, and we'll find the earliest time that works for you."
-  },
-  {
-    question: "How should I prepare my property?",
-    answer: "We'll provide a detailed preparation checklist, but generally involves clearing driveway access, protecting landscaping, and securing outdoor items. Our team handles most preparation."
   }
 ];
 

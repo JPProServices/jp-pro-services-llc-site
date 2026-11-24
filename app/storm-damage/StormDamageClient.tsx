@@ -51,7 +51,7 @@ export default function StormDamageClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src="/hero.jpg"
@@ -427,13 +427,13 @@ export default function StormDamageClient() {
                     c0,4.411,3.589,8,8,8h49c4.411,0,8-3.589,8-8v-33.004C208.504,306.454,205.491,301.491,197.037,301.491z"/>
                 </svg>
                 <h3 className="text-xl font-semibold mb-2">Fallen Tree Damage</h3>
-                <p className="text-blue-100">Complete restoration from tree damage including structural repairs and roof reconstruction.</p>
+                <p className="text-blue-100">Roof repair after tree damage, including decking replacement where needed.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Structural assessment</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Deck replacement</li>
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Complete reconstruction</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Roof repair or replacement</li>
                 </ul>
               </div>
             </div>
@@ -659,7 +659,7 @@ export default function StormDamageClient() {
                 <h3 className="text-xl font-semibold text-white mb-4">Get In Touch</h3>
                 <div className="space-y-3">
                   <a href={`tel:${phoneDisplay.replace(/\D/g, '')}`} className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-red-600 p-2 rounded-lg border border-red-500 hover:bg-red-500 transition-all duration-300">
+                    <div className="bg-yellow-500 p-2 rounded-lg border border-yellow-400 hover:bg-yellow-400 transition-all duration-300">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>

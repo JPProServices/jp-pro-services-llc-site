@@ -51,7 +51,7 @@ export default function CommercialRoofingClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src="/hero.jpg"
@@ -96,7 +96,7 @@ export default function CommercialRoofingClient() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Our Commercial Roofing Process</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-              We specialize in both <strong>maintenance & repair</strong> and <strong>new construction</strong> projects. Choose your path below to see our tailored process.
+              We specialize in both <strong>maintenance & repair</strong> and <strong>roof replacement</strong> projects. Choose your path below to see our tailored process.
             </p>
             
             {/* Process Type Tabs */}
@@ -121,7 +121,7 @@ export default function CommercialRoofingClient() {
                   }`}
                   onClick={() => setActiveProcess('new-build')}
                 >
-                  {"\u{1F3D7}\uFE0F"} New Construction
+                  {"\u{1F504}"} Replacement
                 </button>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function CommercialRoofingClient() {
               
               <div className="bg-white/10 backdrop-blur rounded-xl border border-white/15 mx-4 flex-1 max-w-xs">
                 <div className="bg-yellow-500 text-black rounded-xl px-6 py-4 text-center font-semibold">
-                  {activeProcess === 'maintenance' ? '\u{1F527} Maintenance' : '\u{1F3D7}\uFE0F New Construction'}
+                  {activeProcess === 'maintenance' ? '\u{1F527} Maintenance' : '\u{1F504} Replacement'}
                 </div>
               </div>
               
@@ -184,7 +184,7 @@ export default function CommercialRoofingClient() {
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
                 <h3 className="text-lg font-bold text-white mb-3">Efficient Repairs</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Professional maintenance and repair work by licensed commercial crews. Coordinated scheduling and daily progress updates.
+                  Professional maintenance and repair work by our experienced crew. Coordinated scheduling and daily progress updates.
                 </p>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function CommercialRoofingClient() {
             </div>
           </div>
 
-          {/* New Construction Process */}
+          {/* Replacement Process */}
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${activeProcess === 'new-build' ? '' : 'hidden'}`}>
             {/* Step 1 */}
             <div className="text-center">
@@ -209,7 +209,7 @@ export default function CommercialRoofingClient() {
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
                 <h3 className="text-lg font-bold text-white mb-3">Project Consultation</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Comprehensive project assessment with architectural review and material recommendations. Custom solutions for new commercial buildings.
+                  On-site assessment of your existing roof with material recommendations and a written estimate.
                 </p>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function CommercialRoofingClient() {
                 <div className="bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
                 <h3 className="text-lg font-bold text-white mb-3">Professional Installation</h3>
                 <p className="text-slate-300 text-sm flex-grow">
-                  Expert commercial installation by licensed, insured crews. Quality control checkpoints and project management throughout construction.
+                  Tear-off and installation by an insured, bonded crew, with quality checks throughout the project.
                 </p>
               </div>
             </div>
@@ -284,7 +284,7 @@ export default function CommercialRoofingClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Licensed & Insured Service</h3>
-                  <p className="text-slate-300 leading-relaxed">Fully licensed, bonded, and insured for your peace of mind. We carry comprehensive commercial liability coverage and work with property managers throughout Middle Tennessee.</p>
+                  <p className="text-slate-300 leading-relaxed">Insured and bonded for your peace of mind. We work with property managers around Nashville.</p>
                 </div>
               </div>
             </div>
@@ -426,7 +426,7 @@ export default function CommercialRoofingClient() {
               </div>
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Licensed contractors</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Insured & bonded</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Quality materials</li>
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Workmanship warranty</li>
                 </ul>

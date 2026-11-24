@@ -2,27 +2,24 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type MenuKey = "services" | "roofTypes" | null;
+import { roofingPages, secondaryRoofingPages, services } from "@/components/services";
+
+type MenuKey = "roofing" | null;
 
 type NavItem = {
   href: string;
   label: string;
 };
 
-const servicesItems: NavItem[] = [
-  { href: "/residential-roofing", label: "Residential Roofing" },
-  { href: "/commercial-roofing", label: "Commercial Roofing" },
-  { href: "/roof-repair", label: "Roof Repair" },
-  { href: "/roof-replacement", label: "Roof Replacement" },
-  { href: "/storm-damage", label: "Storm Damage" },
+const roofingItems: NavItem[] = [
+  { href: "/roofing-gutters", label: "Roofing & Gutters Overview" },
+  ...roofingPages,
+  ...secondaryRoofingPages,
 ];
 
-const roofTypeItems: NavItem[] = [
-  { href: "/asphalt-shingles", label: "Asphalt Shingles" },
-  { href: "/metal-roofing", label: "Metal Roofing" },
-  { href: "/tile-slate", label: "Tile & Slate" },
-  { href: "/flat-roofing", label: "Flat Roofing" },
-];
+const serviceLinks: NavItem[] = services
+  .filter((service) => service.slug !== "roofing-gutters")
+  .map((service) => ({ href: `/${service.slug}`, label: service.shortName }));
 
 function DropdownMenu({
   id,
@@ -49,7 +46,7 @@ function DropdownMenu({
     >
       <button
         type="button"
-        className="nav-link-gold flex items-center gap-1 py-2"
+        className="nav-link-gold flex items-center gap-1 whitespace-nowrap py-2"
         aria-expanded={isOpen}
         aria-controls={`${id}-menu`}
         onClick={onToggle}
@@ -68,7 +65,7 @@ function DropdownMenu({
       <div
         id={`${id}-menu`}
         className={`absolute top-full left-0 mt-1 rounded-lg border border-zinc-600/50 bg-black/90 shadow-2xl transition-all duration-200 z-50 ${
-          id === "services" ? "w-56" : "w-48"
+          "w-64"
         } ${isOpen ? "visible opacity-100" : "invisible opacity-0 pointer-events-none"}`}
         style={{
           backdropFilter: "blur(12px)",
@@ -119,30 +116,24 @@ export default function DesktopNav() {
   }, []);
 
   return (
-    <nav className="hidden lg:flex items-center justify-center flex-1 mx-12" aria-label="Main">
-      <div ref={navRef} className="flex items-center gap-8 text-slate-300 font-medium">
+    <nav className="hidden xl:flex items-center justify-center flex-1 mx-8" aria-label="Main">
+      <div ref={navRef} className="flex items-center gap-6 text-slate-300 font-medium">
         <DropdownMenu
-          id="services"
-          label="Services"
-          items={servicesItems}
-          isOpen={openMenu === "services"}
-          onToggle={() => setOpenMenu((current) => (current === "services" ? null : "services"))}
-          onOpen={() => setOpenMenu("services")}
-          onClose={() => setOpenMenu((current) => (current === "services" ? null : current))}
+          id="roofing"
+          label="Roofing & Gutters"
+          items={roofingItems}
+          isOpen={openMenu === "roofing"}
+          onToggle={() => setOpenMenu((current) => (current === "roofing" ? null : "roofing"))}
+          onOpen={() => setOpenMenu("roofing")}
+          onClose={() => setOpenMenu((current) => (current === "roofing" ? null : current))}
         />
 
-        <DropdownMenu
-          id="roofTypes"
-          label="Roof Types"
-          items={roofTypeItems}
-          isOpen={openMenu === "roofTypes"}
-          onToggle={() => setOpenMenu((current) => (current === "roofTypes" ? null : "roofTypes"))}
-          onOpen={() => setOpenMenu("roofTypes")}
-          onClose={() => setOpenMenu((current) => (current === "roofTypes" ? null : current))}
-        />
+        {serviceLinks.map((link) => (
+          <a key={link.href} href={link.href} className="nav-link-gold whitespace-nowrap py-2">{link.label}</a>
+        ))}
 
-        <a href="/gallery" className="nav-link-gold py-2">Gallery</a>
-        <a href="/#faq" className="nav-link-gold py-2">FAQs</a>
+        <a href="/gallery" className="nav-link-gold whitespace-nowrap py-2">Gallery</a>
+        <a href="/#faq" className="nav-link-gold whitespace-nowrap py-2">FAQs</a>
       </div>
     </nav>
   );

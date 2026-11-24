@@ -1,12 +1,50 @@
 /* Tailwind v4 */
 @import "tailwindcss";
 
+/*
+  Provisional earthy palette until the new logo arrives.
+  The existing pages use Tailwind's default color names (black, yellow, blue,
+  slate, zinc), so remapping them here recolors the whole site in one place.
+  yellow = clay accent, blue = moss, black/zinc = bark, slate = sand text.
+*/
+@theme {
+  --color-white: #faf7f2;
+  --color-black: #1e1a15;
+
+  --color-yellow-300: #e7a882;
+  --color-yellow-400: #d98a5f;
+  --color-yellow-500: #c9744a;
+  --color-yellow-600: #b0603a;
+
+  --color-blue-100: #e3e7d3;
+  --color-blue-500: #7a8760;
+  --color-blue-600: #66734d;
+  --color-blue-700: #535f3d;
+
+  --color-emerald-600: #66734d;
+
+  --color-zinc-400: #a59886;
+  --color-zinc-600: #5c5245;
+  --color-zinc-700: #463d33;
+  --color-zinc-800: #322b23;
+  --color-zinc-900: #26211b;
+  --color-zinc-950: #1a1612;
+
+  --color-slate-200: #e9e2d6;
+  --color-slate-300: #d8cebf;
+  --color-slate-400: #b5a894;
+  --color-slate-500: #958977;
+  --color-slate-600: #73685a;
+  --color-slate-700: #574e43;
+  --color-slate-900: #241f19;
+}
+
 /* Global smooth scrolling and mobile viewport fixes */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background-color: #000000;
-  background: #000000;
+  background-color: #1e1a15;
+  background: #1e1a15;
 }
 
 body {
@@ -14,14 +52,29 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #000000;
-  background: #000000;
+  background-color: #1e1a15;
+  background: #1e1a15;
 }
 
 /* Focus outline styling */
 :focus-visible {
-  outline: 2px solid #60a5fa;
+  outline: 2px solid #d98a5f;
   outline-offset: 2px;
+}
+
+/* Hero background fades as the page scrolls (Three Stone / Seek One style) */
+@keyframes hero-fade-out {
+  to { opacity: 0.2; }
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-fade {
+      animation: hero-fade-out linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 80vh;
+    }
+  }
 }
 
 /* Custom animations */
@@ -46,8 +99,8 @@ body {
 
 /* Professional solid golden button with subtle effects */
 .btn-gold {
-  background: linear-gradient(135deg, #e8b923, #d4a21a);
-  color: white;
+  background: linear-gradient(135deg, #c9744a, #b0603a);
+  color: #1e1a15;
   position: relative;
   overflow: hidden;
   border: none;
@@ -57,7 +110,7 @@ body {
   
   /* Professional shadows for depth */
   box-shadow: 
-    0 4px 16px rgba(232, 185, 35, 0.3),
+    0 4px 16px rgba(201, 116, 74, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   
@@ -72,14 +125,14 @@ body {
   0%, 100% { 
     transform: scale(1); 
     box-shadow: 
-      0 4px 16px rgba(232, 185, 35, 0.3),
+      0 4px 16px rgba(201, 116, 74, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.2),
       inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   }
   50% { 
     transform: scale(1.005); 
     box-shadow: 
-      0 6px 20px rgba(232, 185, 35, 0.35),
+      0 6px 20px rgba(201, 116, 74, 0.35),
       inset 0 1px 0 rgba(255, 255, 255, 0.25),
       inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   }
@@ -115,10 +168,10 @@ body {
   right: -2px;
   bottom: -2px;
   background: linear-gradient(135deg, 
-    rgba(232, 185, 35, 0.8) 0%,
-    rgba(232, 185, 35, 0.2) 25%,
-    rgba(232, 185, 35, 0.2) 75%,
-    rgba(232, 185, 35, 0.8) 100%
+    rgba(201, 116, 74, 0.8) 0%,
+    rgba(201, 116, 74, 0.2) 25%,
+    rgba(201, 116, 74, 0.2) 75%,
+    rgba(201, 116, 74, 0.8) 100%
   );
   border-radius: inherit;
   z-index: -1;
@@ -134,9 +187,9 @@ body {
 
 /* Hover effects */
 .btn-gold:hover {
-  background: linear-gradient(135deg, #f0c935, #e8b923) !important;
+  background: linear-gradient(135deg, #d98a5f, #c9744a) !important;
   box-shadow: 
-    0 8px 24px rgba(232, 185, 35, 0.4),
+    0 8px 24px rgba(201, 116, 74, 0.4),
     inset 0 2px 0 rgba(255, 255, 255, 0.3),
     inset 0 -2px 0 rgba(0, 0, 0, 0.1) !important;
   transform: translateY(-2px) scale(1.03);
@@ -154,9 +207,9 @@ body {
 .btn-gold:active {
   transform: translateY(0) scale(0.98) !important;
   box-shadow: 
-    0 2px 8px rgba(232, 185, 35, 0.4),
+    0 2px 8px rgba(201, 116, 74, 0.4),
     inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
-  background: linear-gradient(135deg, #d4a21a, #c19216) !important;
+  background: linear-gradient(135deg, #b0603a, #974f2e) !important;
   animation: none;
 }
 
@@ -164,10 +217,10 @@ body {
 .btn-gold:focus {
   outline: none;
   box-shadow: 
-    0 4px 16px rgba(232, 185, 35, 0.3),
+    0 4px 16px rgba(201, 116, 74, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1),
-    0 0 0 3px rgba(232, 185, 35, 0.4);
+    0 0 0 3px rgba(201, 116, 74, 0.4);
 }
 
 /* Cool ripple effect on click */
@@ -208,7 +261,7 @@ body {
   left: 50%;
   width: 4px;
   height: 4px;
-  background: rgba(232, 185, 35, 0.8);
+  background: rgba(201, 116, 74, 0.8);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: floatingParticles 2s infinite ease-in-out;
@@ -238,19 +291,19 @@ body {
 @keyframes pulseGlow {
   0%, 100% {
     box-shadow: 
-      0 8px 20px rgba(232, 185, 35, 0.15),
+      0 8px 20px rgba(201, 116, 74, 0.15),
       inset 0 2px 0 rgba(255, 255, 255, 0.25),
-      inset 0 -2px 0 rgba(232, 185, 35, 0.2),
-      0 0 0 2px rgba(232, 185, 35, 0.3),
-      0 0 25px rgba(232, 185, 35, 0.1);
+      inset 0 -2px 0 rgba(201, 116, 74, 0.2),
+      0 0 0 2px rgba(201, 116, 74, 0.3),
+      0 0 25px rgba(201, 116, 74, 0.1);
   }
   50% {
     box-shadow: 
-      0 10px 25px rgba(232, 185, 35, 0.2),
+      0 10px 25px rgba(201, 116, 74, 0.2),
       inset 0 2px 0 rgba(255, 255, 255, 0.3),
-      inset 0 -2px 0 rgba(232, 185, 35, 0.25),
-      0 0 0 2.5px rgba(232, 185, 35, 0.4),
-      0 0 35px rgba(232, 185, 35, 0.15);
+      inset 0 -2px 0 rgba(201, 116, 74, 0.25),
+      0 0 0 2.5px rgba(201, 116, 74, 0.4),
+      0 0 35px rgba(201, 116, 74, 0.15);
   }
 }
 
@@ -309,36 +362,35 @@ body {
 
 /* Neon glow variant for special buttons */
 .btn-gold.neon {
-  text-shadow: 0 0 10px rgba(232, 185, 35, 0.8);
   animation: neonGlow 2s ease-in-out infinite alternate;
 }
 
 @keyframes neonGlow {
   from {
     box-shadow: 
-      0 16px 40px rgba(232, 185, 35, 0.2),
+      0 16px 40px rgba(201, 116, 74, 0.2),
       inset 0 2px 0 rgba(255, 255, 255, 0.25),
-      0 0 20px rgba(232, 185, 35, 0.4),
-      0 0 40px rgba(232, 185, 35, 0.2);
+      0 0 20px rgba(201, 116, 74, 0.4),
+      0 0 40px rgba(201, 116, 74, 0.2);
   }
   to {
     box-shadow: 
-      0 20px 50px rgba(232, 185, 35, 0.3),
+      0 20px 50px rgba(201, 116, 74, 0.3),
       inset 0 2px 0 rgba(255, 255, 255, 0.3),
-      0 0 30px rgba(232, 185, 35, 0.6),
-      0 0 60px rgba(232, 185, 35, 0.3);
+      0 0 30px rgba(201, 116, 74, 0.6),
+      0 0 60px rgba(201, 116, 74, 0.3);
   }
 }
 
 .nav-link-gold {
-  color: rgb(148 163 184);
+  color: rgb(216 206 191);
   transition: all 0.3s ease;
   position: relative;
 }
 
 .nav-link-gold:hover {
-  color: #E8B923 !important;
-  text-shadow: 0 0 8px rgba(232, 185, 35, 0.3);
+  color: #c9744a !important;
+  text-shadow: 0 0 8px rgba(201, 116, 74, 0.3);
 }
 
 .dropdown-item-gold {
@@ -348,11 +400,11 @@ body {
 }
 
 .dropdown-item-gold:hover {
-  background: rgba(232, 185, 35, 0.1) !important;
+  background: rgba(201, 116, 74, 0.1) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
-  color: #E8B923 !important;
-  border-left: 3px solid #E8B923 !important;
+  color: #c9744a !important;
+  border-left: 3px solid #c9744a !important;
 }
 
 /* Glass morphism form elements */
@@ -366,8 +418,8 @@ body {
 
 .glass-form-input:focus {
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(232, 185, 35, 0.4);
-  box-shadow: 0 0 0 3px rgba(232, 185, 35, 0.1);
+  border: 1px solid rgba(201, 116, 74, 0.4);
+  box-shadow: 0 0 0 3px rgba(201, 116, 74, 0.1);
   outline: none;
 }
 
@@ -388,9 +440,9 @@ input[type="email"].form-input-glow:focus,
 input[type="tel"].form-input-glow:focus,
 select.form-input-glow:focus,
 textarea.form-input-glow:focus {
-  box-shadow: 0 10px 15px -3px rgba(202, 138, 4, 0.2), 0 4px 6px -2px rgba(202, 138, 4, 0.08) !important;
-  background: #000000 !important;
-  border-color: #ca8a04 !important;
+  box-shadow: 0 10px 15px -3px rgba(201, 116, 74, 0.2), 0 4px 6px -2px rgba(201, 116, 74, 0.08) !important;
+  background: #1e1a15 !important;
+  border-color: #c9744a !important;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
@@ -409,8 +461,8 @@ input[type="tel"]:focus,
 select:focus,
 textarea:focus {
   background: rgba(0, 0, 0, 0.3) !important;
-  border: 1px solid rgba(232, 185, 35, 0.5) !important;
-  box-shadow: 0 0 0 2px rgba(232, 185, 35, 0.2) !important;
+  border: 1px solid rgba(201, 116, 74, 0.5) !important;
+  box-shadow: 0 0 0 2px rgba(201, 116, 74, 0.2) !important;
   outline: none !important;
 }
 
@@ -426,18 +478,18 @@ textarea:focus {
 /* iOS Safari specific fixes for white background issues */
 @supports (-webkit-touch-callout: none) {
   html {
-    background-color: #000000 !important;
-    background: #000000 !important;
+    background-color: #1e1a15 !important;
+    background: #1e1a15 !important;
   }
   
   body {
-    background-color: #000000 !important;
-    background: #000000 !important;
+    background-color: #1e1a15 !important;
+    background: #1e1a15 !important;
   }
   
   /* Target the root viewport for iOS */
   #__next {
-    background-color: #000000;
+    background-color: #1e1a15;
     min-height: 100vh;
   }
 }
@@ -465,7 +517,7 @@ textarea:focus {
     left: 0 !important;
     height: 100vh !important;
     max-height: 100vh !important;
-    background-color: #000000 !important;
+    background-color: #1e1a15 !important;
     -webkit-transform: translateZ(0) !important;
     transform: translateZ(0) !important;
     -webkit-backface-visibility: hidden !important;

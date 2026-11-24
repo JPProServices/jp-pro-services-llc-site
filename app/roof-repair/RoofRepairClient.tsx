@@ -3,7 +3,7 @@ import { useState } from "react";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
 export default function RoofRepairClient() {
-  const [activeProcess, setActiveProcess] = useState<'emergency' | 'scheduled'>('emergency');
+  const [activeProcess, setActiveProcess] = useState<'emergency' | 'scheduled'>('scheduled');
   const [openFAQs, setOpenFAQs] = useState<Set<number>>(new Set());
 
   const toggleFAQ = (index: number) => {
@@ -37,7 +37,7 @@ export default function RoofRepairClient() {
     },
     {
       question: "How long do roof repairs typically take?",
-      answer: "Most standard repairs can be completed in 1-2 days, depending on weather conditions and the extent of damage."
+      answer: "It depends on the extent of the damage and the weather. We give you a timeline with your estimate."
     },
     {
       question: "Do you warranty your roof repair work?",
@@ -50,7 +50,7 @@ export default function RoofRepairClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src="/hero.jpg"
@@ -357,8 +357,8 @@ export default function RoofRepairClient() {
               <div className="p-6">
                 <ul className="space-y-2 text-slate-300">
                   <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> 5-year workmanship warranty</li>
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Licensed & insured</li>
-                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Satisfaction guaranteed</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Insured & bonded</li>
+                  <li className="flex items-center"><span className="text-yellow-500 mr-2">•</span> Clear written estimate</li>
                 </ul>
               </div>
             </div>

@@ -17,13 +17,13 @@ export default function ScrollHeader() {
       // Calculate blur: starts at 20px, goes to 12px for lighter effect
       const blur = Math.max(12, 20 - (scrolled / maxScroll) * 8);
       
-      header.style.background = `rgba(0, 0, 0, ${opacity})`;
+      header.style.background = `rgba(30, 26, 21, ${opacity})`;
       header.style.backdropFilter = `blur(${blur}px)`;
       (header.style as CSSStyleDeclaration & {webkitBackdropFilter: string}).webkitBackdropFilter = `blur(${blur}px)`;
       
       // Add subtle border fade
       const borderOpacity = Math.max(0.3, 1 - (scrolled / maxScroll) * 0.7);
-      header.style.borderBottomColor = `rgba(100, 116, 139, ${borderOpacity})`;
+      header.style.borderBottomColor = `rgba(149, 137, 119, ${borderOpacity})`;
     };
 
     // Set initial state

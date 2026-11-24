@@ -11,11 +11,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jpproservicesllc.com"),
-  title: "JP Pro Services - Roofing & Renovations",
-  description: "Top-rated roofing company in Middle Tennessee.",
+  title: "JP Pro Services | Roofing, Decks, Siding & Remodeling in Nashville",
+  description: "Roofing and gutters, decks and fencing, siding and remodeling for homeowners within 50 miles of Nashville.",
   openGraph: {
     title: "JP Pro Services",
-    description: "Roofing, construction and restoration in Nashville and Middle Tennessee.",
+    description: "Roofing, decks, fencing, siding and remodeling in Nashville.",
     siteName: "JP Pro Services",
     type: "website",
   },
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className} suppressHydrationWarning>
         {/* MAIN HEADER — NOW sticky with dynamic transparency */}
         <header id="main-header" className="sticky top-0 z-50 shadow-xl transition-all duration-300" style={{ 
-          background: 'rgb(0, 0, 0)',
+          background: 'rgb(30, 26, 21)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)'
         }}>
@@ -56,10 +56,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <DesktopNav />
 
                 {/* CTA Button */}
-                <div className="hidden lg:block">
+                <div className="hidden xl:block">
                   <a
                     href={`tel:${phoneHref}`}
-                    className="group btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl"
+                    className="group btn-gold inline-flex items-center gap-2 whitespace-nowrap px-5 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl"
                   >
                     <span>{phone}</span>
                     <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
               
               <div className="flex items-center gap-6 text-sm">
-                <span className="text-slate-300">Middle Tennessee's Trusted Roofing Company</span>
+                <span className="text-slate-300">Roofing, Decks, Siding &amp; Remodeling in Nashville</span>
                 <a href={`tel:${phoneHref}`} className="text-yellow-400 hover:text-yellow-300 font-medium transition-colors duration-200">
                   {phoneHref.replace(/^\+1-/, '').replace(/-/g, '.').replace(/(\d{3})\.(\d{3})\.(\d{4})/, '($1) $2-$3')}
                 </a>

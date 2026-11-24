@@ -50,7 +50,7 @@ export default function AsphaltShinglesClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh]">
+      <section className="relative isolate min-h-[80vh]">
         <div aria-hidden className="absolute inset-0 -z-10">
           <img src="/hero.jpg" alt="" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/40" />
@@ -60,10 +60,10 @@ export default function AsphaltShinglesClient() {
             {/* Top badges */}
             <div className="mb-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">🏆 GAF Certified Contractor</span>
-              <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">🛡️ 25+ Year Warranties</span>
+              <span className="inline-flex items-center gap-2 rounded-lg bg-black/35 px-4 py-2 text-white backdrop-blur">🛡️ 50-Year Materials Warranty</span>
             </div>
             <h1 className="max-w-xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">Premium GAF Asphalt Shingles in Nashville</h1>
-            <p className="mt-4 max-w-2xl text-lg text-slate-200">Tennessee's most trusted roofing choice. GAF certified shingles with unmatched durability, style, and value backed by industry-leading warranties.</p>
+            <p className="mt-4 max-w-2xl text-lg text-slate-200">GAF shingles installed by a GAF certified contractor, backed by a 50-year materials warranty and our 5-year labor warranty.</p>
             <div className="mt-6"><TrustBadges /></div>
           </div>
           <div className="md:pt-6"><LeadCTA /></div>

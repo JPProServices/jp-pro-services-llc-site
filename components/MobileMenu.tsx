@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 
+import { roofingPages, secondaryRoofingPages, services } from "@/components/services";
+
 type Props = {
   phone: string;
   phoneHref: string;
@@ -9,7 +11,6 @@ type Props = {
 export default function MobileMenu({ phone, phoneHref }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [roofTypesOpen, setRoofTypesOpen] = useState(false);
 
   useEffect(() => {
     if (!isOpen) {
@@ -45,21 +46,18 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
   const toggleMenu = () => {
     if (isOpen) {
       setServicesOpen(false);
-      setRoofTypesOpen(false);
     }
     setIsOpen(!isOpen);
   };
   const closeMenu = () => {
     setIsOpen(false);
     setServicesOpen(false);
-    setRoofTypesOpen(false);
   };
 
   const toggleServices = () => setServicesOpen(!servicesOpen);
-  const toggleRoofTypes = () => setRoofTypesOpen(!roofTypesOpen);
 
   return (
-    <div className="lg:hidden relative">
+    <div className="xl:hidden relative">
       <button 
         className="p-2 hover:bg-slate-700 rounded-md transition-colors duration-200"
         onClick={toggleMenu}
@@ -81,7 +79,7 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+            backgroundColor: 'rgba(30, 26, 21, 0.75)',
             WebkitBackfaceVisibility: 'hidden',
             backfaceVisibility: 'hidden',
             WebkitTransform: 'translateZ(0)',
@@ -97,7 +95,7 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
               position: 'fixed',
               top: 0,
               left: 0,
-              backgroundColor: '#000000',
+              backgroundColor: '#1e1a15',
               backgroundImage: 'none',
               opacity: '1',
               zIndex: 10000,
@@ -127,48 +125,30 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
               </div>
             </div>
             <nav className="p-4 space-y-2">
-              {/* Services Dropdown */}
+              {/* Roofing & Gutters */}
               <div>
                 <button 
                   onClick={toggleServices}
+                  aria-expanded={servicesOpen}
                   className="w-full flex items-center justify-between py-3 px-2 text-slate-300 hover:text-white hover:bg-zinc-700 rounded transition-colors text-left"
                 >
-                  <span>Services</span>
+                  <span>Roofing &amp; Gutters</span>
                   <svg className={`w-5 h-5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 {servicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">
-                    <a href="/residential-roofing" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Residential Roofing</a>
-                    <a href="/commercial-roofing" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Commercial Roofing</a>
-                    <a href="/roof-repair" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Roof Repair</a>
-                    <a href="/roof-replacement" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Roof Replacement</a>
-                    <a href="/storm-damage" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Storm Damage</a>
+                    {[{ href: "/roofing-gutters", label: "Roofing & Gutters Overview" }, ...roofingPages, ...secondaryRoofingPages].map((item) => (
+                      <a key={item.href} href={item.href} className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>{item.label}</a>
+                    ))}
                   </div>
                 )}
               </div>
 
-              {/* Roof Types Dropdown */}
-              <div>
-                <button 
-                  onClick={toggleRoofTypes}
-                  className="w-full flex items-center justify-between py-3 px-2 text-slate-300 hover:text-white hover:bg-zinc-700 rounded transition-colors text-left"
-                >
-                  <span>Roof Types</span>
-                  <svg className={`w-5 h-5 transition-transform duration-200 ${roofTypesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {roofTypesOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    <a href="/asphalt-shingles" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Asphalt Shingles</a>
-                    <a href="/metal-roofing" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Metal Roofing</a>
-                    <a href="/tile-slate" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Tile & Slate</a>
-                    <a href="/flat-roofing" className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>Flat Roofing</a>
-                  </div>
-                )}
-              </div>
+              {services.filter((service) => service.slug !== "roofing-gutters").map((service) => (
+                <a key={service.slug} href={`/${service.slug}`} className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-zinc-700 rounded transition-colors" onClick={closeMenu}>{service.name}</a>
+              ))}
 
               {/* Direct Links */}
               <a href="/gallery" className="block py-3 px-2 text-slate-300 hover:text-white hover:bg-zinc-700 rounded transition-colors" onClick={closeMenu}>Gallery</a>
