@@ -6,7 +6,8 @@ type Props = {
 const BBB_HREF =
   "https://www.bbb.org/us/tn/la-vergne/profile/roofing-contractors/jp-pro-services-llc-0573-37380553/#sealclick";
 const BBB_IMAGE_SRC =
-  "https://seal-nashville.bbb.org/seals/blue-seal-200-42-bbb-37380553.png";
+  // Gray variant: BBB's transparent seal made for dark backgrounds
+  "https://seal-nashville.bbb.org/seals/gray-seal-293-61-bbb-37380553.png";
 const BBB_ALT = "JP Pro Services BBB Business Review";
 
 export default function BBBSeal({ className = "", imageClassName = "" }: Props) {

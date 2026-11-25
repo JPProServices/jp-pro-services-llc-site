@@ -173,13 +173,11 @@ export default function HomePage() {
             />
             <TrustMetricCard
               badge={
-                <div className="inline-flex rounded-2xl bg-white p-2 shadow-lg shadow-black/20 ring-1 ring-black/10">
-                  <BBBSeal imageClassName="h-[42px] w-auto" />
-                </div>
+                <BBBSeal className="inline-flex" imageClassName="h-[46px] w-auto" />
               }
               eyebrow="Better Business Bureau"
-              title="Accredited"
-              description="Official BBB accredited business seal linked directly to the live BBB profile."
+              title="A+ Rated"
+              description="BBB accredited business. The rating on the seal updates live from our BBB profile."
             />
           </div>
 

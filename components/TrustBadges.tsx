@@ -37,7 +37,7 @@ function BadgePill({
 
   return (
     <span
-      className={`inline-flex items-center gap-3 rounded-xl border border-slate-200 bg-white/95 text-slate-900 shadow-lg shadow-black/10 ring-1 ring-black/5 backdrop-blur ${pillSize}`}
+      className={`inline-flex items-center gap-3 rounded-xl border border-white/15 bg-black/45 text-white shadow-lg shadow-black/20 backdrop-blur-md ${pillSize}`}
     >
       <span className={`inline-flex items-center justify-center rounded-lg text-white shadow-sm ${iconSize} ${accentClassName}`}>
         {icon}
@@ -48,26 +48,21 @@ function BadgePill({
 }
 
 export default function TrustBadges({ size = "sm", showLicensedBadge = true }: Props) {
-  const sealHeight = size === "lg" ? "h-[42px]" : "h-[36px]";
-  const sealPadding = size === "lg" ? "px-4 py-3" : "px-3 py-2.5";
+  const sealHeight = size === "lg" ? "h-[46px]" : "h-[38px]";
+  const gafHeight = size === "lg" ? "h-[72px]" : "h-[60px]";
 
   return (
-    <div className="flex flex-wrap items-center gap-3">
-      <BBBSeal
-        className={`inline-flex rounded-xl border border-slate-200 bg-white/95 shadow-lg shadow-black/10 ring-1 ring-black/5 backdrop-blur ${sealPadding}`}
-        imageClassName={`${sealHeight} w-auto`}
+    <div className="flex flex-wrap items-center gap-4">
+      <BBBSeal className="inline-flex" imageClassName={`${sealHeight} w-auto`} />
+      <img
+        src="/GAF_Certified_Residential.png"
+        alt="GAF Certified Residential Roofing Contractor"
+        className={`${gafHeight} w-auto drop-shadow-lg`}
       />
-      <BadgePill
-        size={size}
-        accentClassName="bg-[#d7261e]"
-        icon={<span className="text-[0.65em] font-black tracking-tight">GAF</span>}
-      >
-        GAF Certified
-      </BadgePill>
       {showLicensedBadge ? (
         <BadgePill
           size={size}
-          accentClassName="bg-slate-900"
+          accentClassName="bg-blue-700"
           icon={<ShieldCheckIcon />}
         >
           Licensed & Insured
