@@ -6,6 +6,9 @@ import ButtonEffects from "@/components/ButtonEffects";
 import ScrollHeader from "@/components/ScrollHeader";
 import DesktopNav from "@/components/DesktopNav";
 import SocialLinks from "@/components/SocialLinks";
+import StickyCallBar from "@/components/StickyCallBar";
+import JsonLd, { businessJsonLd } from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +30,19 @@ export const viewport = {
   maximumScale: 1,
   userScalable: false,
 };
+
+function LicenseLink() {
+  return (
+    <a
+      href="https://verify.tn.gov/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xs text-slate-400 underline-offset-2 hover:text-yellow-400 hover:underline"
+    >
+      TN Home Improvement License #13503 · Verify
+    </a>
+  );
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const phone = "(615) 956-4920";
@@ -76,7 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {children}
 
-        <footer className="bg-zinc-900 border-t border-zinc-700 py-6 text-slate-400">
+        <footer className="bg-zinc-900 border-t border-zinc-700 pt-6 pb-24 md:pb-6 text-slate-400">
           <div className="mx-auto w-[min(1200px,94%)]">
             {/* Mobile Footer - Centered logo and copyright only */}
             <div className="flex flex-col items-center gap-4 md:hidden">
@@ -86,6 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className="h-10 w-auto"
               />
               <SocialLinks />
+              <LicenseLink />
               <div className="text-xs text-slate-500">
                 © <span suppressHydrationWarning>{new Date().getFullYear()}</span> JP Pro Services. All rights reserved.
               </div>
@@ -109,12 +126,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <SocialLinks />
               </div>
               
-              <div className="text-xs text-slate-500">
-                © <span suppressHydrationWarning>{new Date().getFullYear()}</span> JP Pro Services. All rights reserved.
+              <div className="flex flex-col items-end gap-1 text-xs text-slate-500">
+                <LicenseLink />
+                <span>© <span suppressHydrationWarning>{new Date().getFullYear()}</span> JP Pro Services. All rights reserved.</span>
               </div>
             </div>
           </div>
         </footer>
+        <StickyCallBar />
+        <JsonLd data={businessJsonLd} />
+        <Analytics />
         <ButtonEffects />
         <ScrollHeader />
       </body>

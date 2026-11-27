@@ -22,7 +22,23 @@ function shouldSkipVideo() {
 
 export default function HeroMedia({ poster, posterAlt = "", videoSrc, mobileVideoSrc }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const pausedByUser = useRef(false);
   const [src, setSrc] = useState<string | null>(null);
+  const [playing, setPlaying] = useState(true);
+
+  const togglePlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) {
+      pausedByUser.current = false;
+      video.play().catch(() => {});
+      setPlaying(true);
+    } else {
+      pausedByUser.current = true;
+      video.pause();
+      setPlaying(false);
+    }
+  };
 
   // Load the video only after the page has finished loading, so the poster stays the LCP image.
   useEffect(() => {
@@ -41,30 +57,50 @@ export default function HeroMedia({ poster, posterAlt = "", videoSrc, mobileVide
     const video = videoRef.current;
     if (!video) return;
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) video.play().catch(() => {});
-      else video.pause();
+      if (entry.isIntersecting && !pausedByUser.current) video.play().catch(() => {});
+      else if (!entry.isIntersecting) video.pause();
     });
     observer.observe(video);
     return () => observer.disconnect();
   }, [src]);
 
   return (
-    <div aria-hidden={!posterAlt} className="hero-fade absolute inset-0 -z-10">
-      <Image src={poster} alt={posterAlt} fill priority sizes="100vw" className="object-cover" />
+    <>
+      <div aria-hidden={!posterAlt} className="hero-fade absolute inset-0 -z-10">
+        <Image src={poster} alt={posterAlt} fill priority sizes="100vw" className="object-cover" />
+        {src ? (
+          <video
+            ref={videoRef}
+            className="absolute inset-0 h-full w-full object-cover"
+            src={src}
+            poster={poster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          />
+        ) : null}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/75" />
+      </div>
       {src ? (
-        <video
-          ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
-          src={src}
-          poster={poster}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-        />
+        <button
+          type="button"
+          onClick={togglePlayback}
+          aria-label={playing ? "Pause background video" : "Play background video"}
+          className="absolute bottom-4 right-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-black/55 text-white backdrop-blur transition-colors hover:bg-black/75"
+        >
+          {playing ? (
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
+            </svg>
+          ) : (
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          )}
+        </button>
       ) : null}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/75" />
-    </div>
+    </>
   );
 }

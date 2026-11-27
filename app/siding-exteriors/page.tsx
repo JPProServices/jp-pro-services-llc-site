@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ServicePage
+      path="/siding-exteriors"
       name="Siding & Exterior Finishes"
       headline="Siding & Exteriors That Protect Your Home"
       intro="Siding and exterior finishes for homeowners within 50 miles of Nashville."

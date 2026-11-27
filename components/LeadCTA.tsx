@@ -27,7 +27,7 @@ export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) 
     : `${wrap} max-w-md ml-auto`;
 
   return (
-    <aside className={containerClasses} aria-label={kind === "estimate" ? "Free estimate form" : "Contact form"}>
+    <aside id={kind === "estimate" ? "estimate" : undefined} className={`${containerClasses} scroll-mt-28`} aria-label={kind === "estimate" ? "Free estimate form" : "Contact form"}>
       <h3 className="mb-2 text-xl font-semibold text-white">
         {kind === "estimate" ? (
           <>Get your <strong>FREE</strong> Estimate</>

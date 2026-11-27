@@ -2,13 +2,15 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 import HeroMedia from "@/components/HeroMedia";
+import JsonLd, { serviceJsonLd } from "@/components/JsonLd";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
 
-type Photo = { src: string; alt: string };
+type Photo = { src: string; alt: string; caption?: string };
 type LinkItem = { href: string; label: string };
 
 type Props = {
+  path: string;
   name: string;
   headline: string;
   intro: string;
@@ -25,6 +27,7 @@ type Props = {
 const PHONE = "(615) 956-4920";
 
 export default function ServicePage({
+  path,
   name,
   headline,
   intro,
@@ -39,6 +42,7 @@ export default function ServicePage({
 }: Props) {
   return (
     <main>
+      <JsonLd data={serviceJsonLd(name, intro, path)} />
       {/* Hero */}
       <section className="relative isolate">
         {heroImage ? (
@@ -112,15 +116,20 @@ export default function ServicePage({
           {gallery.length ? (
             <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {gallery.map((photo) => (
-                <div key={photo.src} className="relative aspect-[3/2] overflow-hidden rounded-xl border border-white/10">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
+                <figure key={photo.src}>
+                  <div className="relative aspect-[3/2] overflow-hidden rounded-xl border border-white/10">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  {photo.caption ? (
+                    <figcaption className="mt-2 text-sm text-slate-300">{photo.caption}</figcaption>
+                  ) : null}
+                </figure>
               ))}
             </div>
           ) : (

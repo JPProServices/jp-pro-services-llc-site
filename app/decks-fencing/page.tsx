@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ServicePage
+      path="/decks-fencing"
       name="Decks, Fencing & Outdoor Living"
       headline="Decks & Fences Built to Last"
       intro="Decks, fences and outdoor living spaces for homeowners within 50 miles of Nashville, built with Trex and TimberTech."

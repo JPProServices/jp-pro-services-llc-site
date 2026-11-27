@@ -188,6 +188,17 @@ export default function HomePage() {
             <div className="flex justify-center">
               <TrustBadges size="lg" />
             </div>
+            <p className="mt-5 text-center text-sm text-slate-400">
+              Tennessee Home Improvement License #13503.{" "}
+              <a
+                href="https://verify.tn.gov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-yellow-400 underline underline-offset-4 hover:text-yellow-300"
+              >
+                Verify it on the state license search
+              </a>
+            </p>
           </div>
         </div>
       </section>

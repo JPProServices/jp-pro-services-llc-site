@@ -240,6 +240,7 @@ export default function GalleryClient() {
             {/* Close Button */}
             <button
               onClick={closeProject}
+              aria-label="Close project photos"
               className="absolute -top-14 right-0 text-white hover:text-yellow-500 transition-colors z-10 bg-black/50 hover:bg-black/70 p-2 rounded-full"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ServicePage
+      path="/remodeling"
       name="Custom Remodeling"
       headline="Remodeling Planned Around Your Home"
       intro="Interior remodeling and home improvement projects for homeowners within 50 miles of Nashville."
