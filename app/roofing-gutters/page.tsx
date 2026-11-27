@@ -21,7 +21,7 @@ export default function Page() {
       offerings={[
         { title: "Roof replacement", text: "Full tear-off and a new roof with GAF materials, with a written estimate before work begins." },
         { title: "Roof repair", text: "Leaks, missing shingles and flashing. Fast scheduling for storm damage and leak repairs." },
-        { title: "Gutters", text: "[Confirm gutter services with the owners: installation, replacement, guards.]" },
+        { title: "Gutters", text: "Gutter and downspout installation, including copper gutters." },
         { title: "Roof types", text: "Asphalt shingles, metal, tile and slate, and flat roofs." },
       ]}
       products={["GAF roofing systems, installed by a GAF certified contractor", "[More roofing and gutter brands: coming from the owners]"]}
@@ -36,6 +36,12 @@ export default function Page() {
         drone("side", "Side view of a home with a new roof"),
         drone("rear-high", "High aerial view of a new roof and backyard"),
         drone("street", "Home with a new roof seen from the street"),
+        { src: "/images/roofing/ranch-pool-roof.jpg", alt: "Brick ranch home with a new shingle roof and metal patio cover" },
+        { src: "/images/roofing/copper-gutters-side.jpg", alt: "New copper gutters and downspouts on a painted brick home" },
+        { src: "/images/roofing/ranch-patio-cover.jpg", alt: "Aerial view of a new roof and patio cover beside a pool" },
+        { src: "/images/roofing/copper-gutters-gable.jpg", alt: "Copper gutters along a steep gable roof" },
+        { src: "/images/roofing/gutter-install.jpg", alt: "Crew member installing gutters from a ladder" },
+        { src: "/images/roofing/ranch-roof-top.jpg", alt: "Top-down view of a new roof on a brick ranch home" },
         { src: "/roof7_3.JPEG", alt: "Brick home with a new architectural shingle roof" },
         { src: "/roof3_1.JPG", alt: "Home with a new roof beside a pool" },
         { src: "/roof4_1.JPG", alt: "Stone and brick home with a dark shingle roof" },

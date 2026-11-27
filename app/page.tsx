@@ -76,9 +76,13 @@ export default function HomePage() {
   const phoneDisplay = "(615) 956-4920";
   return (
     <main>
-      {/* Hero: drone photo now, background video once the client's footage arrives */}
+      {/* Hero: drone footage from the client, photo poster first */}
       <section className="relative isolate min-h-[80vh]">
-        <HeroMedia poster="/images/roofing/roof-2026-11-hero.jpg" />
+        <HeroMedia
+          poster="/images/home-video-poster.jpg"
+          videoSrc="/videos/home-1280.mp4"
+          mobileVideoSrc="/videos/home-854.mp4"
+        />
         <div className="relative z-10 mx-auto w-[min(1200px,94%)] grid items-start gap-8 py-10 md:grid-cols-2 md:py-14">
           <Hero />
           <div className="md:pt-6">

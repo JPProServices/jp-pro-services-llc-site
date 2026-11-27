@@ -26,9 +26,9 @@ export const services: Service[] = [
     slug: "decks-fencing",
     name: "Decks, Fencing & Outdoor Living",
     shortName: "Decks & Fencing",
-    summary: "Decks, fences and outdoor living spaces built with Trex and TimberTech products.",
-    bullets: ["Decks", "Fencing", "Outdoor living spaces"],
-    image: null,
+    summary: "Wood and composite decks, fences and screened porches. Composite decking from Trex and TimberTech.",
+    bullets: ["Decks", "Fencing", "Screened porches"],
+    image: { src: "/images/decks/stained-deck-hero.jpg", alt: "Two-story stained wood deck with stairs on a brick home" },
     warranty: "2-year labor warranty",
   },
   {
@@ -37,7 +37,7 @@ export const services: Service[] = [
     shortName: "Siding & Exteriors",
     summary: "Siding and exterior finishes that protect your home and refresh how it looks from the street.",
     bullets: ["Siding installation and replacement", "Exterior finishes", "[Confirm other exterior work]"],
-    image: null,
+    image: { src: "/images/siding/board-batten-gable-hero.jpg", alt: "Board-and-batten siding on a gable above brick" },
     warranty: "2-year labor warranty",
   },
   {
@@ -46,7 +46,7 @@ export const services: Service[] = [
     shortName: "Remodeling",
     summary: "Interior remodeling and home improvement projects, planned around how you use your home.",
     bullets: ["Interior remodeling", "Home improvement projects", "[Confirm room types offered]"],
-    image: null,
+    image: { src: "/images/remodel/sunroom-side.jpg", alt: "Sunroom with tall windows being finished on a yellow home" },
     warranty: "2-year labor warranty",
   },
 ];
