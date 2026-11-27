@@ -8,8 +8,7 @@ export const metadata: Metadata = {
   description: "Roof replacement, roof repair and gutters near Nashville. GAF certified, with a 5-year labor and 50-year materials warranty.",
 };
 
-const PROJECT_1 = "Full roof replacement · GAF [shingle line], [color]";
-const drone = (name: string, alt: string, caption?: string) => ({ src: `/images/roofing/roof-2026-11-${name}.jpg`, alt, caption });
+const drone = (name: string, alt: string) => ({ src: `/images/roofing/roof-2026-11-${name}.jpg`, alt });
 
 export default function Page() {
   return (
@@ -31,15 +30,15 @@ export default function Page() {
         { label: "Materials", value: "50 years" },
       ]}
       gallery={[
-        drone("front-angle", "Front of a two-story home with a new shingle roof", PROJECT_1),
-        drone("rear", "Rear view of a home with a new roof and patio", PROJECT_1),
-        drone("top-down", "Top-down view of a finished shingle roof", PROJECT_1),
-        drone("side", "Side view of a home with a new roof", PROJECT_1),
-        drone("rear-high", "High aerial view of a new roof and backyard", PROJECT_1),
-        drone("street", "Home with a new roof seen from the street", PROJECT_1),
-        { src: "/roof7_3.JPEG", alt: "Brick home with a new architectural shingle roof", caption: "[Project type] · [Product line], [color]" },
-        { src: "/roof3_1.JPG", alt: "Home with a new roof beside a pool", caption: "[Project type] · [Product line], [color]" },
-        { src: "/roof4_1.JPG", alt: "Stone and brick home with a dark shingle roof", caption: "[Project type] · [Product line], [color]" },
+        drone("front-angle", "Front of a two-story home with a new shingle roof"),
+        drone("rear", "Rear view of a home with a new roof and patio"),
+        drone("top-down", "Top-down view of a finished shingle roof"),
+        drone("side", "Side view of a home with a new roof"),
+        drone("rear-high", "High aerial view of a new roof and backyard"),
+        drone("street", "Home with a new roof seen from the street"),
+        { src: "/roof7_3.JPEG", alt: "Brick home with a new architectural shingle roof" },
+        { src: "/roof3_1.JPG", alt: "Home with a new roof beside a pool" },
+        { src: "/roof4_1.JPG", alt: "Stone and brick home with a dark shingle roof" },
       ]}
       related={[
         { title: "Roofing services", links: roofingPages },

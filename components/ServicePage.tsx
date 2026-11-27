@@ -6,7 +6,7 @@ import JsonLd, { serviceJsonLd } from "@/components/JsonLd";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
 
-type Photo = { src: string; alt: string; caption?: string };
+type Photo = { src: string; alt: string };
 type LinkItem = { href: string; label: string };
 
 type Props = {
@@ -126,9 +126,6 @@ export default function ServicePage({
                       className="object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
-                  {photo.caption ? (
-                    <figcaption className="mt-2 text-sm text-slate-300">{photo.caption}</figcaption>
-                  ) : null}
                 </figure>
               ))}
             </div>
