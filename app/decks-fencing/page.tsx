@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/components/seo";
 
 import ServicePage from "@/components/ServicePage";
 import { reviews } from "@/components/reviews";
 
-export const metadata: Metadata = {
-  title: "Decks, Fencing & Outdoor Living in Nashville | JP Pro Services",
-  description: "Decks, fences and outdoor living spaces near Nashville, built with Trex and TimberTech, with a 2-year labor warranty.",
-};
+export const metadata: Metadata = pageMetadata("/decks-fencing", "Decks, Fencing & Outdoor Living in Nashville | JP Pro Services", "Wood and composite decks, fences and screened porches near Nashville, with a 2-year labor warranty.");
 
 export default function Page() {
   return (

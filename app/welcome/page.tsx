@@ -7,7 +7,6 @@ import HomePage from "../page";
 export const metadata: Metadata = {
   title: "Welcome | JP Pro Services",
   robots: { index: false, follow: true },
-  alternates: { canonical: "/" },
 };
 
 export default function WelcomePage() {

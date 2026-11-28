@@ -44,6 +44,16 @@ export const businessJsonLd = {
   sameAs: ["https://www.facebook.com/JPProServicesLLC", "https://www.instagram.com/jpproservicesllc"],
 };
 
+// Tells Google to show "JP Pro Services" as the site name instead of the domain.
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "JP Pro Services",
+  url: SITE_URL,
+  publisher: { "@id": BUSINESS_ID },
+};
+
 export function serviceJsonLd(name: string, description: string, path: string) {
   return {
     "@context": "https://schema.org",

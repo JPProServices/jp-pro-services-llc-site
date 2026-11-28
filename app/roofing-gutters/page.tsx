@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/components/seo";
 
 import ServicePage from "@/components/ServicePage";
 import { reviews } from "@/components/reviews";
 import { roofingPages, secondaryRoofingPages } from "@/components/services";
 
-export const metadata: Metadata = {
-  title: "Roofing & Gutters in Nashville | JP Pro Services",
-  description: "Roof replacement, roof repair and gutters near Nashville. GAF certified, with a 5-year labor and 50-year materials warranty.",
-};
+export const metadata: Metadata = pageMetadata("/roofing-gutters", "Roofing & Gutters in Nashville | JP Pro Services", "Roof replacement, roof repair and gutters near Nashville. GAF certified, with a 5-year labor and 50-year materials warranty.");
 
 const drone = (name: string, alt: string) => ({ src: `/images/roofing/roof-2026-11-${name}.jpg`, alt });
 

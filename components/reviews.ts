@@ -20,6 +20,16 @@ export const reviews = {
     job: "Siding and gutters",
     text: "We have used their services for several home improvement projects. I highly recommend them for their exceptional work ethic and outstanding customer service!!",
   },
+  repair: {
+    name: "Jennifer P.",
+    job: "Roof repair",
+    text: "I had the best experience with these guys!!! They were here early and stayed late every day to get my house done after a car landed in my roof!!",
+  },
+  storm: {
+    name: "Juanita M.",
+    job: "Roof replacement",
+    text: "The work was done in one day and not a scrap of trash or debris remained after they left - and my house got a beautiful new roof. Very thankful to have it during the recent ice storm!",
+  },
   remodel: {
     name: "Alyssa D.",
     job: "Bathroom renovation",

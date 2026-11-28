@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
@@ -8,7 +9,14 @@ import TrustBadges from "@/components/TrustBadges";
 import FAQ from "@/components/FAQ";
 import BBBSeal from "@/components/BBBSeal";
 import { services } from "@/components/services";
+import { pageMetadata } from "@/components/seo";
 import { GOOGLE_REVIEWS_URL, reviews } from "@/components/reviews";
+
+export const metadata: Metadata = pageMetadata(
+  "/",
+  "JP Pro Services | Roofing, Decks, Siding & Remodeling in Nashville",
+  "Roofing and gutters, decks and fencing, siding and remodeling for homeowners within 50 miles of Nashville.",
+);
 
 function TrustMetricCard({
   badge,
@@ -268,7 +276,7 @@ export default function HomePage() {
         <div className="mx-auto flex w-[min(1200px,94%)] flex-col items-start justify-between gap-4 md:flex-row md:items-center">
           <div>
             <h2 className="text-xl font-semibold text-white">Storm damage on your roof?</h2>
-            <p className="mt-1 text-slate-300">We have experience handling insurance claims and work with your adjuster.</p>
+            <p className="mt-1 text-slate-300">We document the damage and work with your insurance adjuster.</p>
           </div>
           <a href="/storm-damage" className="font-semibold text-yellow-400 hover:text-yellow-300">
             Storm damage &amp; insurance claims →
@@ -291,11 +299,29 @@ export default function HomePage() {
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="mb-2 text-3xl font-bold text-white">Contact Us</h2>
+              <h2 className="mb-2 text-3xl font-bold text-white">Prefer to talk?</h2>
               <p className="mb-6 text-slate-300 text-lg">
-                Quick question or request? Send us a message and we'll get back to you.
+                Call us Monday–Saturday, 8:00 AM–4:00 PM, or email us any time.
               </p>
-              <LeadCTA variant="inline" kind="contact" />
+              <div className="space-y-4">
+                <a href="tel:+16159564920" className="btn-gold inline-flex items-center gap-3 rounded-xl px-6 py-4 text-xl">
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call {phoneDisplay}
+                </a>
+                <p className="text-slate-300">
+                  Or email{" "}
+                  <a href="mailto:jpproservicesllc2024@gmail.com" className="font-semibold text-yellow-400 underline underline-offset-4 hover:text-yellow-300">
+                    jpproservicesllc2024@gmail.com
+                  </a>
+                  , or{" "}
+                  <a href="#estimate" className="font-semibold text-yellow-400 underline underline-offset-4 hover:text-yellow-300">
+                    request a free estimate
+                  </a>
+                  .
+                </p>
+              </div>
             </div>
 
             <div className="space-y-8">
@@ -339,27 +365,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Get In Touch</h3>
-                <div className="space-y-3">
-                  <a href="tel:+16159564920" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15">
-                      <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">{phoneDisplay}</span>
-                  </a>
-                  <a href="mailto:jpproservicesllc2024@gmail.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200">
-                    <div className="bg-white/10 backdrop-blur p-2 rounded-lg border border-white/15">
-                      <svg className="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">jpproservicesllc2024@gmail.com</span>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>

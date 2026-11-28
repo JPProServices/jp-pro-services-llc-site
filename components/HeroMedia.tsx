@@ -67,13 +67,12 @@ export default function HeroMedia({ poster, posterAlt = "", videoSrc, mobileVide
   return (
     <>
       <div aria-hidden={!posterAlt} className="hero-fade absolute inset-0 -z-10">
-        <Image src={poster} alt={posterAlt} fill priority sizes="100vw" className="object-cover" />
+        <Image src={poster} alt={posterAlt} fill priority fetchPriority="high" sizes="100vw" quality={65} className="object-cover" />
         {src ? (
           <video
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
             src={src}
-            poster={poster}
             autoPlay
             muted
             loop
@@ -81,7 +80,7 @@ export default function HeroMedia({ poster, posterAlt = "", videoSrc, mobileVide
             preload="auto"
           />
         ) : null}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
       </div>
       {src ? (
         <button

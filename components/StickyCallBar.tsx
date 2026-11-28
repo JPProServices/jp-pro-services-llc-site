@@ -34,6 +34,13 @@ export default function StickyCallBar() {
         </a>
         <a
           href="#estimate"
+          onClick={(event) => {
+            // Pages without their own form (e.g. the gallery) send people to the homepage form.
+            if (!document.getElementById("estimate")) {
+              event.preventDefault();
+              window.location.href = "/#estimate";
+            }
+          }}
           tabIndex={visible ? 0 : -1}
           className="btn-gold inline-flex min-h-[48px] items-center justify-center rounded-lg font-semibold"
         >

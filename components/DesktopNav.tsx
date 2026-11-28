@@ -27,7 +27,15 @@ function RoofingMenu({
   onClose: () => void;
 }) {
   return (
-    <div className="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
+    <div
+      className="relative"
+      onMouseEnter={onOpen}
+      onMouseLeave={onClose}
+      onBlur={(event) => {
+        // Close when keyboard focus leaves the button and its menu
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) onClose();
+      }}
+    >
       <button
         type="button"
         className="nav-link-gold flex items-center gap-1 whitespace-nowrap py-2"
@@ -55,7 +63,7 @@ function RoofingMenu({
         }`}
       >
         <div
-          className="w-[30rem] rounded-lg border border-zinc-600/50 bg-black/95 p-3 shadow-2xl"
+          className={`${roofingMenu.length > 1 ? "w-[30rem]" : "w-72"} rounded-lg border border-zinc-600/50 bg-black/95 p-3 shadow-2xl`}
           style={{ backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
         >
           <a
@@ -66,7 +74,7 @@ function RoofingMenu({
             All roofing &amp; gutters
             <span aria-hidden>→</span>
           </a>
-          <div className="mt-2 grid grid-cols-2 gap-2 border-t border-zinc-700 pt-3">
+          <div className={`mt-2 grid gap-2 border-t border-zinc-700 pt-3 ${roofingMenu.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
             {roofingMenu.map((group) => (
               <div key={group.title}>
                 <p className="px-3 pb-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{group.title}</p>
@@ -113,7 +121,10 @@ export default function DesktopNav() {
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setOpenMenu(null);
+        setOpenMenu((current) => {
+          if (current) document.querySelector<HTMLElement>('[aria-controls="roofing-menu"]')?.focus();
+          return null;
+        });
       }
     };
 

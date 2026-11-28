@@ -43,6 +43,12 @@ export default function ServicePage({
   review,
   aside,
 }: Props) {
+  // "5 years labor and 50 years materials": only rows the client has confirmed (no [brackets]).
+  const warrantyText = warranty
+    .filter((row) => !row.value.includes("["))
+    .map((row) => `${row.value} ${row.label.toLowerCase()}`)
+    .join(" and ");
+
   return (
     <main>
       <JsonLd data={serviceJsonLd(name, intro, path)} />
@@ -83,8 +89,31 @@ export default function ServicePage({
         </div>
       </section>
 
-      {/* Products and warranty */}
+      {/* How it works: ends with this page's confirmed warranty */}
       <section className="bg-zinc-900 py-16">
+        <div className="mx-auto w-[min(1200px,94%)]">
+          <h2 className="mb-8 text-3xl font-bold text-white">How it works</h2>
+          <ol className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: "Reach out", text: "Call us Mon–Sat, 8:00 AM–4:00 PM, or send the form." },
+              { title: "Free estimate", text: "We look at your project and give you an estimate before any work begins." },
+              { title: "The work", text: "Our crew does the job, led by an owner with 19 years of construction experience." },
+              { title: "Warranty", text: warrantyText ? `Your project is backed by ${warrantyText}.` : "Your project is backed by our labor warranty." },
+            ].map((step, index) => (
+              <li key={step.title} className="rounded-xl border border-white/15 bg-black/40 p-6">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-500 font-bold text-black" aria-hidden="true">
+                  {index + 1}
+                </span>
+                <h3 className="mt-4 text-lg font-semibold text-white">{step.title}</h3>
+                <p className="mt-2 text-slate-300">{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Products and warranty */}
+      <section className="bg-black py-16">
         <div className="mx-auto grid w-[min(1200px,94%)] grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="rounded-xl border border-white/15 bg-black/40 p-8">
             <h2 className="text-2xl font-bold text-white">Products we use</h2>
@@ -193,11 +222,16 @@ export default function ServicePage({
         <div className="mx-auto flex w-[min(1200px,94%)] flex-col items-start justify-between gap-6 rounded-2xl border border-white/15 bg-gradient-to-r from-blue-700 to-blue-600 p-8 md:flex-row md:items-center md:p-10">
           <div>
             <h2 className="text-3xl font-bold text-white">Get a free estimate</h2>
-            <p className="mt-2 text-blue-100">Call us Mon–Sat, 8:00 AM–4:00 PM, or send the form and we'll call you back.</p>
+            <p className="mt-2 text-white">Call us Mon–Sat, 8:00 AM–4:00 PM, or send the form and we&apos;ll get back to you.</p>
           </div>
-          <a href="tel:+16159564920" className="btn-gold inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold">
-            Call {PHONE}
-          </a>
+          <div className="flex flex-wrap gap-3">
+            <a href="tel:+16159564920" className="btn-gold inline-flex items-center gap-2 rounded-lg px-6 py-3">
+              Call {PHONE}
+            </a>
+            <a href="#estimate" className="inline-flex items-center gap-2 rounded-lg border border-white/60 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">
+              Request a Free Estimate
+            </a>
+          </div>
         </div>
       </section>
     </main>

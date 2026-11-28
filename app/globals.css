@@ -39,21 +39,29 @@
   --color-slate-900: #241f19;
 }
 
-/* Global smooth scrolling and mobile viewport fixes */
+/* Mobile viewport fixes. `clip` (not `hidden`) keeps the sticky header working. */
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
+  /* Keep anchored and focused elements clear of the sticky header and phone call bar */
+  scroll-padding-top: 5.5rem;
+  scroll-padding-bottom: 5rem;
   background-color: #1e1a15;
   background: #1e1a15;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   background-color: #1e1a15;
   background: #1e1a15;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Focus outline styling */
@@ -97,289 +105,28 @@ body {
   animation: slide-in-from-top 0.3s ease-out;
 }
 
-/* Professional solid golden button with subtle effects */
+/* Primary button: solid clay with dark text (5:1 or better at every state) */
 .btn-gold {
-  background: linear-gradient(135deg, #c9744a, #b0603a);
+  background: #d98a5f;
   color: #1e1a15;
-  position: relative;
-  overflow: hidden;
   border: none;
   font-weight: 600;
-  letter-spacing: 0.5px;
   cursor: pointer;
-  
-  /* Professional shadows for depth */
-  box-shadow: 
-    0 4px 16px rgba(201, 116, 74, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  
-  /* Smooth transitions */
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-  
-  /* Very subtle breathing animation */
-  animation: subtleBreathing 4s ease-in-out infinite;
+  transition: background-color 150ms ease, transform 150ms ease;
 }
 
-@keyframes subtleBreathing {
-  0%, 100% { 
-    transform: scale(1); 
-    box-shadow: 
-      0 4px 16px rgba(201, 116, 74, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  }
-  50% { 
-    transform: scale(1.005); 
-    box-shadow: 
-      0 6px 20px rgba(201, 116, 74, 0.35),
-      inset 0 1px 0 rgba(255, 255, 255, 0.25),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  }
-}
-
-/* Animated shimmer effect */
-.btn-gold::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(255, 255, 255, 0.2), 
-    transparent
-  );
-  transition: left 0.6s;
-  z-index: 1;
-}
-
-.btn-gold:hover::before {
-  left: 100%;
-}
-
-/* Gradient border with pulsing animation */
-.btn-gold::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(135deg, 
-    rgba(201, 116, 74, 0.8) 0%,
-    rgba(201, 116, 74, 0.2) 25%,
-    rgba(201, 116, 74, 0.2) 75%,
-    rgba(201, 116, 74, 0.8) 100%
-  );
-  border-radius: inherit;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  animation: borderPulse 3s infinite ease-in-out;
-}
-
-@keyframes borderPulse {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.02); }
-}
-
-/* Hover effects */
 .btn-gold:hover {
-  background: linear-gradient(135deg, #d98a5f, #c9744a) !important;
-  box-shadow: 
-    0 8px 24px rgba(201, 116, 74, 0.4),
-    inset 0 2px 0 rgba(255, 255, 255, 0.3),
-    inset 0 -2px 0 rgba(0, 0, 0, 0.1) !important;
-  transform: translateY(-2px) scale(1.03);
-  letter-spacing: 1px;
-  /* Disable breathing animation on hover */
-  animation: none;
+  background: #e7a882;
 }
 
-.btn-gold:hover::after {
-  opacity: 0.8;
-  animation: borderPulse 1.5s infinite ease-in-out;
-}
-
-/* Active/pressed state */
 .btn-gold:active {
-  transform: translateY(0) scale(0.98) !important;
-  box-shadow: 
-    0 2px 8px rgba(201, 116, 74, 0.4),
-    inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
-  background: linear-gradient(135deg, #b0603a, #974f2e) !important;
-  animation: none;
+  background: #c9744a;
+  transform: translateY(1px);
 }
 
-/* Focus state for accessibility */
-.btn-gold:focus {
-  outline: none;
-  box-shadow: 
-    0 4px 16px rgba(201, 116, 74, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
-    0 0 0 3px rgba(201, 116, 74, 0.4);
-}
-
-/* Cool ripple effect on click */
-.btn-gold {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-gold.ripple {
-  position: relative;
-}
-
-.btn-gold .ripple-effect {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  pointer-events: none;
-  transform: scale(0);
-  animation: ripple 0.6s linear;
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-/* Floating particles animation */
-.btn-gold:hover {
-  position: relative;
-}
-
-.btn-gold:hover::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 4px;
-  height: 4px;
-  background: rgba(201, 116, 74, 0.8);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: floatingParticles 2s infinite ease-in-out;
-  z-index: 2;
-}
-
-@keyframes floatingParticles {
-  0%, 100% { 
-    transform: translate(-50%, -50%) translateY(0px) scale(0);
-    opacity: 0;
-  }
-  20% {
-    transform: translate(-50%, -50%) translateY(-5px) scale(1);
-    opacity: 1;
-  }
-  80% {
-    transform: translate(-50%, -50%) translateY(-15px) scale(0.8);
-    opacity: 0.8;
-  }
-}
-
-/* Enhanced glow effect - reduced intensity */
-.btn-gold:hover {
-  animation: pulseGlow 3s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 
-      0 8px 20px rgba(201, 116, 74, 0.15),
-      inset 0 2px 0 rgba(255, 255, 255, 0.25),
-      inset 0 -2px 0 rgba(201, 116, 74, 0.2),
-      0 0 0 2px rgba(201, 116, 74, 0.3),
-      0 0 25px rgba(201, 116, 74, 0.1);
-  }
-  50% {
-    box-shadow: 
-      0 10px 25px rgba(201, 116, 74, 0.2),
-      inset 0 2px 0 rgba(255, 255, 255, 0.3),
-      inset 0 -2px 0 rgba(201, 116, 74, 0.25),
-      0 0 0 2.5px rgba(201, 116, 74, 0.4),
-      0 0 35px rgba(201, 116, 74, 0.15);
-  }
-}
-
-/* 3D Tilt Effect */
-.btn-gold {
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-
-.btn-gold.tilt-active {
-  transition: transform 0.1s ease-out;
-}
-
-/* Loading spinner for form submissions */
-.btn-gold.loading {
-  pointer-events: none;
-  position: relative;
-}
-
-.btn-gold.loading::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top: 2px solid white;
-  border-radius: 50%;
-  animation: buttonSpin 1s linear infinite;
-  z-index: 3;
-}
-
-@keyframes buttonSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Success state animation */
-.btn-gold.success {
-  background: linear-gradient(135deg, rgba(46, 160, 67, 0.25), rgba(46, 160, 67, 0.15)) !important;
-  animation: successPulse 0.6s ease-out;
-}
-
-@keyframes successPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-/* Ultra smooth transitions */
-.btn-gold {
-  will-change: transform, box-shadow, background;
-}
-
-/* Neon glow variant for special buttons */
-.btn-gold.neon {
-  animation: neonGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes neonGlow {
-  from {
-    box-shadow: 
-      0 16px 40px rgba(201, 116, 74, 0.2),
-      inset 0 2px 0 rgba(255, 255, 255, 0.25),
-      0 0 20px rgba(201, 116, 74, 0.4),
-      0 0 40px rgba(201, 116, 74, 0.2);
-  }
-  to {
-    box-shadow: 
-      0 20px 50px rgba(201, 116, 74, 0.3),
-      inset 0 2px 0 rgba(255, 255, 255, 0.3),
-      0 0 30px rgba(201, 116, 74, 0.6),
-      0 0 60px rgba(201, 116, 74, 0.3);
-  }
+.btn-gold:focus-visible {
+  outline: 2px solid #faf7f2;
+  outline-offset: 2px;
 }
 
 .nav-link-gold {
@@ -423,47 +170,13 @@ body {
   outline: none;
 }
 
-/* Remove blue highlights from all form elements */
-input, select, textarea, button {
-  outline: none !important;
-}
-
-/* Allow custom focus styles to work, only remove default browser outline */
-input:focus, select:focus, textarea:focus {
-  outline: none !important;
-}
-
-/* Custom form input glow effect - ALL FORM ELEMENTS IDENTICAL */
-input.form-input-glow:focus,
-input[type="text"].form-input-glow:focus,
-input[type="email"].form-input-glow:focus,
-input[type="tel"].form-input-glow:focus,
-select.form-input-glow:focus,
-textarea.form-input-glow:focus {
-  box-shadow: 0 10px 15px -3px rgba(201, 116, 74, 0.2), 0 4px 6px -2px rgba(201, 116, 74, 0.08) !important;
-  background: #1e1a15 !important;
-  border-color: #c9744a !important;
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
-}
-
-/* Override browser default blue highlights */
-*:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Custom focus styles for form inputs */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
+/* Form fields: clay border plus ring on focus, visible on the dark background */
+input:focus,
 select:focus,
 textarea:focus {
-  background: rgba(0, 0, 0, 0.3) !important;
-  border: 1px solid rgba(201, 116, 74, 0.5) !important;
-  box-shadow: 0 0 0 2px rgba(201, 116, 74, 0.2) !important;
-  outline: none !important;
+  outline: none;
+  border-color: #c9744a;
+  box-shadow: 0 0 0 2px rgba(217, 138, 95, 0.55);
 }
 
 /* Glass container for forms */

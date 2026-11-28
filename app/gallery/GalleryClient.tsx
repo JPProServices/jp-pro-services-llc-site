@@ -1,332 +1,331 @@
-﻿"use client";
-import { useState, useEffect } from "react";
+"use client";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
+type Photo = { src: string; alt: string };
+type Project = { id: number; name: string; service: string; images: Photo[] };
+
+const projects: Project[] = [
+  {
+    id: 1,
+    name: "Roof replacement",
+    service: "Roofing",
+    images: [
+      { src: "/images/roofing/roof-2026-11-hero.jpg", alt: "Aerial view of a brick home with a new shingle roof" },
+      { src: "/images/roofing/roof-2026-11-rear.jpg", alt: "Rear view of the same home with its new roof" },
+      { src: "/images/roofing/roof-2026-11-top-down.jpg", alt: "Top-down view of the finished roof" },
+    ],
+  },
+  {
+    id: 2,
+    name: "Stained wood deck",
+    service: "Decks",
+    images: [
+      { src: "/images/decks/stained-deck-hero.jpg", alt: "Two-story stained wood deck with stairs on a brick home" },
+      { src: "/images/decks/stained-deck-aerial.jpg", alt: "The same deck from above" },
+      { src: "/images/decks/stained-deck-stairs.jpg", alt: "Deck stairs and railing" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Screened porch",
+    service: "Outdoor living",
+    images: [
+      { src: "/images/decks/screened-porch.jpg", alt: "Elevated screened porch with stairs on a white brick home" },
+      { src: "/images/decks/screened-porch-aerial.jpg", alt: "The screened porch from above" },
+    ],
+  },
+  {
+    id: 4,
+    name: "Copper gutters",
+    service: "Gutters",
+    images: [
+      { src: "/images/roofing/copper-gutters-side.jpg", alt: "New copper gutters and downspouts on a painted brick home" },
+      { src: "/images/roofing/copper-gutters-gable.jpg", alt: "Copper gutters along a steep gable roof" },
+    ],
+  },
+  {
+    id: 5,
+    name: "Board-and-batten siding",
+    service: "Siding",
+    images: [
+      { src: "/images/siding/board-batten-gable-hero.jpg", alt: "Board-and-batten siding on a gable above brick" },
+      { src: "/images/siding/board-batten-dormer.jpg", alt: "Board-and-batten siding on a dormer" },
+    ],
+  },
+  {
+    id: 6,
+    name: "Deck with black balusters",
+    service: "Decks",
+    images: [
+      { src: "/images/decks/deck-black-balusters.jpg", alt: "New wood deck with black metal balusters" },
+      { src: "/images/decks/deck-stairs-front.jpg", alt: "The same deck with its stairs" },
+    ],
+  },
+  {
+    id: 7,
+    name: "Sunroom",
+    service: "Remodeling",
+    images: [
+      { src: "/images/remodel/sunroom-side.jpg", alt: "Sunroom with tall windows on a yellow home" },
+      { src: "/images/remodel/sunroom-progress.jpg", alt: "Crew finishing the sunroom" },
+    ],
+  },
+  {
+    id: 8,
+    name: "Roof replacement",
+    service: "Roofing",
+    images: [
+      { src: "/images/roofing/ranch-pool-roof.jpg", alt: "Brick ranch home with a new roof and patio cover" },
+      { src: "/images/roofing/ranch-roof-top.jpg", alt: "Top-down view of the new roof" },
+    ],
+  },
+  {
+    id: 9,
+    name: "Roofing project",
+    service: "Roofing",
+    images: [
+      { src: "/roof7_1.JPG", alt: "Brick home with a new roof, seen from above" },
+      { src: "/roof7_3.JPEG", alt: "Front of the brick home with its new roof" },
+      { src: "/roof7_4.JPEG", alt: "Rear of the home with its new roof and pool" },
+    ],
+  },
+  {
+    id: 10,
+    name: "Roofing project",
+    service: "Roofing",
+    images: [
+      { src: "/roof4_1.JPG", alt: "Stone and brick home with a dark shingle roof" },
+      { src: "/roof4_2.JPG", alt: "Side view of the same roof" },
+    ],
+  },
+  {
+    id: 11,
+    name: "Roofing project",
+    service: "Roofing",
+    images: [
+      { src: "/roof3_1.JPG", alt: "Home with a new roof beside a pool" },
+      { src: "/roof3_2.JPEG", alt: "The same home from above" },
+    ],
+  },
+  {
+    id: 12,
+    name: "Roofing project",
+    service: "Roofing",
+    images: [
+      { src: "/roof1_1.jpeg", alt: "Two-story brick home with a new roof" },
+      { src: "/roof1_2.jpeg", alt: "Closer view of the same roof" },
+    ],
+  },
+];
+
 export default function GalleryClient() {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  
-  // Keyboard navigation
+  const [selected, setSelected] = useState<Project | null>(null);
+  const [index, setIndex] = useState(0);
+  const closeButton = useRef<HTMLButtonElement>(null);
+  const opener = useRef<HTMLElement | null>(null);
+
+  const open = (project: Project, trigger: HTMLElement) => {
+    opener.current = trigger;
+    setSelected(project);
+    setIndex(0);
+  };
+
+  const close = () => {
+    setSelected(null);
+    setIndex(0);
+    opener.current?.focus();
+  };
+
+  const step = (direction: 1 | -1) => {
+    if (!selected) return;
+    const count = selected.images.length;
+    setIndex((current) => (current + direction + count) % count);
+  };
+
+  // Keyboard: Escape closes, arrows move between photos, Tab stays inside the dialog.
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedProject === null) return;
-      
-      switch (e.key) {
-        case 'Escape':
-          closeProject();
-          break;
-        case 'ArrowLeft':
-          e.preventDefault();
-          navigateInProject('prev');
-          break;
-        case 'ArrowRight':
-          e.preventDefault();
-          navigateInProject('next');
-          break;
-      }
-    };
-
-    if (selectedProject !== null) {
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-  }, [selectedProject, currentImageIndex]);
-
-  useEffect(() => {
-    if (selectedProject === null) {
-      return undefined;
-    }
-
+    if (!selected) return;
+    closeButton.current?.focus();
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-
+    const count = selected.images.length;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelected(null);
+        setIndex(0);
+        opener.current?.focus();
+      }
+      if (e.key === "ArrowLeft") setIndex((current) => (current - 1 + count) % count);
+      if (e.key === "ArrowRight") setIndex((current) => (current + 1) % count);
+      if (e.key === "Tab") {
+        const focusable = document.querySelectorAll<HTMLElement>("#gallery-dialog button");
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
+      document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = previousOverflow;
     };
-  }, [selectedProject]);
-  
-  // Organized roof projects with all their images
-  const roofProjects = [
-    {
-      id: 1,
-      name: "Residential Roofing Project",
-      images: [
-        { src: "/roof1_1.jpeg", alt: "Residential roof project 1 - main view" },
-        { src: "/roof1_2.jpeg", alt: "Residential roof project 1 - detail view" }
-      ]
-    },
-    {
-      id: 2,
-      name: "Commercial Roofing Project", 
-      images: [
-        { src: "/roof2_1.jpeg", alt: "Commercial roof project 2 - main view" },
-        { src: "/roof2_2.jpeg", alt: "Commercial roof project 2 - side view" },
-        { src: "/roof2_3.jpeg", alt: "Commercial roof project 2 - detail view" },
-        { src: "/roof2_4.jpeg", alt: "Commercial roof project 2 - completion view" },
-        { src: "/roof2_5.jpeg", alt: "Commercial roof project 2 - final inspection" }
-      ]
-    },
-    {
-      id: 3,
-      name: "Roof Replacement Project",
-      images: [
-        { src: "/roof3_1.JPG", alt: "Roof replacement project 3 - main view" },
-        { src: "/roof3_2.JPEG", alt: "Roof replacement project 3 - completion view" }
-      ]
-    },
-    {
-      id: 4,
-      name: "Complete Roof Installation Project",
-      images: [
-        { src: "/roof4_1.JPG", alt: "Complete roof installation project 4 - main view" },
-        { src: "/roof4_2.JPG", alt: "Complete roof installation project 4 - progress view" },
-        { src: "/roof4_3.JPG", alt: "Complete roof installation project 4 - detail work" },
-        { src: "/roof4_4.JPG", alt: "Complete roof installation project 4 - final result" }
-      ]
-    },
-    {
-      id: 5,
-      name: "Residential Roofing Project",
-      images: [
-        { src: "/roof5_1.JPEG", alt: "Residential roofing project 5 - completed roof" }
-      ]
-    },
-    {
-      id: 6,
-      name: "Professional Installation Project",
-      images: [
-        { src: "/roof6_1.JPG", alt: "Professional installation project 6 - main view" },
-        { src: "/roof6_2.JPG", alt: "Professional installation project 6 - finished work" }
-      ]
-    },
-    {
-      id: 7,
-      name: "Complex Roofing Project",
-      images: [
-        { src: "/roof7_1.JPG", alt: "Complex roofing project 7 - main view" },
-        { src: "/roof7_2.JPEG", alt: "Complex roofing project 7 - progress view" },
-        { src: "/roof7_3.JPEG", alt: "Complex roofing project 7 - detail work" },
-        { src: "/roof7_4.JPEG", alt: "Complex roofing project 7 - completion stage" },
-        { src: "/roof7_5.JPEG", alt: "Complex roofing project 7 - final result" }
-      ]
-    },
-    {
-      id: 8,
-      name: "Roof Repair Project",
-      images: [
-        { src: "/roof8_1.jpeg", alt: "Roof repair project 8 - completed repair" }
-      ]
-    }
-  ];
-
-  const openProject = (projectId: number) => {
-    setSelectedProject(projectId);
-    setCurrentImageIndex(0);
-  };
-
-  const closeProject = () => {
-    setSelectedProject(null);
-    setCurrentImageIndex(0);
-  };
-
-  const navigateInProject = (direction: 'prev' | 'next') => {
-    if (selectedProject === null) return;
-    
-    const currentProject = roofProjects.find(p => p.id === selectedProject);
-    if (!currentProject) return;
-    
-    const maxIndex = currentProject.images.length - 1;
-    
-    if (direction === 'prev') {
-      setCurrentImageIndex(currentImageIndex === 0 ? maxIndex : currentImageIndex - 1);
-    } else {
-      setCurrentImageIndex(currentImageIndex === maxIndex ? 0 : currentImageIndex + 1);
-    }
-  };
-
-  const getCurrentProject = () => {
-    return roofProjects.find(p => p.id === selectedProject);
-  };
+  }, [selected]);
 
   return (
     <main className="bg-black min-h-screen">
-      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-b from-zinc-900 to-black">
-        <div className="mx-auto w-[min(1200px,94%)]">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-              Our Recent Projects
-            </h1>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Take a look at our latest completed roofing projects across Nashville and Middle Tennessee. 
-              Each roof represents our commitment to quality craftsmanship and customer satisfaction.
-            </p>
-          </div>
+        <div className="mx-auto w-[min(1200px,94%)] text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Our Recent Projects</h1>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            Roofs, gutters, decks, screened porches, siding and remodeling for homeowners around Nashville.
+          </p>
         </div>
       </section>
 
-      {/* Masonry Gallery */}
       <section className="py-16 bg-black">
         <div className="mx-auto w-[min(1400px,94%)]">
-          {/* Masonry Grid Container */}
-          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-            {roofProjects.map((project) => (
-              <div 
-                key={project.id}
-                className="break-inside-avoid cursor-pointer group"
-                onClick={() => openProject(project.id)}
-              >
-                <div className="relative overflow-hidden rounded-xl bg-zinc-800 border border-zinc-700 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-yellow-500/10">
-                  <Image
-                    src={project.images[0].src}
-                    alt={project.images[0].alt}
-                    width={400}
-                    height={300}
-                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                    style={{ aspectRatio: 'auto' }}
-                  />
-                  
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      View Project
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <ul className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+            {projects.map((project, position) => (
+              <li key={project.id} className="break-inside-avoid">
+                <button
+                  type="button"
+                  onClick={(e) => open(project, e.currentTarget)}
+                  aria-label={`View ${project.images.length} photos: ${project.name}`}
+                  className="group block w-full overflow-hidden rounded-xl border border-zinc-700 bg-zinc-800 text-left transition-shadow duration-300 hover:shadow-2xl"
+                >
+                  <span className="relative block">
+                    <Image
+                      src={project.images[0].src}
+                      alt={project.images[0].alt}
+                      width={400}
+                      height={300}
+                      priority={position < 4}
+                      sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </span>
+                  <span className="flex items-center justify-between gap-3 px-4 py-3">
+                    <span className="font-semibold text-white">{project.name}</span>
+                    <span className="text-sm text-slate-400">{project.service}</span>
+                  </span>
+                </button>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-16 bg-gradient-to-t from-zinc-900 to-black">
         <div className="mx-auto w-[min(1200px,94%)] text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to See Your Brand New Roof Here?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to start your project?</h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Join our satisfied customers across Nashville and Middle Tennessee. 
-            Your dream roof is just one call away.
+            Call us Monday–Saturday, 8:00 AM–4:00 PM, or request a free estimate online.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="tel:+16159564920"
-              className="group btn-gold neon relative inline-flex items-center justify-center overflow-hidden rounded-xl px-8 py-4 font-extrabold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                {"\u260E"} Call Now: (615) 956-4920
-              </span>
+            <a href="tel:+16159564920" className="btn-gold inline-flex items-center justify-center rounded-xl px-8 py-4 font-extrabold shadow-lg">
+              Call (615) 956-4920
             </a>
-            
-            <a 
+            <a
               href="/#estimate"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl border-2 border-yellow-500 text-yellow-500 font-bold hover:bg-yellow-500 hover:text-black transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-xl border-2 border-yellow-400 text-yellow-400 font-bold transition-colors duration-200 hover:bg-yellow-400 hover:text-black"
             >
-              Get FREE Estimate
+              Get a Free Estimate
             </a>
           </div>
         </div>
       </section>
 
-      {/* Project Viewer Modal */}
-      {selectedProject && (
-        <div 
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-          onClick={closeProject}
+      {selected ? (
+        <div
+          id="gallery-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${selected.name} photos`}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+          onClick={close}
         >
-          <div className="relative max-w-6xl w-full max-h-[95vh]">
-            {/* Close Button */}
-            <button
-              onClick={closeProject}
-              aria-label="Close project photos"
-              className="absolute -top-14 right-0 text-white hover:text-yellow-500 transition-colors z-10 bg-black/50 hover:bg-black/70 p-2 rounded-full"
-            >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            {/* Project Title */}
-            <div className="absolute -top-14 left-0 text-white">
-              <h3 className="text-lg font-bold">{getCurrentProject()?.name}</h3>
-              <p className="text-sm text-white/70">
-                Image {currentImageIndex + 1} of {getCurrentProject()?.images.length}
-              </p>
+          <div className="relative w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+            <div className="mb-3 flex items-center justify-between text-white">
+              <div>
+                <h2 className="text-lg font-bold">{selected.name}</h2>
+                <p className="text-sm text-white/70" aria-live="polite">
+                  Photo {index + 1} of {selected.images.length}
+                </p>
+              </div>
+              <button
+                ref={closeButton}
+                type="button"
+                onClick={close}
+                aria-label="Close project photos"
+                className="rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70 hover:text-yellow-400"
+              >
+                <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
 
-            {/* Navigation Buttons - Only show if multiple images */}
-            {getCurrentProject() && getCurrentProject()!.images.length > 1 && (
-              <>
-                <button
-                  onClick={(e) => { e.stopPropagation(); navigateInProject('prev'); }}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full transition-all z-10 group"
-                >
-                  <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-
-                <button
-                  onClick={(e) => { e.stopPropagation(); navigateInProject('next'); }}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full transition-all z-10 group"
-                >
-                  <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </>
-            )}
-
-            {/* Main Image */}
-            <div onClick={(e) => e.stopPropagation()} className="flex items-center justify-center h-full">
-              {getCurrentProject() && (
-                <Image
-                  src={getCurrentProject()!.images[currentImageIndex].src}
-                  alt={getCurrentProject()!.images[currentImageIndex].alt}
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto max-h-[95vh] object-contain rounded-lg shadow-2xl"
-                />
-              )}
-            </div>
-
-            {/* Image Thumbnails Navigation (for projects with multiple images) */}
-            {getCurrentProject() && getCurrentProject()!.images.length > 1 && (
-              <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 flex gap-2 bg-black/60 backdrop-blur p-3 rounded-lg">
-                {getCurrentProject()!.images.map((image, index) => (
+            <div className="relative flex items-center justify-center">
+              <Image
+                src={selected.images[index].src}
+                alt={selected.images[index].alt}
+                width={1200}
+                height={800}
+                sizes="(min-width: 1200px) 1152px, 94vw"
+                className="h-auto max-h-[75vh] w-full rounded-lg object-contain shadow-2xl"
+              />
+              {selected.images.length > 1 ? (
+                <>
                   <button
-                    key={index}
-                    onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(index); }}
-                    className={`relative overflow-hidden rounded transition-all ${
-                      index === currentImageIndex 
-                        ? 'ring-2 ring-yellow-500 scale-110' 
-                        : 'hover:scale-105 opacity-70 hover:opacity-100'
-                    }`}
+                    type="button"
+                    onClick={() => step(-1)}
+                    aria-label="Previous photo"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/60 p-4 text-white transition-colors hover:bg-black/80"
                   >
-                    <Image
-                      src={image.src}
-                      alt={`Thumbnail ${index + 1}`}
-                      width={60}
-                      height={45}
-                      className="w-12 h-9 object-cover"
-                    />
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => step(1)}
+                    aria-label="Next photo"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/60 p-4 text-white transition-colors hover:bg-black/80"
+                  >
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </>
+              ) : null}
+            </div>
+
+            {selected.images.length > 1 ? (
+              <div className="mt-4 flex justify-center gap-2">
+                {selected.images.map((image, i) => (
+                  <button
+                    key={image.src}
+                    type="button"
+                    onClick={() => setIndex(i)}
+                    aria-label={`Show photo ${i + 1} of ${selected.images.length}`}
+                    aria-current={i === index}
+                    className={`overflow-hidden rounded transition-opacity ${i === index ? "ring-2 ring-yellow-400" : "opacity-70 hover:opacity-100"}`}
+                  >
+                    <Image src={image.src} alt="" width={60} height={45} className="h-9 w-12 object-cover" />
                   </button>
                 ))}
               </div>
-            )}
-
-            {/* Keyboard Navigation Hint */}
-            {getCurrentProject() && getCurrentProject()!.images.length > 1 && (
-              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-white/50 text-xs text-center">
-                Use arrow keys or click arrows to navigate • Press ESC to close
-              </div>
-            )}
+            ) : null}
           </div>
         </div>
-      )}
+      ) : null}
     </main>
   );
 }
-

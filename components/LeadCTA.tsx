@@ -1,142 +1,163 @@
 "use client";
-import { useState } from "react";
+import { useId, useState, type FormEvent } from "react";
 
 type Props = {
   variant?: "card" | "inline";
-  kind?: "estimate" | "contact";  // NEW
+  kind?: "estimate" | "contact";
 };
+
+type Status = { type: "idle" } | { type: "sending" } | { type: "sent" } | { type: "error"; message: string };
+
+const PHONE = "(615) 956-4920";
+const inputClass =
+  "mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 transition-colors duration-200";
 
 export default function LeadCTA({ variant = "card", kind = "estimate" }: Props) {
   const action = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "";
-  const phone = "(615) 956-4920";
+  // Unique ids so two forms on one page don't share labels.
+  const uid = useId();
+  const id = (name: string) => `${uid}-${name}`;
+  const [status, setStatus] = useState<Status>({ type: "idle" });
+
   const wrap =
     variant === "inline"
       ? "rounded-2xl border border-zinc-700 bg-zinc-800/90 p-4"
       : "rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur";
+  const containerClasses = variant === "inline" && kind === "contact" ? `${wrap} w-full` : `${wrap} max-w-md ml-auto`;
 
-  const [msg, setMsg] = useState<string | null>(null);
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    if (!form.reportValidity()) return;
+    if (!action) {
+      setStatus({ type: "error", message: `Our form isn't available right now. Please call us at ${PHONE}.` });
+      return;
+    }
+    setStatus({ type: "sending" });
+    try {
+      const response = await fetch(action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) throw new Error(String(response.status));
+      form.reset();
+      setStatus({ type: "sent" });
+    } catch {
+      setStatus({ type: "error", message: `Something went wrong sending your request. Please call us at ${PHONE}.` });
+    }
+  }
 
-  const requiredNames =
-    kind === "estimate"
-      ? ["service", "address", "name", "phone", "consent"]
-      : ["name", "email", "phone", "message", "consent"];
-
-  // For inline contact forms, use full width. For others, use max-w-md ml-auto
-  const containerClasses = (variant === "inline" && kind === "contact") 
-    ? `${wrap} w-full` 
-    : `${wrap} max-w-md ml-auto`;
+  if (status.type === "sent") {
+    return (
+      <aside id={kind === "estimate" ? "estimate" : undefined} className={`${containerClasses} scroll-mt-28`}>
+        <div role="status" className="py-6 text-center">
+          <h2 className="text-xl font-semibold text-white">Thanks, we got your request.</h2>
+          <p className="mt-2 text-slate-300">
+            We&apos;ll get back to you during office hours, Monday–Saturday, 8:00 AM–4:00 PM. Need us sooner? Call{" "}
+            <a href="tel:+16159564920" className="font-semibold text-yellow-400 underline underline-offset-4">{PHONE}</a>.
+          </p>
+        </div>
+      </aside>
+    );
+  }
 
   return (
-    <aside id={kind === "estimate" ? "estimate" : undefined} className={`${containerClasses} scroll-mt-28`} aria-label={kind === "estimate" ? "Free estimate form" : "Contact form"}>
-      <h3 className="mb-2 text-xl font-semibold text-white">
-        {kind === "estimate" ? (
-          <>Get your <strong>FREE</strong> Estimate</>
-        ) : (
-          <>Contact <strong>JP Pro Services</strong></>
-        )}
-      </h3>
+    <aside
+      id={kind === "estimate" ? "estimate" : undefined}
+      className={`${containerClasses} scroll-mt-28`}
+      aria-label={kind === "estimate" ? "Free estimate form" : "Contact form"}
+    >
+      <h2 className="mb-2 text-xl font-semibold text-white">
+        {kind === "estimate" ? "Get your free estimate" : "Send us a message"}
+      </h2>
 
-      <form
-        action={action}
-        method="POST"
-        className="grid gap-3"
-        onSubmit={(e) => {
-          const form = e.currentTarget;
-          for (const name of requiredNames) {
-            const el = form.querySelector<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(`[name="${name}"]`);
-            if (!el) continue;
-            if ((el as HTMLInputElement).type === "checkbox" && !(el as HTMLInputElement).checked) {
-              e.preventDefault(); setMsg("Please complete the required fields."); (el as HTMLInputElement).focus(); return;
-            }
-            if ((el as HTMLInputElement).value.trim() === "") {
-              e.preventDefault(); setMsg("Please complete the required fields."); el.focus(); return;
-            }
-          }
-          setMsg(null);
-        }}
-      >
+      <form action={action} method="POST" className="grid gap-3" onSubmit={handleSubmit}>
         {/* Honeypot */}
-        <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-
-        {kind === "estimate" ? (
-          <div>
-            <label htmlFor="service" className="block text-sm text-slate-300">Choose Service*</label>
-            <select id="service" name="service" required
-              className="mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white outline-none focus:border-yellow-500 focus:ring-0 focus:shadow-lg focus:shadow-yellow-500/25 transition-all duration-200">
-              <option value="" className="bg-black text-white">Select…</option>
-              <option className="bg-black text-white">Roof Replacement</option>
-              <option className="bg-black text-white">Roof Repair</option>
-              <option className="bg-black text-white">Gutters</option>
-              <option className="bg-black text-white">Decks, Fencing &amp; Outdoor Living</option>
-              <option className="bg-black text-white">Siding &amp; Exterior Finishes</option>
-              <option className="bg-black text-white">Custom Remodeling</option>
-              <option className="bg-black text-white">Storm Damage / Insurance Claim</option>
-            </select>
-          </div>
-        ) : null}
+        <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
         <div className="grid gap-3 md:grid-cols-2">
           <div>
-            <label htmlFor="name" className="block text-sm text-slate-300">Name*</label>
-            <input id="name" name="name" required
-              className="form-input-glow mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
+            <label htmlFor={id("name")} className="block text-sm text-slate-300">Name*</label>
+            <input id={id("name")} name="name" required autoComplete="name" className={inputClass} />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm text-slate-300">Phone Number*</label>
-            <input id="phone" name="phone" inputMode="tel" required placeholder={phone}
-              className="form-input-glow mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
+            <label htmlFor={id("phone")} className="block text-sm text-slate-300">Phone*</label>
+            <input id={id("phone")} name="phone" type="tel" inputMode="tel" required autoComplete="tel" placeholder="Your phone number" className={inputClass} />
           </div>
-        </div>
-
-        <div>
-          <label htmlFor="email" className="block text-sm text-slate-300">Email*</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com"
-            className="form-input-glow mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
         </div>
 
         {kind === "estimate" ? (
-          <div>
-            <label htmlFor="address" className="block text-sm text-slate-300">Full Address*</label>
-            <input id="address" name="address" required placeholder="Street, City, ZIP"
-              className="form-input-glow mt-1 w-full rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
-          </div>
+          <>
+            <div>
+              <label htmlFor={id("service")} className="block text-sm text-slate-300">What do you need?*</label>
+              <select id={id("service")} name="service" required defaultValue="" className={inputClass}>
+                <option value="" disabled>Select…</option>
+                <option>Roof Replacement</option>
+                <option>Roof Repair</option>
+                <option>Gutters</option>
+                <option>Decks, Fencing &amp; Outdoor Living</option>
+                <option>Siding &amp; Exterior Finishes</option>
+                <option>Custom Remodeling</option>
+                <option>Storm Damage / Insurance Claim</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor={id("address")} className="block text-sm text-slate-300">Project address*</label>
+              <input id={id("address")} name="address" required autoComplete="street-address" placeholder="Street, City, ZIP" className={inputClass} />
+            </div>
+          </>
         ) : null}
 
-        {kind === "contact" ? (
-          <div>
-            <label htmlFor="message" className="block text-sm text-slate-300">Message*</label>
-            <textarea id="message" name="message" required rows={4} placeholder="How can we help?"
-              className="form-input-glow mt-1 w-full resize-y rounded-xl border border-slate-600 bg-black px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-yellow-500 focus:ring-0 transition-all duration-200" />
-          </div>
-        ) : null}
+        <div>
+          <label htmlFor={id("email")} className="block text-sm text-slate-300">
+            Email <span className="text-slate-400">(optional)</span>
+          </label>
+          <input id={id("email")} name="email" type="email" autoComplete="email" placeholder="you@example.com" className={inputClass} />
+        </div>
 
-        <label className="flex items-start gap-2 text-xs text-slate-300">
-          <input type="checkbox" name="consent" id="consent" required className="mt-[3px]" />
-          <span>
-            I agree to be contacted regarding my request. Msg/data rates may apply.
-            Consent not required to purchase. <a href="#privacy" className="underline">Privacy Policy</a>.
-          </span>
+        <div>
+          <label htmlFor={id("message")} className="block text-sm text-slate-300">
+            {kind === "estimate" ? (
+              <>Project details <span className="text-slate-400">(optional)</span></>
+            ) : (
+              "Message*"
+            )}
+          </label>
+          <textarea
+            id={id("message")}
+            name="message"
+            required={kind === "contact"}
+            rows={kind === "estimate" ? 2 : 4}
+            placeholder={kind === "estimate" ? "For example: new 12x16 deck with stairs" : "How can we help?"}
+            className={`${inputClass} resize-y`}
+          />
+        </div>
+
+        <label htmlFor={id("consent")} className="flex items-start gap-2 text-xs text-slate-300">
+          <input type="checkbox" name="consent" id={id("consent")} required className="mt-[3px]" />
+          <span>I agree to be contacted about my request by phone, text or email. Msg/data rates may apply.</span>
         </label>
 
-        <button type="submit"
-          className="group btn-gold neon relative inline-flex items-center justify-center overflow-hidden rounded-xl px-4 py-3 font-extrabold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+        <button
+          type="submit"
+          disabled={status.type === "sending"}
+          className="group btn-gold relative inline-flex items-center justify-center rounded-xl px-4 py-3 font-extrabold shadow-lg disabled:opacity-70"
         >
-          <span className="relative z-10 flex items-center gap-2">
-            {kind === "estimate" ? "Get My FREE Estimate" : "Send Message"}
-            <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span className="flex items-center gap-2">
+            {status.type === "sending" ? "Sending…" : kind === "estimate" ? "Get My Free Estimate" : "Send Message"}
+            <svg className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </span>
         </button>
 
-        {!!msg && (
-          <div className="flex items-center gap-2 bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-red-800 text-sm animate-in slide-in-from-top-2 duration-300">
-            <svg className="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-            </svg>
-            <span>{msg}</span>
+        {status.type === "error" ? (
+          <div role="alert" className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+            {status.message}
           </div>
-        )}
+        ) : null}
       </form>
     </aside>
   );

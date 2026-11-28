@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/components/seo";
 
 import ServicePage from "@/components/ServicePage";
 import { reviews } from "@/components/reviews";
 
-export const metadata: Metadata = {
-  title: "Siding & Exterior Finishes in Nashville | JP Pro Services",
-  description: "Siding and exterior finishes for homes near Nashville, with a 2-year labor warranty.",
-};
+export const metadata: Metadata = pageMetadata("/siding-exteriors", "Siding & Exterior Finishes in Nashville | JP Pro Services", "Siding and exterior finishes for homes near Nashville, with a 2-year labor warranty.");
 
 export default function Page() {
   return (

@@ -1,16 +1,12 @@
 ﻿import type { Metadata } from "next";
+import { pageMetadata } from "@/components/seo";
 import GalleryClient from './GalleryClient';
 
-export const metadata: Metadata = {
-  title: "Project Gallery | JP Pro Services",
-  description: "Photos of recent JP Pro Services projects around Nashville.",
-};
+export const metadata: Metadata = pageMetadata("/gallery", "Project Gallery | JP Pro Services", "Photos of recent JP Pro Services projects around Nashville.");
 
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function Page() {
