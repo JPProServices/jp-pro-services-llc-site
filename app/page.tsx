@@ -191,7 +191,7 @@ export default function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Credentials & Coverage</p>
             </div>
             <div className="flex justify-center">
-              <TrustBadges size="lg" />
+              <TrustBadges size="lg" dots />
             </div>
             <p className="mt-5 text-center text-sm text-slate-400">
               Tennessee Home Improvement License #13503.{" "}
@@ -225,7 +225,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Reviews: real Google reviews, trimmed only with "…" */}
+      {/* Reviews: real Google reviews, quoted as whole consecutive sentences */}
       <section className="bg-black py-16">
         <div className="mx-auto w-[min(1200px,94%)]">
           <div className="text-center mb-12">
