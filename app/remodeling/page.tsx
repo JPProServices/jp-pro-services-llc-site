@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import ServicePage from "@/components/ServicePage";
+import { reviews } from "@/components/reviews";
 
 export const metadata: Metadata = {
   title: "Custom Remodeling in Nashville | JP Pro Services",
@@ -11,6 +12,7 @@ export default function Page() {
   return (
     <ServicePage
       path="/remodeling"
+      review={reviews.remodel}
       name="Custom Remodeling"
       headline="Remodeling Planned Around Your Home"
       intro="Interior remodeling and home improvement projects for homeowners within 50 miles of Nashville."

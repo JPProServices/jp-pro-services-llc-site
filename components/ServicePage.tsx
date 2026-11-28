@@ -5,6 +5,7 @@ import HeroMedia from "@/components/HeroMedia";
 import JsonLd, { serviceJsonLd } from "@/components/JsonLd";
 import LeadCTA from "@/components/LeadCTA";
 import TrustBadges from "@/components/TrustBadges";
+import { GOOGLE_REVIEWS_URL, type Review } from "@/components/reviews";
 
 type Photo = { src: string; alt: string };
 type LinkItem = { href: string; label: string };
@@ -21,6 +22,7 @@ type Props = {
   gallery: Photo[];
   galleryNote?: string;
   related?: { title: string; links: LinkItem[] }[];
+  review?: Review;
   aside?: ReactNode;
 };
 
@@ -38,6 +40,7 @@ export default function ServicePage({
   gallery,
   galleryNote,
   related,
+  review,
   aside,
 }: Props) {
   return (
@@ -166,6 +169,20 @@ export default function ServicePage({
               </div>
             ))}
           </div>
+        </section>
+      ) : null}
+
+      {review ? (
+        <section className="bg-black py-16">
+          <figure className="mx-auto w-[min(900px,94%)] text-center">
+            <blockquote className="text-2xl font-medium leading-relaxed text-white md:text-3xl">“{review.text}”</blockquote>
+            <figcaption className="mt-6 text-slate-300">
+              <span className="font-semibold text-white">{review.name}</span> · {review.job} ·{" "}
+              <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="text-yellow-400 underline underline-offset-4 hover:text-yellow-300">
+                Google review
+              </a>
+            </figcaption>
+          </figure>
         </section>
       ) : null}
 

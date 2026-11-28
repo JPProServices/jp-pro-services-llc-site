@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import ServicePage from "@/components/ServicePage";
+import { reviews } from "@/components/reviews";
 import { roofingPages, secondaryRoofingPages } from "@/components/services";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function Page() {
   return (
     <ServicePage
       path="/roofing-gutters"
+      review={reviews.roof}
       name="Roofing & Gutters"
       headline="Roofing & Gutters Done Right"
       intro="Roof replacement, roof repair and gutters for homeowners within 50 miles of Nashville, installed by a GAF certified contractor."

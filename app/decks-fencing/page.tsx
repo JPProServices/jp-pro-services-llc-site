@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import ServicePage from "@/components/ServicePage";
+import { reviews } from "@/components/reviews";
 
 export const metadata: Metadata = {
   title: "Decks, Fencing & Outdoor Living in Nashville | JP Pro Services",
@@ -11,6 +12,7 @@ export default function Page() {
   return (
     <ServicePage
       path="/decks-fencing"
+      review={reviews.deck}
       name="Decks, Fencing & Outdoor Living"
       headline="Decks & Fences Built to Last"
       intro="Wood and composite decks, fences and screened porches for homeowners within 50 miles of Nashville."
