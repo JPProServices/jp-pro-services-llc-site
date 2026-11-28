@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-import { roofingPages, secondaryRoofingPages, services } from "@/components/services";
+import { roofingMenu, services } from "@/components/services";
 
 type Props = {
   phone: string;
@@ -139,8 +139,14 @@ export default function MobileMenu({ phone, phoneHref }: Props) {
                 </button>
                 {servicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">
-                    {[{ href: "/roofing-gutters", label: "Roofing & Gutters Overview" }, ...roofingPages, ...secondaryRoofingPages].map((item) => (
-                      <a key={item.href} href={item.href} className="block py-2 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>{item.label}</a>
+                    <a href="/roofing-gutters" className="block py-3 px-3 font-semibold text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>All roofing &amp; gutters</a>
+                    {roofingMenu.map((group) => (
+                      <div key={group.title} className="pt-2">
+                        <p className="px-3 pb-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{group.title}</p>
+                        {group.links.map((item) => (
+                          <a key={item.href} href={item.href} className="block py-3 px-3 text-slate-400 hover:text-white hover:bg-zinc-700 rounded transition-colors text-sm" onClick={closeMenu}>{item.label}</a>
+                        ))}
+                      </div>
                     ))}
                   </div>
                 )}

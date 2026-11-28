@@ -64,3 +64,25 @@ export const secondaryRoofingPages = [
   { href: "/storm-damage", label: "Storm Damage & Insurance Claims" },
   { href: "/commercial-roofing", label: "Commercial Roofing" },
 ];
+
+// Roofing dropdown, grouped so nine links read as two short lists.
+export const roofingMenu = [
+  {
+    title: "Services",
+    links: [
+      { href: "/roof-replacement", label: "Roof Replacement" },
+      { href: "/roof-repair", label: "Roof Repair" },
+      { href: "/storm-damage", label: "Storm Damage & Insurance" },
+      { href: "/commercial-roofing", label: "Commercial Roofing" },
+    ],
+  },
+  {
+    title: "Roof types",
+    links: [
+      { href: "/asphalt-shingles", label: "Asphalt Shingles" },
+      { href: "/metal-roofing", label: "Metal Roofing" },
+      { href: "/tile-slate", label: "Tile & Slate" },
+      { href: "/flat-roofing", label: "Flat Roofing" },
+    ],
+  },
+];
